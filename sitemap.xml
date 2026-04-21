@@ -40,42 +40,63 @@
   </url>
   <url>
     <loc>https://unitedglobal.uz/countries/italy.html</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://unitedglobal.uz/countries/italy.html?lang=uz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://unitedglobal.uz/countries/italy.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitedglobal.uz/countries/italy.html?lang=en"/>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://unitedglobal.uz/countries/luxembourg.html</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://unitedglobal.uz/countries/luxembourg.html?lang=uz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://unitedglobal.uz/countries/luxembourg.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitedglobal.uz/countries/luxembourg.html?lang=en"/>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://unitedglobal.uz/countries/finland.html</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://unitedglobal.uz/countries/finland.html?lang=uz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://unitedglobal.uz/countries/finland.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitedglobal.uz/countries/finland.html?lang=en"/>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://unitedglobal.uz/countries/turkey.html</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://unitedglobal.uz/countries/turkey.html?lang=uz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://unitedglobal.uz/countries/turkey.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitedglobal.uz/countries/turkey.html?lang=en"/>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://unitedglobal.uz/countries/japan.html</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://unitedglobal.uz/countries/japan.html?lang=uz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://unitedglobal.uz/countries/japan.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitedglobal.uz/countries/japan.html?lang=en"/>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://unitedglobal.uz/countries/latvia.html</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://unitedglobal.uz/countries/latvia.html?lang=uz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://unitedglobal.uz/countries/latvia.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitedglobal.uz/countries/latvia.html?lang=en"/>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://unitedglobal.uz/countries/malaysia.html</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://unitedglobal.uz/countries/malaysia.html?lang=uz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://unitedglobal.uz/countries/malaysia.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitedglobal.uz/countries/malaysia.html?lang=en"/>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -88,12 +109,18 @@
   </url>
   <url>
     <loc>https://unitedglobal.uz/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://unitedglobal.uz/privacy.html?lang=uz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://unitedglobal.uz/privacy.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitedglobal.uz/privacy.html?lang=en"/>
     <lastmod>2026-04-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://unitedglobal.uz/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://unitedglobal.uz/terms.html?lang=uz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://unitedglobal.uz/terms.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://unitedglobal.uz/terms.html?lang=en"/>
     <lastmod>2026-04-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>

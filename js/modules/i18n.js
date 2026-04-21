@@ -70,26 +70,34 @@
 
   const applyLang = async (lang) => {
     if (!SUPPORTED.includes(lang)) lang = DEFAULT_LANG;
+    let dict = null;
+    let resolvedLang = lang;
     try {
-      const dict = await loadDict(lang);
-      applyDict(dict);
-      document.documentElement.lang = lang;
-      document.documentElement.setAttribute('data-lang', lang);
-      try { localStorage.setItem(STORAGE_KEY, lang); } catch (_) {}
-      // Update lang button label
-      const label = document.getElementById('currentLang');
-      if (label) label.textContent = lang.toUpperCase();
-      // Highlight active item in dropdown
-      document.querySelectorAll('.lang-dropdown [data-lang]').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang.toLowerCase() === lang);
-      });
-      // Fire event
-      document.dispatchEvent(new CustomEvent('i18n:changed', { detail: { lang, dict } }));
-      return dict;
+      dict = await loadDict(lang);
     } catch (err) {
-      console.warn('[i18n] load failed', err);
-      return null;
+      console.warn('[i18n] load failed for', lang, err);
+      if (lang !== DEFAULT_LANG) {
+        try {
+          dict = await loadDict(DEFAULT_LANG);
+          resolvedLang = DEFAULT_LANG;
+          console.warn('[i18n] fell back to', DEFAULT_LANG);
+        } catch (err2) {
+          console.warn('[i18n] default fallback also failed', err2);
+        }
+      }
     }
+    if (!dict) return null;
+    applyDict(dict);
+    document.documentElement.lang = resolvedLang;
+    document.documentElement.setAttribute('data-lang', resolvedLang);
+    try { localStorage.setItem(STORAGE_KEY, resolvedLang); } catch (_) {}
+    const label = document.getElementById('currentLang');
+    if (label) label.textContent = resolvedLang.toUpperCase();
+    document.querySelectorAll('.lang-dropdown [data-lang]').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang.toLowerCase() === resolvedLang);
+    });
+    document.dispatchEvent(new CustomEvent('i18n:changed', { detail: { lang: resolvedLang, dict } }));
+    return dict;
   };
 
   global.UGCi18n = {

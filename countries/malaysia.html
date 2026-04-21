@@ -231,10 +231,10 @@
 
   <script>
     document.getElementById('footerYear').textContent = new Date().getFullYear();
-    (function w(){
-      if (window.lucide && lucide.createIcons) lucide.createIcons({ nameAttr: 'data-lucide' });
-      else setTimeout(w, 100);
-    })();
+    (function(){ var tries = 0; (function w(){
+      if (window.lucide && lucide.createIcons) { lucide.createIcons({ nameAttr: 'data-lucide' }); return; }
+      if (++tries < 40) setTimeout(w, 100);
+    })(); })();
   </script>
 </body>
 </html>
