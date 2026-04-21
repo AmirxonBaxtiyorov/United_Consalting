@@ -4,6 +4,7 @@ import { saveLead } from '@/lib/supabase';
 import { sendTelegramNotification } from '@/lib/telegram';
 import { sendManagerEmail, sendClientAutoReply } from '@/lib/email';
 import { rateLimit } from '@/lib/rate-limit';
+import { verifyRecaptcha } from '@/lib/recaptcha';
 
 export const runtime = 'nodejs';
 
@@ -38,6 +39,12 @@ export async function POST(req: Request) {
 
   if (data.website) {
     return NextResponse.json({ ok: true });
+  }
+
+  const captcha = await verifyRecaptcha(data.recaptchaToken, 'contact_form');
+  if (!captcha.ok) {
+    console.warn('[contact] recaptcha failed', captcha);
+    return NextResponse.json({ error: 'Captcha failed' }, { status: 403 });
   }
 
   const lead = {

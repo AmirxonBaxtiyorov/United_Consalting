@@ -10,6 +10,8 @@ import { SITE } from '@/lib/config';
 import { COUNTRIES } from '@/data/countries';
 import { CheckCircle2, AlertCircle, Phone, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
 import type { Locale } from '@/i18n/routing';
+import { getRecaptchaToken } from '@/components/shared/Recaptcha';
+import { trackEvent } from '@/components/shared/Analytics';
 
 const formSchema = z.object({
   name: z.string().trim().min(2).max(100),
@@ -42,12 +44,14 @@ export function ContactForm({ source = 'homepage' }: { source?: string }) {
   const onSubmit = async (data: FormValues) => {
     setStatus('loading');
     try {
+      const recaptchaToken = await getRecaptchaToken('contact_form');
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, locale, source }),
+        body: JSON.stringify({ ...data, locale, source, recaptchaToken }),
       });
       if (!res.ok) throw new Error('Failed');
+      trackEvent('lead_submit', { source, country: data.country, degree: data.degree });
       setStatus('ok');
       reset();
     } catch {

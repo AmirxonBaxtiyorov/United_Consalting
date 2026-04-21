@@ -19,6 +19,7 @@ export const contactSchema = z.object({
   source: z.string().max(100).optional(),
   // honeypot
   website: z.string().max(0).optional().or(z.literal('')),
+  recaptchaToken: z.string().optional().nullable(),
 });
 
 export type ContactInput = z.infer<typeof contactSchema>;

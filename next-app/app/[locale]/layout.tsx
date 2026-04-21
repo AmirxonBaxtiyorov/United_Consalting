@@ -9,6 +9,8 @@ import { Footer } from '@/components/layout/Footer';
 import { FloatingWidgets } from '@/components/widgets/FloatingWidgets';
 import { CookieConsent } from '@/components/widgets/CookieConsent';
 import { SchemaOrg } from '@/components/shared/SchemaOrg';
+import { Analytics } from '@/components/shared/Analytics';
+import { RecaptchaLoader } from '@/components/shared/Recaptcha';
 import { SITE } from '@/lib/config';
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'], variable: '--font-inter', display: 'swap' });
@@ -76,6 +78,8 @@ export default async function LocaleLayout({
           <Footer />
           <FloatingWidgets />
           <CookieConsent />
+          <Analytics />
+          <RecaptchaLoader />
         </NextIntlClientProvider>
       </body>
     </html>
