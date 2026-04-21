@@ -1,0 +1,313 @@
+export type CountryName = {
+  uz: string;
+  ru: string;
+  en: string;
+};
+
+export type Deadline = {
+  id: string;
+  label: string;
+  date: string;
+};
+
+export type University = {
+  name: string;
+  chip: string;
+  desc: string;
+};
+
+export type QuizWeight = {
+  asia: number;
+  affordable: number;
+  prestige: number;
+  english: number;
+  kpop: number;
+  tech: number;
+  warm: number;
+  europe: number;
+  scholarship_focus: number;
+};
+
+export type Country = {
+  slug: string;
+  code: string;
+  name: CountryName;
+  capital: string;
+  language: string;
+  currency_local: string;
+  image: string;
+  universities_count: number;
+  tuition_year: {
+    bachelor: number;
+    master: number;
+    phd: number;
+    language: number;
+  };
+  living_year: {
+    dorm: number;
+    shared: number;
+    rent: number;
+  };
+  extra: {
+    documents: number;
+    visa: number;
+    insurance: number;
+    flight: number;
+  };
+  typical_deadlines: Deadline[];
+  quiz_weight: QuizWeight;
+  universities: University[];
+};
+
+export const COUNTRIES: Country[] = [
+  {
+    slug: 'korea',
+    code: 'kr',
+    name: { uz: "Janubiy Koreya", ru: 'Южная Корея', en: 'South Korea' },
+    capital: 'Seoul',
+    language: 'Korean / English',
+    currency_local: 'KRW',
+    image: 'https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=1600&q=80',
+    universities_count: 25,
+    tuition_year: { bachelor: 6500, master: 9000, phd: 8500, language: 4200 },
+    living_year: { dorm: 3000, shared: 4800, rent: 7800 },
+    extra: { documents: 300, visa: 200, insurance: 450, flight: 700 },
+    typical_deadlines: [
+      { id: 'korea-fall', label: 'Fall intake — Seoul National / Sungkyunkwan', date: '2026-06-15' },
+      { id: 'korea-spring', label: 'Spring intake — Yonsei / Korea Univ.', date: '2026-11-30' },
+    ],
+    quiz_weight: { asia: 3, affordable: 2, prestige: 3, english: 2, kpop: 3, tech: 3, warm: 0, europe: 0, scholarship_focus: 3 },
+    universities: [
+      { name: 'Seoul National University', chip: 'QS Top 40', desc: "Korea's most prestigious university, strong English programs." },
+      { name: 'Sungkyunkwan University (SKKU)', chip: 'Partner', desc: 'Samsung-backed, top business and engineering schools.' },
+      { name: 'Yonsei University', chip: 'SKY', desc: "One of Korea's SKY trio, strong IBB and UIC English tracks." },
+      { name: 'Korea University', chip: 'SKY', desc: 'SKY trio, vibrant campus life and wide English offerings.' },
+      { name: 'KAIST', chip: 'Tech', desc: "Korea's MIT — science, engineering, fully English graduate programs." },
+      { name: 'Hanyang University', chip: 'ERICA', desc: 'Strong engineering, business, design, English Global BBA.' },
+    ],
+  },
+  {
+    slug: 'singapore',
+    code: 'sg',
+    name: { uz: 'Singapur', ru: 'Сингапур', en: 'Singapore' },
+    capital: 'Singapore',
+    language: 'English',
+    currency_local: 'SGD',
+    image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1600&q=80',
+    universities_count: 12,
+    tuition_year: { bachelor: 18000, master: 22000, phd: 14000, language: 8000 },
+    living_year: { dorm: 7200, shared: 9600, rent: 15000 },
+    extra: { documents: 350, visa: 280, insurance: 600, flight: 900 },
+    typical_deadlines: [
+      { id: 'sg-nus', label: 'NUS / NTU Fall intake', date: '2026-03-15' },
+      { id: 'sg-smu', label: 'SMU Spring intake', date: '2026-10-31' },
+    ],
+    quiz_weight: { asia: 3, affordable: 0, prestige: 3, english: 3, kpop: 0, tech: 3, warm: 3, europe: 0, scholarship_focus: 2 },
+    universities: [
+      { name: 'National University of Singapore (NUS)', chip: 'QS Top 10', desc: "Asia's #1, world-class faculty, English medium." },
+      { name: 'Nanyang Technological University (NTU)', chip: 'QS Top 20', desc: 'Innovation-focused, strong engineering and business.' },
+      { name: 'Singapore Management University (SMU)', chip: 'Business', desc: 'Urban campus, strong finance & law, American teaching style.' },
+      { name: 'Singapore Institute of Technology', chip: 'Applied', desc: 'Applied-learning degrees tied to industry.' },
+      { name: 'SUTD', chip: 'Design', desc: 'Design + tech integrated programs, MIT-collaborated.' },
+    ],
+  },
+  {
+    slug: 'usa',
+    code: 'us',
+    name: { uz: 'AQSH', ru: 'США', en: 'United States' },
+    capital: 'Washington D.C.',
+    language: 'English',
+    currency_local: 'USD',
+    image: 'https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&w=1600&q=80',
+    universities_count: 30,
+    tuition_year: { bachelor: 32000, master: 38000, phd: 28000, language: 12000 },
+    living_year: { dorm: 10800, shared: 13200, rent: 21000 },
+    extra: { documents: 450, visa: 350, insurance: 2200, flight: 1400 },
+    typical_deadlines: [
+      { id: 'us-ed', label: 'Ivy League Early Decision', date: '2026-11-01' },
+      { id: 'us-rd', label: 'Regular Decision (most schools)', date: '2027-01-05' },
+    ],
+    quiz_weight: { asia: 0, affordable: 0, prestige: 3, english: 3, kpop: 0, tech: 3, warm: 1, europe: 0, scholarship_focus: 2 },
+    universities: [
+      { name: 'Harvard University', chip: 'Ivy', desc: "World's most selective university, need-blind aid for international students." },
+      { name: 'MIT', chip: 'STEM', desc: 'Science + engineering apex, generous financial aid.' },
+      { name: 'Stanford University', chip: 'Tech', desc: "Silicon Valley's core, interdisciplinary approach." },
+      { name: 'UC Berkeley', chip: 'Public Ivy', desc: 'Top public university, strong merit scholarships for top profiles.' },
+      { name: 'NYU', chip: 'Urban', desc: 'Global campus, strong arts, business, tech programs.' },
+    ],
+  },
+  {
+    slug: 'italy',
+    code: 'it',
+    name: { uz: 'Italiya', ru: 'Италия', en: 'Italy' },
+    capital: 'Rome',
+    language: 'Italian / English',
+    currency_local: 'EUR',
+    image: 'https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=1600&q=80',
+    universities_count: 15,
+    tuition_year: { bachelor: 3500, master: 5000, phd: 3800, language: 2600 },
+    living_year: { dorm: 4800, shared: 6600, rent: 10800 },
+    extra: { documents: 280, visa: 180, insurance: 400, flight: 650 },
+    typical_deadlines: [
+      { id: 'it-polimi', label: 'Politecnico di Milano — Spring call', date: '2026-05-10' },
+      { id: 'it-bocconi', label: 'Bocconi — Round 3 deadline', date: '2026-04-30' },
+    ],
+    quiz_weight: { asia: 0, affordable: 2, prestige: 2, english: 2, kpop: 0, tech: 2, warm: 3, europe: 3, scholarship_focus: 2 },
+    universities: [
+      { name: 'Politecnico di Milano', chip: 'Design', desc: "Europe's top architecture + design school, English-taught MSc." },
+      { name: 'Bocconi University', chip: 'Business', desc: "Italy's #1 business school, global MBA, English BSc." },
+      { name: 'Sapienza University of Rome', chip: 'Historic', desc: 'Largest European university, Engineering, Medicine in English.' },
+      { name: 'University of Bologna', chip: 'Oldest', desc: "World's oldest university, English-taught Int. programs." },
+    ],
+  },
+  {
+    slug: 'luxembourg',
+    code: 'lu',
+    name: { uz: 'Lyuksemburg', ru: 'Люксембург', en: 'Luxembourg' },
+    capital: 'Luxembourg City',
+    language: 'French / German / English',
+    currency_local: 'EUR',
+    image: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1600&q=80',
+    universities_count: 5,
+    tuition_year: { bachelor: 400, master: 400, phd: 200, language: 2000 },
+    living_year: { dorm: 7200, shared: 10200, rent: 15600 },
+    extra: { documents: 280, visa: 180, insurance: 500, flight: 700 },
+    typical_deadlines: [
+      { id: 'lu-bsc', label: 'University of Luxembourg — BSc', date: '2026-04-30' },
+      { id: 'lu-msc', label: 'University of Luxembourg — MSc', date: '2026-05-31' },
+    ],
+    quiz_weight: { asia: 0, affordable: 3, prestige: 2, english: 2, kpop: 0, tech: 2, warm: 1, europe: 3, scholarship_focus: 3 },
+    universities: [
+      { name: 'University of Luxembourg', chip: 'Multilingual', desc: 'Trilingual instruction, strong finance + CS programs.' },
+      { name: 'LBS — Luxembourg Business School', chip: 'MBA', desc: 'Executive education, international faculty.' },
+      { name: 'Sacred Heart University Luxembourg', chip: 'USA ties', desc: 'American curriculum in Europe, MBA in English.' },
+    ],
+  },
+  {
+    slug: 'finland',
+    code: 'fi',
+    name: { uz: 'Finlyandiya', ru: 'Финляндия', en: 'Finland' },
+    capital: 'Helsinki',
+    language: 'Finnish / English',
+    currency_local: 'EUR',
+    image: 'https://images.unsplash.com/photo-1559686043-aef1bb74cb1c?auto=format&fit=crop&w=1600&q=80',
+    universities_count: 10,
+    tuition_year: { bachelor: 10000, master: 13000, phd: 0, language: 5000 },
+    living_year: { dorm: 5400, shared: 7800, rent: 12000 },
+    extra: { documents: 250, visa: 180, insurance: 400, flight: 780 },
+    typical_deadlines: [
+      { id: 'fi-joint', label: 'Studyinfo joint application', date: '2027-01-14' },
+      { id: 'fi-aalto', label: 'Aalto MSc — priority round', date: '2026-12-01' },
+    ],
+    quiz_weight: { asia: 0, affordable: 2, prestige: 2, english: 3, kpop: 0, tech: 3, warm: 0, europe: 3, scholarship_focus: 3 },
+    universities: [
+      { name: 'University of Helsinki', chip: 'Top 100', desc: "Finland's largest, research-focused, strong in humanities + STEM." },
+      { name: 'Aalto University', chip: 'Design+Tech', desc: 'Design, business, tech merged — innovation-driven.' },
+      { name: 'Tampere University', chip: 'Engineering', desc: 'Engineering and ICT with industry partnerships.' },
+    ],
+  },
+  {
+    slug: 'turkey',
+    code: 'tr',
+    name: { uz: 'Turkiya', ru: 'Турция', en: 'Türkiye' },
+    capital: 'Ankara',
+    language: 'Turkish / English',
+    currency_local: 'TRY',
+    image: 'https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1600&q=80',
+    universities_count: 20,
+    tuition_year: { bachelor: 4800, master: 6200, phd: 4000, language: 2400 },
+    living_year: { dorm: 2400, shared: 3600, rent: 6000 },
+    extra: { documents: 220, visa: 120, insurance: 300, flight: 350 },
+    typical_deadlines: [
+      { id: 'tr-yos', label: 'YÖS / Türkiye Bursları', date: '2026-02-20' },
+      { id: 'tr-summer', label: 'State universities summer call', date: '2026-07-20' },
+    ],
+    quiz_weight: { asia: 1, affordable: 3, prestige: 1, english: 2, kpop: 0, tech: 1, warm: 3, europe: 2, scholarship_focus: 3 },
+    universities: [
+      { name: 'Bogazici University', chip: 'Top', desc: "Istanbul's English-medium flagship, selective." },
+      { name: 'Middle East Technical University (METU)', chip: 'Tech', desc: "Ankara's leading engineering school, English instruction." },
+      { name: 'Koç University', chip: 'Private', desc: 'Top private, strong scholarships for international students.' },
+      { name: 'Istanbul Technical University', chip: 'Engineering', desc: "One of the world's oldest tech universities." },
+    ],
+  },
+  {
+    slug: 'japan',
+    code: 'jp',
+    name: { uz: 'Yaponiya', ru: 'Япония', en: 'Japan' },
+    capital: 'Tokyo',
+    language: 'Japanese / English',
+    currency_local: 'JPY',
+    image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1600&q=80',
+    universities_count: 18,
+    tuition_year: { bachelor: 7200, master: 9000, phd: 7800, language: 6000 },
+    living_year: { dorm: 5400, shared: 8400, rent: 12600 },
+    extra: { documents: 350, visa: 250, insurance: 550, flight: 950 },
+    typical_deadlines: [
+      { id: 'jp-mext', label: 'MEXT scholarship application', date: '2026-05-31' },
+      { id: 'jp-tokyo', label: 'University of Tokyo PEAK', date: '2026-12-15' },
+    ],
+    quiz_weight: { asia: 3, affordable: 1, prestige: 3, english: 2, kpop: 1, tech: 3, warm: 1, europe: 0, scholarship_focus: 3 },
+    universities: [
+      { name: 'University of Tokyo', chip: 'PEAK', desc: "Japan's #1, PEAK program taught entirely in English." },
+      { name: 'Kyoto University', chip: 'Research', desc: "Japan's #2, strong sciences and humanities." },
+      { name: 'Waseda University', chip: 'Private', desc: 'SILS English degree track, vibrant international campus.' },
+      { name: 'Sophia University', chip: 'English', desc: 'Jesuit international school in Tokyo, English Faculty of Liberal Arts.' },
+    ],
+  },
+  {
+    slug: 'latvia',
+    code: 'lv',
+    name: { uz: 'Latviya', ru: 'Латвия', en: 'Latvia' },
+    capital: 'Riga',
+    language: 'Latvian / English',
+    currency_local: 'EUR',
+    image: 'https://images.unsplash.com/photo-1564898818877-1f49c1aac0c9?auto=format&fit=crop&w=1600&q=80',
+    universities_count: 6,
+    tuition_year: { bachelor: 3200, master: 4500, phd: 4000, language: 2200 },
+    living_year: { dorm: 3000, shared: 4800, rent: 7200 },
+    extra: { documents: 230, visa: 150, insurance: 300, flight: 600 },
+    typical_deadlines: [
+      { id: 'lv-rsu', label: 'Riga Stradins — Medicine deadline', date: '2026-05-15' },
+      { id: 'lv-rtu', label: 'Riga Technical University — Summer', date: '2026-06-30' },
+    ],
+    quiz_weight: { asia: 0, affordable: 3, prestige: 1, english: 3, kpop: 0, tech: 2, warm: 0, europe: 3, scholarship_focus: 2 },
+    universities: [
+      { name: 'Riga Stradins University', chip: 'Medicine', desc: "Europe's most popular English-medium medical degree." },
+      { name: 'Riga Technical University', chip: 'Engineering', desc: 'Affordable engineering degrees in English.' },
+      { name: 'University of Latvia', chip: 'Flagship', desc: 'Wide English programs in business, CS, economics.' },
+      { name: 'Stockholm School of Economics in Riga', chip: 'SSE', desc: 'Elite business bachelor, English-taught.' },
+    ],
+  },
+  {
+    slug: 'malaysia',
+    code: 'my',
+    name: { uz: 'Malayziya', ru: 'Малайзия', en: 'Malaysia' },
+    capital: 'Kuala Lumpur',
+    language: 'Malay / English',
+    currency_local: 'MYR',
+    image: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=1600&q=80',
+    universities_count: 8,
+    tuition_year: { bachelor: 4200, master: 5200, phd: 3800, language: 2000 },
+    living_year: { dorm: 2400, shared: 3600, rent: 6000 },
+    extra: { documents: 220, visa: 180, insurance: 300, flight: 520 },
+    typical_deadlines: [
+      { id: 'my-um', label: 'Universiti Malaya — Fall', date: '2026-07-01' },
+      { id: 'my-monash', label: 'Monash University Malaysia', date: '2026-05-30' },
+    ],
+    quiz_weight: { asia: 3, affordable: 3, prestige: 2, english: 3, kpop: 0, tech: 2, warm: 3, europe: 0, scholarship_focus: 2 },
+    universities: [
+      { name: 'Universiti Malaya (UM)', chip: 'QS Top 70', desc: "Malaysia's #1, English-medium across most programs." },
+      { name: 'Universiti Putra Malaysia', chip: 'Agriculture', desc: 'Research-intensive, top for agriculture and life sciences.' },
+      { name: 'Monash University Malaysia', chip: 'Aussie', desc: "Branch of Australia's Group-of-Eight university." },
+      { name: "Taylor's University", chip: 'Private', desc: 'Top private for hospitality, business, design.' },
+    ],
+  },
+];
+
+export function getCountry(slug: string): Country | undefined {
+  return COUNTRIES.find((c) => c.slug === slug);
+}
+
+export function allCountrySlugs(): string[] {
+  return COUNTRIES.map((c) => c.slug);
+}

@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #ffffff;
+  --color-fg: #0a0a0a;
+  --color-muted: #f5f7fa;
+  --color-muted-fg: #6b7280;
+  --color-border: #e5e7eb;
+
+  --color-primary: #0a2540;
+  --color-primary-light: #1e3a5f;
+  --color-primary-dark: #061a2e;
+  --color-primary-foreground: #ffffff;
+
+  --color-accent: #00d4aa;
+  --color-accent-light: #33ddbb;
+  --color-accent-dark: #00a386;
+  --color-accent-foreground: #052018;
+
+  --color-gold: #ffb800;
+  --color-gold-dark: #e09f00;
+
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-inter), system-ui, sans-serif;
+
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+
+  --shadow-card: 0 1px 2px rgba(10, 37, 64, 0.04), 0 8px 24px rgba(10, 37, 64, 0.06);
+  --shadow-card-hover: 0 4px 12px rgba(10, 37, 64, 0.08), 0 16px 40px rgba(10, 37, 64, 0.1);
+}
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.bg-hero-grad {
+  background: radial-gradient(1200px circle at 10% 0%, rgba(0, 212, 170, 0.12), transparent 40%),
+              radial-gradient(900px circle at 85% 10%, rgba(255, 184, 0, 0.10), transparent 45%),
+              linear-gradient(180deg, #f7fbff 0%, #ffffff 60%);
+}
+
+.bg-dark-stats {
+  background: radial-gradient(900px circle at 20% 20%, rgba(0, 212, 170, 0.18), transparent 45%),
+              radial-gradient(900px circle at 80% 80%, rgba(30, 58, 95, 0.5), transparent 50%),
+              #0a2540;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: saturate(140%) blur(8px);
+  -webkit-backdrop-filter: saturate(140%) blur(8px);
+}
+
+.container-x {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  max-width: 1280px;
+}
+
+@media (min-width: 1024px) {
+  .container-x { padding-left: 2rem; padding-right: 2rem; }
+}
+
+a, button { transition: color 180ms, background-color 180ms, border-color 180ms, transform 180ms, box-shadow 180ms; }
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.prose-body h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; font-weight: 700; }
+.prose-body h3 { font-size: 1.2rem; margin-top: 1.25rem; margin-bottom: 0.5rem; font-weight: 600; }
+.prose-body p { margin: 0.75rem 0; line-height: 1.75; color: #1f2937; }
+.prose-body ul, .prose-body ol { margin: 0.75rem 0 0.75rem 1.25rem; }
+.prose-body li { margin: 0.25rem 0; line-height: 1.7; }
+.prose-body strong { font-weight: 600; color: var(--color-primary); }
+.prose-body a { color: var(--color-accent-dark); text-decoration: underline; }
+
+.input {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  padding: 12px 14px;
+  font-size: 15px;
+  background: #fff;
+  color: var(--color-fg);
+  outline: none;
+  transition: box-shadow 180ms, border-color 180ms;
+}
+.input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.15);
+}
+textarea.input { min-height: 7rem; resize: vertical; }
+select.input { appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; }
