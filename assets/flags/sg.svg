@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-label="Flag of Singapore">
+  <rect width="900" height="300" fill="#ed2939"/>
+  <rect y="300" width="900" height="300" fill="#fff"/>
+  <g fill="#fff">
+    <circle cx="195" cy="150" r="72"/>
+  </g>
+  <g fill="#ed2939">
+    <circle cx="225" cy="150" r="72"/>
+  </g>
+  <g fill="#fff">
+    <g transform="translate(195 150)">
+      <g id="sg-star"><polygon points="0,-22 6.47,-6.86 22.2,-6.86 9.44,3.28 14.7,18.42 0,8.8 -14.7,18.42 -9.44,3.28 -22.2,-6.86 -6.47,-6.86"/></g>
+    </g>
+    <g transform="translate(240 150)"><use href="#sg-star"/></g>
+    <g transform="translate(285 150)"><use href="#sg-star"/></g>
+    <g transform="translate(218 110)"><use href="#sg-star"/></g>
+    <g transform="translate(262 110)"><use href="#sg-star"/></g>
+  </g>
+</svg>

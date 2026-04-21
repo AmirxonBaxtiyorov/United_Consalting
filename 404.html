@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A2540" />
+  <meta name="robots" content="noindex,follow" />
+  <title>404 — Страница не найдена | United Global Consulting</title>
+  <meta name="description" content="Страница не найдена. Вернитесь на главную United Global Consulting или воспользуйтесь быстрыми ссылками." />
+  <link rel="icon" type="image/png" href="GLODAL.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/enhancements.css" />
+  <script>
+  (function(){
+    try{
+      var t = localStorage.getItem('ugc_theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    }catch(_){ document.documentElement.setAttribute('data-theme','light'); }
+  })();
+  </script>
+</head>
+<body class="page-404">
+  <main class="container error-wrap">
+    <div class="error-card">
+      <div class="error-code">404</div>
+      <h1>Страница не найдена</h1>
+      <p>Похоже, эта страница улетела учиться за границу. Попробуйте вернуться на главную или перейти к одному из популярных разделов.</p>
+      <div class="error-actions">
+        <a href="index.html" class="btn btn-primary btn-lg">← На главную</a>
+        <a href="index.html#contact" class="btn btn-whatsapp btn-lg">Связаться с нами</a>
+      </div>
+      <div class="error-links">
+        <strong>Популярное:</strong>
+        <ul>
+          <li><a href="index.html#countries">Страны обучения</a></li>
+          <li><a href="index.html#services">Наши услуги</a></li>
+          <li><a href="index.html#scholarship">Стипендии и гранты</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="privacy.html">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

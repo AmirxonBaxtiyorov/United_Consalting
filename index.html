@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A2540" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0A0E1A" media="(prefers-color-scheme: dark)" />
+
+  <!-- Content Security Policy (P0-7) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com https://www.googletagmanager.com https://challenges.cloudflare.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https://images.unsplash.com https://flagcdn.com https://maps.googleapis.com https://maps.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://api.telegram.org https://script.google.com https://script.googleusercontent.com https://www.google-analytics.com https://region1.google-analytics.com; frame-src https://www.google.com https://www.youtube.com https://yandex.com https://yandex.ru https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me https://api.telegram.org; upgrade-insecure-requests;" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="permissions-policy" content="geolocation=(self), camera=(), microphone=(), payment=()" />
+
+  <title data-i18n="meta.title">United Global Consulting — Начните будущее за рубежом</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="Профессиональная помощь в поступлении в университеты Кореи, Европы, Америки и Сингапура: документы, admission, виза. 500+ успешных студентов, 10+ стран, 50+ университетов." />
+  <meta name="keywords" content="учёба за рубежом, Korea university, Singapore studies, scholarship, grant, visa, IELTS, study abroad Uzbekistan, chet elda o'qish" />
+  <meta name="author" content="United Global Consulting" />
+  <link rel="canonical" href="https://unitedglobal.uz/" />
+
+  <!-- hreflang (P2-15) -->
+  <link rel="alternate" hreflang="uz" href="https://unitedglobal.uz/?lang=uz" />
+  <link rel="alternate" hreflang="ru" href="https://unitedglobal.uz/?lang=ru" />
+  <link rel="alternate" hreflang="en" href="https://unitedglobal.uz/?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="https://unitedglobal.uz/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://unitedglobal.uz/" />
+  <meta property="og:title" data-i18n-attr="content:meta.title" content="United Global Consulting" />
+  <meta property="og:description" data-i18n-attr="content:meta.description" content="Help with admission to universities in Korea, Europe, USA and Singapore." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" data-i18n-attr="content:meta.og_locale" content="ru_RU" />
+  <meta property="og:locale:alternate" content="uz_UZ" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="United Global Consulting" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" data-i18n-attr="content:meta.title" content="United Global Consulting" />
+  <meta name="twitter:description" data-i18n-attr="content:meta.description" content="Study abroad — from dream to result." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Favicon + PWA -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="GLODAL.png" sizes="512x512" />
+  <link rel="apple-touch-icon" href="GLODAL.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  <!-- Fonts: self-hostable later, for now Google Fonts with preconnect + swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Hero image preload (P1-10) -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80" fetchpriority="high" />
+
+  <!-- Preconnect to image CDN (perf) -->
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin />
+
+  <!-- Lucide icons (P0-6: pinned version + SRI — hash verified against unpkg @0.456.0) -->
+  <script src="https://unpkg.com/lucide@0.456.0/dist/umd/lucide.min.js"
+          integrity="sha384-xxUH8dZ+9qK6wOz3bNViyhHSIuVBQT5jsFlZAowZsRzRDsEqGjLGMJ/Wg10MPC3H"
+          crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/enhancements.css" />
+
+  <!-- JSON-LD: EducationalOrganization + LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://unitedglobal.uz/#org",
+        "name": "United Global Consulting",
+        "url": "https://unitedglobal.uz",
+        "logo": "https://unitedglobal.uz/GLODAL.png",
+        "description": "International education consulting agency helping students from Uzbekistan study abroad.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tashkent",
+          "addressRegion": "Toshkent",
+          "addressCountry": "UZ"
+        },
+        "telephone": "+998885263000",
+        "email": "info@unitedglobal.uz",
+        "sameAs": [
+          "https://wa.me/998885263000",
+          "https://t.me/unitedglobal",
+          "https://instagram.com/unitedglobal.uz"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "500",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://unitedglobal.uz/#business",
+        "name": "United Global Consulting",
+        "image": "https://unitedglobal.uz/GLODAL.png",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tashkent",
+          "addressCountry": "UZ"
+        },
+        "telephone": "+998885263000",
+        "openingHours": "Mo-Sa 09:00-19:00",
+        "url": "https://unitedglobal.uz"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD FAQPage (P1-5) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Can I apply without IELTS?","acceptedAnswer":{"@type":"Answer","text":"Some universities don't require IELTS or accept alternatives (Duolingo, internal tests). We help find these programs."}},
+      {"@type":"Question","name":"Is there a chance with low grades?","acceptedAnswer":{"@type":"Answer","text":"Yes. We use individual approach and find universities matching your level."}},
+      {"@type":"Question","name":"Is it hard to get a visa?","acceptedAnswer":{"@type":"Answer","text":"With correct and complete documents the chance is very high. We support you at each stage."}},
+      {"@type":"Question","name":"Can I pay tuition in instalments?","acceptedAnswer":{"@type":"Answer","text":"In most cases, yes. We build a comfortable payment plan."}},
+      {"@type":"Question","name":"How long does the process take?","acceptedAnswer":{"@type":"Answer","text":"Usually 3-6 months. Some fast-track programs are possible in 1-2 months."}},
+      {"@type":"Question","name":"What is the required age?","acceptedAnswer":{"@type":"Answer","text":"Bachelor — 17+, Master — 21+. Practically no upper age limit."}}
+    ]
+  }
+  </script>
+
+  <!-- Dark mode flash prevention (inlined, early) -->
+  <script>
+  (function(){
+    try{
+      var t = localStorage.getItem('ugc_theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    }catch(_){ document.documentElement.setAttribute('data-theme','light'); }
+  })();
+  </script>
+</head>
+<body>
+  <!-- Skip to content -->
+  <a href="#main" class="skip-link" data-i18n="nav.skip">Skip to main content</a>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo" data-i18n-attr="aria-label:nav.home" aria-label="United Global Consulting — home">
+        <span class="logo-icon"><i data-lucide="globe-2"></i></span>
+        <span class="logo-text">
+          <span class="logo-line-1">United Global</span>
+          <span class="logo-line-2">Consulting</span>
+        </span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary">
+        <a href="#hero" class="nav-link" data-i18n="nav.home">Home</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+        <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
+        <a href="#countries" class="nav-link" data-i18n="nav.countries">Countries</a>
+        <a href="#scholarship" class="nav-link" data-i18n="nav.scholarships">Scholarships</a>
+        <a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">Testimonials</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" data-i18n-attr="aria-label:nav.theme_toggle" aria-label="Toggle theme">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" aria-haspopup="true" aria-expanded="false" id="langBtn">
+            <i data-lucide="languages"></i>
+            <span id="currentLang">RU</span>
+            <i data-lucide="chevron-down" class="caret"></i>
+          </button>
+          <ul class="lang-dropdown" role="menu">
+            <li role="none"><button role="menuitem" data-lang="uz">O'zbekcha</button></li>
+            <li role="none"><button role="menuitem" data-lang="ru">Русский</button></li>
+            <li role="none"><button role="menuitem" data-lang="en">English</button></li>
+          </ul>
+        </div>
+
+        <a href="#contact" class="btn btn-primary nav-cta" data-ga-event="cta_nav">
+          <i data-lucide="message-circle"></i>
+          <span data-i18n="nav.cta">Free consultation</span>
+        </a>
+
+        <button class="burger" id="burger" data-i18n-attr="aria-label:nav.menu_open" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile menu">
+      <nav class="mobile-nav">
+        <a href="#hero" class="mobile-link" data-i18n="nav.home">Home</a>
+        <a href="#about" class="mobile-link" data-i18n="nav.about">About</a>
+        <a href="#services" class="mobile-link" data-i18n="nav.services">Services</a>
+        <a href="#countries" class="mobile-link" data-i18n="nav.countries">Countries</a>
+        <a href="#scholarship" class="mobile-link" data-i18n="nav.scholarships">Scholarships</a>
+        <a href="#testimonials" class="mobile-link" data-i18n="nav.testimonials">Testimonials</a>
+        <a href="#contact" class="mobile-link" data-i18n="nav.contact">Contact</a>
+        <a href="#contact" class="btn btn-primary mobile-cta" data-i18n="nav.mobile_cta">Get a free consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-particles" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content reveal" data-reveal="up">
+          <div class="hero-eyebrow">
+            <i data-lucide="sparkles"></i>
+            <span data-i18n="hero.eyebrow">International Education Agency</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="word-underline" data-i18n="hero.title_1">Start your future</span> <span data-i18n="hero.title_2">abroad</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            We help you get admitted to universities in Korea, Europe, USA and Singapore.
+          </p>
+
+          <ul class="hero-bullets">
+            <li><span class="bullet-icon"><i data-lucide="graduation-cap"></i></span><span data-i18n="hero.bullet_1">We find the right university</span></li>
+            <li><span class="bullet-icon"><i data-lucide="file-check-2"></i></span><span data-i18n="hero.bullet_2">We prepare documents properly</span></li>
+            <li><span class="bullet-icon"><i data-lucide="plane-takeoff"></i></span><span data-i18n="hero.bullet_3">We support you to visa</span></li>
+          </ul>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary btn-lg" data-ga-event="cta_hero">
+              <i data-lucide="calendar-check-2"></i>
+              <span data-i18n="hero.cta_primary">Get a free consultation</span>
+            </a>
+            <a href="https://wa.me/998885263000" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer" data-ga-event="whatsapp_hero">
+              <i data-lucide="message-circle"></i>
+              <span data-i18n="hero.cta_whatsapp">Chat on WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="hero-microtrust">
+            <div class="avatars">
+              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=80&h=80&q=80" alt="Student" width="40" height="40" loading="lazy" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80" alt="Student" width="40" height="40" loading="lazy" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=80&h=80&q=80" alt="Student" width="40" height="40" loading="lazy" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=80&h=80&q=80" alt="Student" width="40" height="40" loading="lazy" decoding="async" />
+            </div>
+            <div class="micro-text">
+              <div class="stars" data-i18n-attr="aria-label:hero.stars_label" aria-label="5 out of 5 stars">
+                <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+              </div>
+              <span><strong>500+</strong> <span data-i18n="hero.microtrust">students trusted us</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" data-reveal="right">
+          <div class="hero-photo">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80" alt="Student preparing to study abroad" width="900" height="600" loading="eager" fetchpriority="high" decoding="async" />
+          </div>
+
+          <div class="float-card float-card-1">
+            <div class="fc-icon"><i data-lucide="graduation-cap"></i></div>
+            <div class="fc-text">
+              <strong>Sungkyunkwan</strong>
+              <span>Seoul, Korea</span>
+            </div>
+          </div>
+
+          <div class="float-card float-card-2">
+            <div class="fc-icon gold"><i data-lucide="award"></i></div>
+            <div class="fc-text">
+              <strong>Full Scholarship</strong>
+              <span>100%</span>
+            </div>
+          </div>
+
+          <div class="float-card float-card-3">
+            <div class="fc-icon emerald"><i data-lucide="check-circle-2"></i></div>
+            <div class="fc-text">
+              <strong>Visa Approved</strong>
+              <span>3 weeks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#trust-bar" class="scroll-indicator" aria-label="Scroll down">
+        <span class="mouse"><span class="wheel"></span></span>
+        <span class="scroll-text" data-i18n="hero.scroll">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ===================== TRUST BAR ===================== -->
+    <section class="trust-bar" id="trust-bar">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item reveal" data-reveal="up">
+            <span class="trust-icon"><i data-lucide="badge-check"></i></span>
+            <span class="trust-text" data-i18n="trust.item_1">Official partner universities</span>
+          </div>
+          <div class="trust-item reveal" data-reveal="up" data-delay="100">
+            <span class="trust-icon"><i data-lucide="shield-check"></i></span>
+            <span class="trust-text" data-i18n="trust.item_2">Transparent and honest service</span>
+          </div>
+          <div class="trust-item reveal" data-reveal="up" data-delay="200">
+            <span class="trust-icon"><i data-lucide="zap"></i></span>
+            <span class="trust-text" data-i18n="trust.item_3">Fast communication and support</span>
+          </div>
+          <div class="trust-item reveal" data-reveal="up" data-delay="300">
+            <span class="trust-icon"><i data-lucide="user-check"></i></span>
+            <span class="trust-text" data-i18n="trust.item_4">Individual approach</span>
+          </div>
+        </div>
+
+        <div class="partners-strip" data-i18n-attr="aria-label:trust.partners_label" aria-label="Partner universities">
+          <div class="partners-track">
+            <span class="partner-logo">SEOUL NATIONAL UNIV.</span>
+            <span class="partner-logo">SUNGKYUNKWAN</span>
+            <span class="partner-logo">NUS Singapore</span>
+            <span class="partner-logo">NTU</span>
+            <span class="partner-logo">University of Helsinki</span>
+            <span class="partner-logo">Politecnico di Milano</span>
+            <span class="partner-logo">University of Latvia</span>
+            <span class="partner-logo">Bocconi</span>
+            <span class="partner-logo">Yonsei University</span>
+            <span class="partner-logo">Korea University</span>
+            <span class="partner-logo" aria-hidden="true">SEOUL NATIONAL UNIV.</span>
+            <span class="partner-logo" aria-hidden="true">SUNGKYUNKWAN</span>
+            <span class="partner-logo" aria-hidden="true">NUS Singapore</span>
+            <span class="partner-logo" aria-hidden="true">NTU</span>
+            <span class="partner-logo" aria-hidden="true">University of Helsinki</span>
+            <span class="partner-logo" aria-hidden="true">Politecnico di Milano</span>
+            <span class="partner-logo" aria-hidden="true">University of Latvia</span>
+            <span class="partner-logo" aria-hidden="true">Bocconi</span>
+            <span class="partner-logo" aria-hidden="true">Yonsei University</span>
+            <span class="partner-logo" aria-hidden="true">Korea University</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal" data-reveal="left">
+          <div class="about-photo">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="United Global Consulting team" width="900" height="600" loading="lazy" decoding="async" />
+          </div>
+          <div class="about-badge">
+            <i data-lucide="award"></i>
+            <div>
+              <strong data-i18n="about.badge_title">5+ years of experience</strong>
+              <span data-i18n="about.badge_sub">In international consulting</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal" data-reveal="right">
+          <span class="eyebrow gold" data-i18n="about.eyebrow">ABOUT US</span>
+          <h2 class="section-title" data-i18n="about.title">Why United Global Consulting?</h2>
+          <p class="lead" data-i18n="about.lead">
+            Today many students lose their chance due to wrong information or unreliable consulting.
+          </p>
+          <p data-i18n="about.body">
+            Our mission is to guide every student the right way and help them get admitted to an international university.
+          </p>
+
+          <div class="mini-stats">
+            <div class="mini-stat">
+              <strong class="counter" data-target="500" data-suffix="+">0</strong>
+              <span data-i18n="about.stat_students">Successful students</span>
+            </div>
+            <div class="mini-stat">
+              <strong class="counter" data-target="10" data-suffix="+">0</strong>
+              <span data-i18n="about.stat_countries">Countries</span>
+            </div>
+            <div class="mini-stat">
+              <strong class="counter" data-target="5" data-suffix="+">0</strong>
+              <span data-i18n="about.stat_years">Years of experience</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY CHOOSE US ===================== -->
+    <section class="section why-us" id="why-us">
+      <div class="container">
+        <div class="section-header reveal" data-reveal="up">
+          <span class="eyebrow gold" data-i18n="why.eyebrow">WHY US</span>
+          <h2 class="section-title" data-i18n="why.title">Our advantages</h2>
+          <p class="section-subtitle" data-i18n="why.subtitle">Your success is our main goal</p>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card reveal" data-reveal="up">
+            <div class="why-icon"><i data-lucide="graduation-cap"></i></div>
+            <h3 data-i18n="why.card_1_t">Official partner universities</h3>
+            <p data-i18n="why.card_1_d">We partner with universities in Korea, Singapore, Europe and more.</p>
+          </article>
+
+          <article class="why-card reveal" data-reveal="up" data-delay="80">
+            <div class="why-icon"><i data-lucide="file-text"></i></div>
+            <h3 data-i18n="why.card_2_t">Professional document preparation</h3>
+            <p data-i18n="why.card_2_d">Every document is carefully reviewed and submitted error-free.</p>
+          </article>
+
+          <article class="why-card reveal" data-reveal="up" data-delay="160">
+            <div class="why-icon"><i data-lucide="plane"></i></div>
+            <h3 data-i18n="why.card_3_t">Full visa support</h3>
+            <p data-i18n="why.card_3_d">From application to embassy — we are with you all the way.</p>
+          </article>
+
+          <article class="why-card reveal" data-reveal="up" data-delay="240">
+            <div class="why-icon"><i data-lucide="headphones"></i></div>
+            <h3 data-i18n="why.card_4_t">Constant support</h3>
+            <p data-i18n="why.card_4_d">Fast answers to your questions 24/7.</p>
+          </article>
+
+          <article class="why-card reveal" data-reveal="up" data-delay="320">
+            <div class="why-icon"><i data-lucide="globe"></i></div>
+            <h3 data-i18n="why.card_5_t">Many country options</h3>
+            <p data-i18n="why.card_5_d">Not just one — we pick the best option for you.</p>
+          </article>
+
+          <article class="why-card reveal" data-reveal="up" data-delay="400">
+            <div class="why-icon"><i data-lucide="target"></i></div>
+            <h3 data-i18n="why.card_6_t">Result-oriented approach</h3>
+            <p data-i18n="why.card_6_d">Our goal is to send you abroad to study.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COUNTRIES ===================== -->
+    <section class="section countries" id="countries">
+      <div class="container">
+        <div class="section-header reveal" data-reveal="up">
+          <span class="eyebrow gold" data-i18n="countries.eyebrow">DESTINATIONS</span>
+          <h2 class="section-title" data-i18n="countries.title">Countries we send students to</h2>
+          <p class="section-subtitle" data-i18n="countries.subtitle">Hundreds of universities in 10+ countries</p>
+        </div>
+
+        <div class="countries-grid">
+          <!-- Korea -->
+          <article class="country-card reveal" data-reveal="up" data-country="korea">
+            <div class="country-image">
+              <img src="https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=600&q=80" alt="Seoul, Korea" width="600" height="400" loading="lazy" decoding="async" />
+              <img class="country-flag" src="https://flagcdn.com/w80/kr.png" srcset="https://flagcdn.com/w80/kr.png 1x, https://flagcdn.com/w160/kr.png 2x" alt="" width="40" height="28" loading="lazy" decoding="async" />
+            </div>
+            <div class="country-body">
+              <h3 data-i18n="country_names.korea">South Korea</h3>
+              <p><span>25+</span> <span data-i18n="countries.universities">universities</span></p>
+              <a href="countries/korea.html" class="country-link" data-ga-event="country_korea"><span data-i18n="countries.details">Learn more</span> <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+          <!-- Singapore -->
+          <article class="country-card reveal" data-reveal="up" data-delay="60" data-country="singapore">
+            <div class="country-image">
+              <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=600&q=80" alt="Singapore" width="600" height="400" loading="lazy" decoding="async" />
+              <img class="country-flag" src="https://flagcdn.com/w80/sg.png" srcset="https://flagcdn.com/w80/sg.png 1x, https://flagcdn.com/w160/sg.png 2x" alt="" width="40" height="28" loading="lazy" decoding="async" />
+            </div>
+            <div class="country-body">
+              <h3 data-i18n="country_names.singapore">Singapore</h3>
+              <p><span>12+</span> <span data-i18n="countries.universities">universities</span></p>
+              <a href="countries/singapore.html" class="country-link" data-ga-event="country_singapore"><span data-i18n="countries.details">Learn more</span> <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+          <!-- USA -->
+          <article class="country-card reveal" data-reveal="up" data-delay="120" data-country="usa">
+            <div class="country-image">
+              <img src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&w=600&q=80" alt="New York, USA" width="600" height="400" loading="lazy" decoding="async" />
+              <img class="country-flag" src="https://flagcdn.com/w80/us.png" srcset="https://flagcdn.com/w80/us.png 1x, https://flagcdn.com/w160/us.png 2x" alt="" width="40" height="28" loading="lazy" decoding="async" />
+            </div>
+            <div class="country-body">
+              <h3 data-i18n="country_names.usa">United States</h3>
+              <p><span>30+</span> <span data-i18n="countries.universities">universities</span></p>
+              <a href="countries/usa.html" class="country-link" data-ga-event="country_usa"><span data-i18n="countries.details">Learn more</span> <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+          <!-- Italy -->
+          <article class="country-card reveal" data-reveal="up" data-delay="180" data-country="italy">
+            <div class="country-image">
+              <img src="https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=600&q=80" alt="Italy" width="600" height="400" loading="lazy" decoding="async" />
+              <img class="country-flag" src="https://flagcdn.com/w80/it.png" srcset="https://flagcdn.com/w80/it.png 1x, https://flagcdn.com/w160/it.png 2x" alt="" width="40" height="28" loading="lazy" decoding="async" />
+            </div>
+            <div class="country-body">
+              <h3 data-i18n="country_names.italy">Italy</h3>
+              <p><span>15+</span> <span data-i18n="countries.universities">universities</span></p>
+              <a href="countries/italy.html" class="country-link" data-ga-event="country_italy"><span data-i18n="countries.details">Learn more</span> <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+          <!-- Luxembourg -->
+          <article class="country-card reveal" data-reveal="up" data-delay="240" data-country="luxembourg">
+            <div class="country-image">
+              <img src="https://images.unsplash.com/photo-1591622180592-8aef9c3e7c5d?auto=format&fit=crop&w=600&q=80" alt="Luxembourg" width="600" height="400" loading="lazy" decoding="async" />
+              <img class="country-flag" src="https://flagcdn.com/w80/lu.png" srcset="https://flagcdn.com/w80/lu.png 1x, https://flagcdn.com/w160/lu.png 2x" alt="" width="40" height="28" loading="lazy" decoding="async" />
+            </div>
+            <div class="country-body">
+              <h3 data-i18n="country_names.luxembourg">Luxembourg</h3>
+              <p><span>5+</span> <span data-i18n="countries.universities">universities</span></p>
+              <a href="countries/luxembourg.html" class="country-link" data-ga-event="country_luxembourg"><span data-i18n="countries.details">Learn more</span> <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+          <!-- Finland -->
+          <article class="country-card reveal" data-reveal="up" data-country="finland">
+            <div class="country-image">
+              <img src="https://images.unsplash.com/photo-1559686043-aef1bb74cb1c?auto=format&fit=crop&w=600&q=80" alt="Finland" width="600" height="400" loading="lazy" decoding="async" />
+              <img class="country-flag" src="https://flagcdn.com/w80/fi.png" srcset="https://flagcdn.com/w80/fi.png 1x, https://flagcdn.com/w160/fi.png 2x" alt="" width="40" height="28" loading="lazy" decoding="async" />
+            </div>
+            <div class="country-body">
+              <h3 data-i18n="country_names.finland">Finland</h3>
+              <p><span>10+</span> <span data-i18n="countries.universities">universities</span></p>
+              <a href="countries/finland.html" class="country-link" data-ga-event="country_finland"><span data-i18n="countries.details">Learn more</span> <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+          <!-- Turkey -->
+          <article class="country-card reveal" data-reveal="up" data-delay="60" data-country="turkey">
+            <div class="country-image">
+              <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=600&q=80" alt="Istanbul, Turkey" width="600" height="400" loading="lazy" decoding="async" />
+              <img class="country-flag" src="https://flagcdn.com/w80/tr.png" srcset="https://flagcdn.com/w80/tr.png 1x, https://flagcdn.com/w160/tr.png 2x" alt="" width="40" height="28" loading="lazy" decoding="async" />
+            </div>
+            <div class="country-body">
+              <h3 data-i18n="country_names.turkey">Türkiye</h3>
+              <p><span>20+</span> <span data-i18n="countries.universities">universities</span></p>
+              <a href="countries/turkey.html" class="country-link" data-ga-event="country_turkey"><span data-i18n="countries.details">Learn more</span> <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+          <!-- Japan -->
+          <article class="country-card reveal" data-reveal="up" data-delay="120" data-country="japan">
+            <div class="country-image">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80" alt="Tokyo, Japan" width="600" height="400" loading="lazy" decoding="async" />
+              <img class="country-flag" src="https://flagcdn.com/w80/jp.png" srcset="https://flagcdn.com/w80/jp.png 1x, https://flagcdn.com/w160/jp.png 2x" alt="" width="40" height="28" loading="lazy" decoding="async" />
+            </div>
+            <div class="country-body">
+              <h3 data-i18n="country_names.japan">Japan</h3>
+              <p><span>18+</span> <span data-i18n="countries.universities">universities</span></p>
+              <a href="countries/japan.html" class="country-link" data-ga-event="country_japan"><span data-i18n="countries.details">Learn more</span> <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+          <!-- Latvia -->
+          <article class="country-card reveal" data-reveal="up" data-delay="180" data-country="latvia">
+            <div class="country-image">
+              <img src="https://images.unsplash.com/photo-1564898818877-1f49c1aac0c9?auto=format&fit=crop&w=600&q=80" alt="Riga, Latvia" width="600" height="400" loading="lazy" decoding="async" />
+              <img class="country-flag" src="https://flagcdn.com/w80/lv.png" srcset="https://flagcdn.com/w80/lv.png 1x, https://flagcdn.com/w160/lv.png 2x" alt="" width="40" height="28" loading="lazy" decoding="async" />
+            </div>
+            <div class="country-body">
+              <h3 data-i18n="country_names.latvia">Latvia</h3>
+              <p><span>6+</span> <span data-i18n="countries.universities">universities</span></p>
+              <a href="countries/latvia.html" class="country-link" data-ga-event="country_latvia"><span data-i18n="countries.details">Learn more</span> <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+          <!-- Malaysia -->
+          <article class="country-card reveal" data-reveal="up" data-delay="240" data-country="malaysia">
+            <div class="country-image">
+              <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=600&q=80" alt="Kuala Lumpur, Malaysia" width="600" height="400" loading="lazy" decoding="async" />
+              <img class="country-flag" src="https://flagcdn.com/w80/my.png" srcset="https://flagcdn.com/w80/my.png 1x, https://flagcdn.com/w160/my.png 2x" alt="" width="40" height="28" loading="lazy" decoding="async" />
+            </div>
+            <div class="country-body">
+              <h3 data-i18n="country_names.malaysia">Malaysia</h3>
+              <p><span>8+</span> <span data-i18n="countries.universities">universities</span></p>
+              <a href="countries/malaysia.html" class="country-link" data-ga-event="country_malaysia"><span data-i18n="countries.details">Learn more</span> <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="countries-cta reveal" data-reveal="up">
+          <p data-i18n="countries.cta_note">Write to us and we will help you pick the right country</p>
+          <a href="#contact" class="btn btn-primary"><span data-i18n="countries.cta_button">Get a consultation</span> <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section services" id="services">
+      <div class="services-pattern" aria-hidden="true"></div>
+      <div class="container services-grid">
+        <div class="services-visual reveal" data-reveal="left">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="Professional consulting service" width="900" height="600" loading="lazy" decoding="async" />
+          <div class="services-badge">
+            <i data-lucide="sparkles"></i>
+            <span data-i18n="services.badge">9 full services</span>
+          </div>
+        </div>
+
+        <div class="services-content reveal" data-reveal="right">
+          <span class="eyebrow gold" data-i18n="services.eyebrow">SERVICES</span>
+          <h2 class="section-title" data-i18n="services.title">Our services</h2>
+          <p class="section-subtitle" data-i18n="services.subtitle">Everything you need in one place — from start to finish</p>
+
+          <ul class="services-list">
+            <li class="service-item">
+              <span class="check"><i data-lucide="check"></i></span>
+              <div>
+                <strong data-i18n="services.item_1_t">University selection</strong>
+                <span data-i18n="services.item_1_d">Best options matched to your profile</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <span class="check"><i data-lucide="check"></i></span>
+              <div>
+                <strong data-i18n="services.item_2_t">Admission application</strong>
+                <span data-i18n="services.item_2_d">We handle the full process for you</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <span class="check"><i data-lucide="check"></i></span>
+              <div>
+                <strong data-i18n="services.item_3_t">Motivation letter</strong>
+                <span data-i18n="services.item_3_d">We tell your story vividly</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <span class="check"><i data-lucide="check"></i></span>
+              <div>
+                <strong data-i18n="services.item_4_t">CV preparation</strong>
+                <span data-i18n="services.item_4_d">Professional CV by international standards</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <span class="check"><i data-lucide="check"></i></span>
+              <div>
+                <strong data-i18n="services.item_5_t">Translation & apostille</strong>
+                <span data-i18n="services.item_5_d">Notarised official documents</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <span class="check"><i data-lucide="check"></i></span>
+              <div>
+                <strong data-i18n="services.item_6_t">Scholarship advice</strong>
+                <span data-i18n="services.item_6_d">We help you find the right grant</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <span class="check"><i data-lucide="check"></i></span>
+              <div>
+                <strong data-i18n="services.item_7_t">Interview preparation</strong>
+                <span data-i18n="services.item_7_d">Mock interviews and practical drills</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <span class="check"><i data-lucide="check"></i></span>
+              <div>
+                <strong data-i18n="services.item_8_t">Visa guidance</strong>
+                <span data-i18n="services.item_8_d">100% support at the embassy stage</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <span class="check"><i data-lucide="check"></i></span>
+              <div>
+                <strong data-i18n="services.item_9_t">Departure preparation</strong>
+                <span data-i18n="services.item_9_d">Flight, accommodation, insurance — all set</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SCHOLARSHIP ===================== -->
+    <section class="section scholarship" id="scholarship">
+      <div class="scholarship-bg" aria-hidden="true">
+        <div class="stars-bg"></div>
+      </div>
+      <div class="container">
+        <div class="section-header section-header-light reveal" data-reveal="up">
+          <span class="eyebrow gold" data-i18n="scholarship.eyebrow">SCHOLARSHIPS &amp; GRANTS</span>
+          <h2 class="section-title" data-i18n="scholarship.title">Scholarship and grant opportunities</h2>
+          <p class="section-subtitle" data-i18n="scholarship.subtitle">Don't be afraid of tuition — there is a solution</p>
+        </div>
+
+        <p class="scholarship-lead reveal" data-reveal="up" data-i18n="scholarship.lead">
+          Many students are afraid of tuition cost. In reality, many universities offer these options:
+        </p>
+
+        <div class="scholarship-grid">
+          <article class="scholarship-card reveal" data-reveal="up">
+            <div class="sch-icon"><i data-lucide="graduation-cap"></i></div>
+            <h3 data-i18n="scholarship.card_1_t">Partial scholarship</h3>
+            <p data-i18n="scholarship.card_1_d">Partial coverage — discount from 30% up to 70%.</p>
+          </article>
+          <article class="scholarship-card reveal" data-reveal="up" data-delay="80">
+            <div class="sch-icon"><i data-lucide="medal"></i></div>
+            <h3 data-i18n="scholarship.card_2_t">Full scholarship</h3>
+            <p data-i18n="scholarship.card_2_d">Fully funded studies — 100% tuition covered.</p>
+          </article>
+          <article class="scholarship-card reveal" data-reveal="up" data-delay="160">
+            <div class="sch-icon"><i data-lucide="percent"></i></div>
+            <h3 data-i18n="scholarship.card_3_t">Tuition discount</h3>
+            <p data-i18n="scholarship.card_3_d">Fixed discount on tuition every semester.</p>
+          </article>
+          <article class="scholarship-card reveal" data-reveal="up" data-delay="240">
+            <div class="sch-icon"><i data-lucide="trophy"></i></div>
+            <h3 data-i18n="scholarship.card_4_t">Merit-based grant</h3>
+            <p data-i18n="scholarship.card_4_d">Grant awarded based on academic performance.</p>
+          </article>
+        </div>
+
+        <div class="scholarship-cta reveal" data-reveal="up">
+          <p data-i18n="scholarship.cta_note">We help you find the right scholarship for your profile</p>
+          <a href="#contact" class="btn btn-gold">
+            <span data-i18n="scholarship.cta_button">Check my opportunities</span> <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DEADLINES COUNTDOWN (NEW-13) ===================== -->
+    <section class="section deadlines" id="deadlines" aria-labelledby="deadlinesTitle">
+      <div class="container">
+        <div class="deadlines-head reveal" data-reveal="up">
+          <span class="eyebrow" data-i18n="deadlines.eyebrow">DON'T MISS</span>
+          <h2 id="deadlinesTitle" data-i18n="deadlines.title">Upcoming intake deadlines</h2>
+          <p style="color:rgba(255,255,255,.7); max-width: 560px; margin: 10px auto 0;" data-i18n="deadlines.subtitle">Application windows close earlier than you think. Secure your spot with a free strategy call.</p>
+        </div>
+        <div class="deadlines-grid reveal" data-reveal="up" id="deadlinesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== TUITION CALCULATOR (NEW-1) ===================== -->
+    <section class="section calc" id="calculator" aria-labelledby="calcTitle">
+      <div class="container">
+        <div class="section-header reveal" data-reveal="up">
+          <span class="eyebrow gold" data-i18n="calc.eyebrow">COST CALCULATOR</span>
+          <h2 class="section-title" id="calcTitle" data-i18n="calc.title">Estimate your study-abroad budget</h2>
+          <p class="section-subtitle" data-i18n="calc.subtitle">Pick a country, degree, and housing — we'll show an indicative year-one budget.</p>
+        </div>
+
+        <div class="calc-grid">
+          <form class="calc-form reveal" data-reveal="left" id="calcForm" novalidate>
+            <label>
+              <span data-i18n="calc.country">Country</span>
+              <select name="country" id="calcCountry"></select>
+            </label>
+            <label>
+              <span data-i18n="calc.level">Degree</span>
+              <select name="level" id="calcLevel">
+                <option value="bachelor" data-i18n="calc.bachelor">Bachelor</option>
+                <option value="master" data-i18n="calc.master">Master</option>
+                <option value="phd" data-i18n="calc.phd">PhD</option>
+                <option value="language" data-i18n="calc.language">Language course</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="calc.housing">Housing</span>
+              <select name="housing" id="calcHousing">
+                <option value="dorm" data-i18n="calc.dorm">Dormitory</option>
+                <option value="shared" data-i18n="calc.shared">Shared apartment</option>
+                <option value="rent" data-i18n="calc.rent">Private rent</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="calc.duration">Duration (years)</span>
+              <div class="calc-range-row">
+                <input type="range" min="1" max="5" value="1" id="calcDuration" />
+                <span class="calc-range-val" id="calcDurationVal">1</span>
+              </div>
+            </label>
+          </form>
+
+          <aside class="calc-result reveal" data-reveal="right" aria-live="polite">
+            <h3 data-i18n="calc.estimate_title">Year-one estimate (USD)</h3>
+            <div class="calc-line"><span data-i18n="calc.tuition">Tuition</span><span id="calcTuition">$0</span></div>
+            <div class="calc-line"><span data-i18n="calc.living">Living</span><span id="calcLiving">$0</span></div>
+            <div class="calc-line"><span data-i18n="calc.documents">Documents + translation</span><span id="calcDocs">$0</span></div>
+            <div class="calc-line"><span data-i18n="calc.visa">Visa fees</span><span id="calcVisa">$0</span></div>
+            <div class="calc-line"><span data-i18n="calc.insurance">Insurance</span><span id="calcInsurance">$0</span></div>
+            <div class="calc-line"><span data-i18n="calc.flight">Flight</span><span id="calcFlight">$0</span></div>
+            <div class="calc-line calc-total"><span data-i18n="calc.total">Total year 1</span><span id="calcTotal">$0</span></div>
+            <div class="calc-line" id="calcMultiyearRow" hidden><span data-i18n="calc.multi_total">Total full program</span><span id="calcMultiyear">$0</span></div>
+            <a href="#contact" class="calc-cta" id="calcCta" data-ga-event="calculator_cta">
+              <i data-lucide="send"></i>
+              <span data-i18n="calc.cta">Request a personalised plan</span>
+            </a>
+            <p class="calc-note" data-i18n="calc.note">Figures are indicative; actual costs depend on university, city and lifestyle. Ask us for a bespoke budget.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== QUIZ: which country fits you (NEW-17) ===================== -->
+    <section class="section quiz" id="quiz" aria-labelledby="quizTitle">
+      <div class="container">
+        <div class="section-header reveal" data-reveal="up">
+          <span class="eyebrow gold" data-i18n="quiz.eyebrow">QUICK QUIZ</span>
+          <h2 class="section-title" id="quizTitle" data-i18n="quiz.title">Which country fits you?</h2>
+          <p class="section-subtitle" data-i18n="quiz.subtitle">Five questions. 45 seconds. Three personalised matches at the end.</p>
+        </div>
+
+        <div class="quiz-card reveal" data-reveal="up" id="quizCard">
+          <div class="quiz-progress" id="quizProgress" aria-hidden="true"></div>
+          <div id="quizBody"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section-header reveal" data-reveal="up">
+          <span class="eyebrow gold" data-i18n="process.eyebrow">HOW IT WORKS</span>
+          <h2 class="section-title" data-i18n="process.title">How we work</h2>
+          <p class="section-subtitle" data-i18n="process.subtitle">5 simple steps to your dream</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-line" aria-hidden="true"></div>
+
+          <div class="step reveal" data-reveal="up">
+            <div class="step-num">01</div>
+            <div class="step-icon"><i data-lucide="message-square-heart"></i></div>
+            <h3 data-i18n="process.step_1_t">Free consultation</h3>
+            <p data-i18n="process.step_1_d">We map your goals and opportunities</p>
+          </div>
+
+          <div class="step reveal" data-reveal="up" data-delay="100">
+            <div class="step-num">02</div>
+            <div class="step-icon"><i data-lucide="search-check"></i></div>
+            <h3 data-i18n="process.step_2_t">University selection</h3>
+            <p data-i18n="process.step_2_d">We propose matching options</p>
+          </div>
+
+          <div class="step reveal" data-reveal="up" data-delay="200">
+            <div class="step-num">03</div>
+            <div class="step-icon"><i data-lucide="file-stack"></i></div>
+            <h3 data-i18n="process.step_3_t">Document preparation</h3>
+            <p data-i18n="process.step_3_d">All documents prepared professionally</p>
+          </div>
+
+          <div class="step reveal" data-reveal="up" data-delay="300">
+            <div class="step-num">04</div>
+            <div class="step-icon"><i data-lucide="ticket-check"></i></div>
+            <h3 data-i18n="process.step_4_t">Admission & visa</h3>
+            <p data-i18n="process.step_4_d">Full support on both stages</p>
+          </div>
+
+          <div class="step reveal" data-reveal="up" data-delay="400">
+            <div class="step-num">05</div>
+            <div class="step-icon"><i data-lucide="plane-takeoff"></i></div>
+            <h3 data-i18n="process.step_5_t">Departure & follow-up</h3>
+            <p data-i18n="process.step_5_d">We support you even after you leave</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRUST / SAFETY ===================== -->
+    <section class="section safety" id="safety">
+      <div class="container safety-grid">
+        <div class="safety-visual reveal" data-reveal="left">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80" alt="Official contract work" width="900" height="600" loading="lazy" decoding="async" />
+          <div class="safety-overlay">
+            <i data-lucide="shield-check"></i>
+            <span data-i18n="safety.overlay">100% safe</span>
+          </div>
+        </div>
+        <div class="safety-content reveal" data-reveal="right">
+          <span class="eyebrow gold" data-i18n="safety.eyebrow">SAFETY &amp; TRUST</span>
+          <h2 class="section-title" data-i18n="safety.title">Working with us is safe</h2>
+          <p class="section-subtitle" data-i18n="safety.subtitle">Your trust is the most important thing for us</p>
+
+          <ul class="safety-list">
+            <li><span class="shield"><i data-lucide="shield-check"></i></span><span data-i18n="safety.item_1">We work on an official contract</span></li>
+            <li><span class="shield"><i data-lucide="shield-check"></i></span><span data-i18n="safety.item_2">Transparent pricing policy</span></li>
+            <li><span class="shield"><i data-lucide="shield-check"></i></span><span data-i18n="safety.item_3">Regular updates on every stage</span></li>
+            <li><span class="shield"><i data-lucide="shield-check"></i></span><span data-i18n="safety.item_4">No mistakes in documents</span></li>
+            <li><span class="shield"><i data-lucide="shield-check"></i></span><span data-i18n="safety.item_5">Full confidentiality</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal" data-reveal="up">
+          <span class="eyebrow gold" data-i18n="testimonials.eyebrow">TESTIMONIALS</span>
+          <h2 class="section-title" data-i18n="testimonials.title">Students about us</h2>
+          <p class="section-subtitle" data-i18n="testimonials.subtitle">500+ successful students — our best ad</p>
+        </div>
+
+        <div class="testimonials-track-wrap" role="region" aria-roledescription="carousel" data-i18n-attr="aria-label:testimonials.region_label" aria-label="Student testimonials slider">
+          <div class="testimonials-track" id="testimonialsTrack" aria-live="polite">
+            <article class="t-card">
+              <div class="t-stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+              <p class="t-text" data-i18n="testimonials.t_1">"My documents were prepared fast and professionally."</p>
+              <div class="t-author">
+                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=120&h=120&q=80" alt="Jasur K." width="56" height="56" loading="lazy" decoding="async" />
+                <div>
+                  <strong>Jasur K.</strong>
+                  <span>Seoul, Korea</span>
+                </div>
+              </div>
+            </article>
+            <article class="t-card">
+              <div class="t-stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+              <p class="t-text" data-i18n="testimonials.t_2">"Very grateful. They supported me at every stage."</p>
+              <div class="t-author">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80" alt="Malika R." width="56" height="56" loading="lazy" decoding="async" />
+                <div>
+                  <strong>Malika R.</strong>
+                  <span>Milan, Italy</span>
+                </div>
+              </div>
+            </article>
+            <article class="t-card">
+              <div class="t-stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+              <p class="t-text" data-i18n="testimonials.t_3">"I got a Full scholarship. You changed my life!"</p>
+              <div class="t-author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80" alt="Sardor A." width="56" height="56" loading="lazy" decoding="async" />
+                <div>
+                  <strong>Sardor A.</strong>
+                  <span>NUS, Singapore</span>
+                </div>
+              </div>
+            </article>
+            <article class="t-card">
+              <div class="t-stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+              <p class="t-text" data-i18n="testimonials.t_4">"No IELTS but got admitted via Duolingo to Finland."</p>
+              <div class="t-author">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=120&h=120&q=80" alt="Dilnoza M." width="56" height="56" loading="lazy" decoding="async" />
+                <div>
+                  <strong>Dilnoza M.</strong>
+                  <span>Helsinki, Finland</span>
+                </div>
+              </div>
+            </article>
+            <article class="t-card">
+              <div class="t-stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+              <p class="t-text" data-i18n="testimonials.t_5">"They prepared me for the visa interview too. First try visa. Thanks!"</p>
+              <div class="t-author">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=80" alt="Otabek T." width="56" height="56" loading="lazy" decoding="async" />
+                <div>
+                  <strong>Otabek T.</strong>
+                  <span>NYC, USA</span>
+                </div>
+              </div>
+            </article>
+            <article class="t-card">
+              <div class="t-stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+              <p class="t-text" data-i18n="testimonials.t_6">"Didn't know Japanese, got admitted to an English program!"</p>
+              <div class="t-author">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&h=120&q=80" alt="Aziz N." width="56" height="56" loading="lazy" decoding="async" />
+                <div>
+                  <strong>Aziz N.</strong>
+                  <span>Tokyo, Japan</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="t-controls">
+          <button class="t-btn" id="tPrev" data-i18n-attr="aria-label:testimonials.prev" aria-label="Previous"><i data-lucide="chevron-left"></i></button>
+          <div class="t-dots" id="tDots" role="tablist" aria-label="Slides"></div>
+          <button class="t-btn" id="tNext" data-i18n-attr="aria-label:testimonials.next" aria-label="Next"><i data-lucide="chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATS ===================== -->
+    <section class="section stats" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card reveal" data-reveal="up">
+            <strong class="counter big-counter" data-target="500" data-suffix="+">0</strong>
+            <span data-i18n="stats.students">Successful students</span>
+          </div>
+          <div class="stat-card reveal" data-reveal="up" data-delay="100">
+            <strong class="counter big-counter" data-target="10" data-suffix="+">0</strong>
+            <span data-i18n="stats.countries">Partner countries</span>
+          </div>
+          <div class="stat-card reveal" data-reveal="up" data-delay="200">
+            <strong class="counter big-counter" data-target="50" data-suffix="+">0</strong>
+            <span data-i18n="stats.universities">Universities</span>
+          </div>
+          <div class="stat-card reveal" data-reveal="up" data-delay="300">
+            <strong class="counter big-counter" data-target="98" data-suffix="%">0</strong>
+            <span data-i18n="stats.rate">Admission rate</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section faq" id="faq">
+      <div class="container faq-grid">
+        <div class="faq-side reveal" data-reveal="left">
+          <span class="eyebrow gold" data-i18n="faq.eyebrow">FAQ</span>
+          <h2 class="section-title" data-i18n="faq.title">Frequently asked questions</h2>
+          <p class="section-subtitle" data-i18n="faq.subtitle">Answers to the most common questions</p>
+          <a href="#contact" class="btn btn-primary"><span data-i18n="faq.cta">Ask a question</span> <i data-lucide="arrow-right"></i></a>
+        </div>
+
+        <div class="faq-list reveal" data-reveal="right">
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.q_1">Can I apply without IELTS?</span>
+              <i data-lucide="plus" class="faq-toggle"></i>
+            </summary>
+            <p data-i18n="faq.a_1">Some universities don't require IELTS or accept alternatives.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.q_2">Is there a chance with low grades?</span>
+              <i data-lucide="plus" class="faq-toggle"></i>
+            </summary>
+            <p data-i18n="faq.a_2">Yes. Individual approach for every student.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.q_3">Is it hard to get a visa?</span>
+              <i data-lucide="plus" class="faq-toggle"></i>
+            </summary>
+            <p data-i18n="faq.a_3">With correct documents the chance is very high.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.q_4">Can I pay in instalments?</span>
+              <i data-lucide="plus" class="faq-toggle"></i>
+            </summary>
+            <p data-i18n="faq.a_4">In most cases, yes. Comfortable payment plan per student.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.q_5">How long does the process take?</span>
+              <i data-lucide="plus" class="faq-toggle"></i>
+            </summary>
+            <p data-i18n="faq.a_5">Usually 3–6 months. Fast-track 1–2 months.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.q_6">What is the required age?</span>
+              <i data-lucide="plus" class="faq-toggle"></i>
+            </summary>
+            <p data-i18n="faq.a_6">Bachelor 17+, Master 21+. Practically no upper age limit.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA + FORM ===================== -->
+    <section class="section final-cta" id="contact">
+      <div class="cta-bg" aria-hidden="true"></div>
+      <div class="container cta-container">
+        <div class="cta-text reveal" data-reveal="up">
+          <span class="eyebrow gold" data-i18n="contact.eyebrow">START TODAY</span>
+          <h2 class="section-title" data-i18n="contact.title">Take the first step today</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">
+            Studying abroad won't wait. Start today — see results tomorrow.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="https://wa.me/998885263000" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg" data-ga-event="whatsapp_cta">
+              <i data-lucide="message-circle"></i>
+              <span>WhatsApp</span>
+            </a>
+            <a href="https://t.me/unitedglobal" target="_blank" rel="noopener noreferrer" class="btn btn-telegram btn-lg" data-ga-event="telegram_cta">
+              <i data-lucide="send"></i>
+              <span>Telegram</span>
+            </a>
+            <a href="https://instagram.com/unitedglobal.uz" target="_blank" rel="noopener noreferrer" class="btn btn-instagram btn-lg" data-ga-event="instagram_cta">
+              <i data-lucide="instagram"></i>
+              <span>Instagram</span>
+            </a>
+          </div>
+
+          <div class="cta-direct">
+            <a href="tel:+998885263000" class="cta-phone" data-ga-event="phone_cta">
+              <i data-lucide="phone"></i>
+              <span>+998 88 526 30 00</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="cta-form reveal" data-reveal="up" id="leadForm" novalidate autocomplete="on">
+          <h3 class="form-title" data-i18n="form.title">Sign up for a free consultation</h3>
+
+          <div class="form-row">
+            <label class="field">
+              <span class="field-label" data-i18n="form.name_label">Name *</span>
+              <input type="text" name="name" required minlength="2" maxlength="80" data-i18n-attr="placeholder:form.name_placeholder" placeholder="Your name" autocomplete="name" aria-describedby="err-name" />
+              <span class="field-error" id="err-name" data-i18n="form.err_name" hidden>Please enter a valid name</span>
+            </label>
+            <label class="field">
+              <span class="field-label" data-i18n="form.phone_label">Phone *</span>
+              <input type="tel" name="phone" required maxlength="20" data-i18n-attr="placeholder:form.phone_placeholder" placeholder="+998 __ ___ __ __" autocomplete="tel" id="phoneInput" aria-describedby="err-phone" inputmode="tel" />
+              <span class="field-error" id="err-phone" data-i18n="form.err_phone" hidden>Please enter a valid phone</span>
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="field-label" data-i18n="form.email_label">Email</span>
+            <input type="email" name="email" maxlength="120" data-i18n-attr="placeholder:form.email_placeholder" placeholder="email@example.com" autocomplete="email" aria-describedby="err-email" inputmode="email" />
+            <span class="field-error" id="err-email" data-i18n="form.err_email" hidden>Please enter a valid email</span>
+          </label>
+
+          <div class="form-row">
+            <label class="field">
+              <span class="field-label" data-i18n="form.country_label">Which country?</span>
+              <select name="country" autocomplete="country-name">
+                <option value="" data-i18n="form.country_default">— Select —</option>
+                <option value="Korea" data-i18n="country_names.korea">Korea</option>
+                <option value="Singapore" data-i18n="country_names.singapore">Singapore</option>
+                <option value="USA" data-i18n="country_names.usa">USA</option>
+                <option value="Italy" data-i18n="country_names.italy">Italy</option>
+                <option value="Luxembourg" data-i18n="country_names.luxembourg">Luxembourg</option>
+                <option value="Finland" data-i18n="country_names.finland">Finland</option>
+                <option value="Turkey" data-i18n="country_names.turkey">Turkey</option>
+                <option value="Japan" data-i18n="country_names.japan">Japan</option>
+                <option value="Latvia" data-i18n="country_names.latvia">Latvia</option>
+                <option value="Malaysia" data-i18n="country_names.malaysia">Malaysia</option>
+                <option value="Unknown" data-i18n="form.country_idk">Not sure yet</option>
+              </select>
+            </label>
+
+            <fieldset class="field field-radio">
+              <legend class="field-label" data-i18n="form.level_label">Degree</legend>
+              <div class="radio-row">
+                <label><input type="radio" name="level" value="Bachelor" checked /><span>Bachelor</span></label>
+                <label><input type="radio" name="level" value="Master" /><span>Master</span></label>
+                <label><input type="radio" name="level" value="PhD" /><span>PhD</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <label class="field">
+            <span class="field-label" data-i18n="form.message_label">Additional info</span>
+            <textarea name="message" rows="3" maxlength="500" data-i18n-attr="placeholder:form.message_placeholder" placeholder="Your questions, current level, IELTS score, etc."></textarea>
+          </label>
+
+          <!-- Honeypot (P0-4) — invisible to users, bots fill it out -->
+          <label class="hp-field" aria-hidden="true">
+            Website
+            <input type="text" name="website" tabindex="-1" autocomplete="off" />
+          </label>
+
+          <!-- Hidden UTM fields populated by utm.js -->
+          <input type="hidden" name="utm_source" />
+          <input type="hidden" name="utm_medium" />
+          <input type="hidden" name="utm_campaign" />
+          <input type="hidden" name="utm_term" />
+          <input type="hidden" name="utm_content" />
+          <input type="hidden" name="referrer" />
+          <input type="hidden" name="page_lang" />
+
+          <label class="field field-consent">
+            <input type="checkbox" name="consent" required />
+            <span class="consent-text" data-i18n="form.consent" data-i18n-html>I agree to the <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a></span>
+          </label>
+          <span class="field-error" id="err-consent" data-i18n="form.err_consent" hidden>Consent is required</span>
+
+          <!-- Cloudflare Turnstile (P0-4) — widget injects iframe when UGC_CONFIG.turnstileSiteKey is set -->
+          <div class="cf-turnstile-wrap" id="turnstileWrap" data-sitekey="" aria-hidden="true" hidden></div>
+          <span class="field-error" id="err-turnstile" data-i18n="form.err_turnstile" hidden>Please complete the verification</span>
+
+          <button type="submit" class="btn btn-primary btn-lg form-submit" data-ga-event="form_submit">
+            <i data-lucide="send" class="btn-icon-default"></i>
+            <i data-lucide="loader-2" class="btn-icon-loading"></i>
+            <span class="btn-label-default" data-i18n="form.submit">Send</span>
+            <span class="btn-label-loading" data-i18n="form.submitting">Sending…</span>
+          </button>
+
+          <p class="form-note">
+            <i data-lucide="lock"></i>
+            <span data-i18n="form.note">Your data is confidential and protected</span>
+          </p>
+
+          <div class="form-success" id="formSuccess" hidden role="status" aria-live="polite">
+            <i data-lucide="check-circle-2"></i>
+            <h4 data-i18n="form.success_title">Thanks! Your request was received.</h4>
+            <p data-i18n="form.success_body">We'll contact you shortly.</p>
+            <a href="https://wa.me/998885263000" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" data-ga-event="whatsapp_success">
+              <i data-lucide="message-circle"></i>
+              <span data-i18n="form.success_whatsapp">Message us on WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="form-error" id="formError" hidden role="alert" aria-live="assertive">
+            <i data-lucide="alert-circle"></i>
+            <h4 data-i18n="form.error_title">An error occurred</h4>
+            <p data-i18n="form.error_body">Please try again or contact us directly.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== OFFICE MAP (P1-13) ===================== -->
+    <section class="section office" id="office">
+      <div class="container">
+        <div class="section-header reveal" data-reveal="up">
+          <span class="eyebrow gold" data-i18n="contact.office_eyebrow">OUR OFFICE</span>
+          <h2 class="section-title" data-i18n="contact.office_title">Find us</h2>
+        </div>
+        <div class="office-grid reveal" data-reveal="up">
+          <div class="office-info">
+            <ul class="office-list">
+              <li><i data-lucide="map-pin"></i><span data-i18n="contact.office_address">Tashkent, Uzbekistan</span></li>
+              <li><i data-lucide="clock"></i><span data-i18n="contact.office_hours">Mon–Sat: 9:00 — 19:00</span></li>
+              <li><i data-lucide="phone"></i><a href="tel:+998885263000">+998 88 526 30 00</a></li>
+              <li><i data-lucide="mail"></i><a href="mailto:info@unitedglobal.uz">info@unitedglobal.uz</a></li>
+            </ul>
+          </div>
+          <div class="office-map">
+            <iframe
+              title="United Global Consulting office location"
+              src="https://www.google.com/maps?q=Tashkent,Uzbekistan&output=embed"
+              width="100%" height="320"
+              style="border:0;border-radius:20px"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#hero" class="footer-logo">
+          <span class="logo-icon"><i data-lucide="globe-2"></i></span>
+          <span>United Global Consulting</span>
+        </a>
+        <p class="footer-slogan" data-i18n="footer.slogan">🌍 Your Future Starts Here</p>
+        <p class="footer-desc" data-i18n="footer.description">
+          International education consulting agency.
+        </p>
+        <div class="footer-socials">
+          <a href="https://wa.me/998885263000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+          <a href="https://t.me/unitedglobal" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i data-lucide="send"></i></a>
+          <a href="https://instagram.com/unitedglobal.uz" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="mailto:info@unitedglobal.uz" aria-label="Email"><i data-lucide="mail"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.quick_links">Quick Links</h4>
+        <ul>
+          <li><a href="#hero" data-i18n="nav.home">Home</a></li>
+          <li><a href="#about" data-i18n="nav.about">About Us</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#countries" data-i18n="nav.countries">Countries</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.services_title">Services</h4>
+        <ul>
+          <li><a href="#services" data-i18n="services.item_1_t">University Selection</a></li>
+          <li><a href="#services" data-i18n="services.item_8_t">Visa Guidance</a></li>
+          <li><a href="#scholarship" data-i18n="scholarship.card_2_t">Scholarship</a></li>
+          <li><a href="#services" data-i18n="services.item_5_t">Document Translation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact_title">Contact</h4>
+        <ul class="contact-list">
+          <li><i data-lucide="phone"></i><a href="tel:+998885263000">+998 88 526 30 00</a></li>
+          <li><i data-lucide="mail"></i><a href="mailto:info@unitedglobal.uz">info@unitedglobal.uz</a></li>
+          <li><i data-lucide="map-pin"></i><span data-i18n="contact.office_address">Tashkent, Uzbekistan</span></li>
+          <li><i data-lucide="clock"></i><span data-i18n="contact.office_hours">Mon–Sat: 9:00 — 19:00</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-row">
+        <p>© <span id="footerYear">2026</span> <span data-i18n="footer.copyright">United Global Consulting. All rights reserved.</span></p>
+        <div class="footer-legal">
+          <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+          <span>•</span>
+          <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/998885263000" target="_blank" rel="noopener noreferrer" class="float-whatsapp" data-i18n-attr="aria-label:footer.float_whatsapp" aria-label="Chat on WhatsApp" data-ga-event="whatsapp_floating">
+    <i data-lucide="message-circle"></i>
+    <span class="float-pulse"></span>
+  </a>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" data-i18n-attr="aria-label:footer.back_top" aria-label="Back to top" aria-hidden="true" hidden>
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <!-- Sticky mobile CTA bar (NEW-14) -->
+  <nav class="mobile-cta-bar" id="mobileCtaBar" aria-label="Quick contact">
+    <a href="tel:+998885263000" class="mcb-item" data-ga-event="phone_sticky">
+      <i data-lucide="phone"></i>
+      <span data-i18n="mobile_cta.call">Call</span>
+    </a>
+    <a href="https://wa.me/998885263000" target="_blank" rel="noopener noreferrer" class="mcb-item mcb-wa" data-ga-event="whatsapp_sticky">
+      <i data-lucide="message-circle"></i>
+      <span data-i18n="mobile_cta.whatsapp">WhatsApp</span>
+    </a>
+    <a href="#contact" class="mcb-item mcb-form" data-ga-event="form_sticky">
+      <i data-lucide="send"></i>
+      <span data-i18n="mobile_cta.form">Apply</span>
+    </a>
+  </nav>
+
+  <!-- Exit-intent popup (NEW-15) -->
+  <div class="exit-modal" id="exitModal" hidden role="dialog" aria-modal="true" aria-labelledby="exitTitle">
+    <div class="exit-backdrop" data-exit-close></div>
+    <div class="exit-card">
+      <button class="exit-close" data-exit-close data-i18n-attr="aria-label:exit.close" aria-label="Close"><i data-lucide="x"></i></button>
+      <div class="exit-icon"><i data-lucide="sparkles"></i></div>
+      <h3 id="exitTitle" data-i18n="exit.title">Leaving?</h3>
+      <p data-i18n="exit.body">Leave your phone and we'll call back in 5 minutes.</p>
+      <form id="exitForm" class="exit-form" novalidate>
+        <input type="tel" name="phone" required id="exitPhone" data-i18n-attr="placeholder:exit.placeholder" placeholder="+998 __ ___ __ __" inputmode="tel" maxlength="20" autocomplete="tel" />
+        <button type="submit" class="btn btn-primary" data-ga-event="exit_submit">
+          <i data-lucide="phone-call"></i>
+          <span data-i18n="exit.submit">Request a callback</span>
+        </button>
+      </form>
+      <button class="exit-skip" data-exit-close data-i18n="exit.skip">Thanks, later</button>
+    </div>
+  </div>
+
+  <!-- Cookie banner (granular: essential / analytics / marketing) -->
+  <div class="cookie-banner" id="cookieBanner" hidden role="dialog" aria-label="Cookie consent">
+    <p data-i18n="cookie.text">We use cookies to improve your experience.</p>
+    <button type="button" class="cookie-toggle-more" id="cookieToggleMore" data-i18n="cookie.manage">Manage preferences</button>
+
+    <div class="cookie-details" id="cookieDetails" role="group" aria-label="Cookie categories">
+      <label class="cookie-cat">
+        <input type="checkbox" checked disabled />
+        <span><strong data-i18n="cookie.cat_essential">Essential</strong><small data-i18n="cookie.cat_essential_desc">Required for the site to function (theme, language preference).</small></span>
+      </label>
+      <label class="cookie-cat">
+        <input type="checkbox" data-cookie-cat="analytics" />
+        <span><strong data-i18n="cookie.cat_analytics">Analytics</strong><small data-i18n="cookie.cat_analytics_desc">Anonymous usage stats (GA4, Yandex Metrika) to improve the site.</small></span>
+      </label>
+      <label class="cookie-cat">
+        <input type="checkbox" data-cookie-cat="marketing" />
+        <span><strong data-i18n="cookie.cat_marketing">Marketing</strong><small data-i18n="cookie.cat_marketing_desc">Ad tracking (Meta Pixel, Google Ads) for tailored offers.</small></span>
+      </label>
+    </div>
+
+    <div class="cookie-actions">
+      <button class="btn btn-ghost" id="cookieDecline" data-i18n="cookie.decline">Reject non-essential</button>
+      <button class="btn btn-ghost" id="cookieSave" data-i18n="cookie.save">Save choices</button>
+      <button class="btn btn-primary" id="cookieAccept" data-i18n="cookie.accept">Accept all</button>
+    </div>
+  </div>
+
+  <!-- App config: safe for the browser (no secrets). -->
+  <script>
+    window.UGC_CONFIG = {
+      phone: '+998885263000',
+      waNumber: '998885263000',
+      gaId: '',
+      // Proxy endpoint for form submission. Leave empty to skip backend and use WhatsApp-only fallback.
+      // Recommended: a Cloudflare Worker that holds Telegram token securely.
+      formEndpoint: '',
+      turnstileSiteKey: ''
+    };
+  </script>
+
+  <!-- Modules + main -->
+  <script src="js/modules/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+  <!-- SW register (PWA) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>

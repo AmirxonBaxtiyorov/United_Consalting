@@ -1,0 +1,12 @@
+# Do not ship these to Vercel — they are build-time / dev-only
+workers/
+scripts/
+docs/
+MUKAMMAL_PROMPT.md
+PROMPT.md
+_headers
+_redirects
+node_modules/
+.git/
+.github/
+*.log

@@ -1,0 +1,27 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://unpkg.com https://www.googletagmanager.com https://challenges.cloudflare.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https://images.unsplash.com https://flagcdn.com https://maps.googleapis.com https://maps.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://api.telegram.org https://script.google.com https://script.googleusercontent.com https://www.google-analytics.com https://region1.google-analytics.com; frame-src https://www.google.com https://www.youtube.com https://yandex.com https://yandex.ru https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me https://api.telegram.org; upgrade-insecure-requests;
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self), payment=(), usb=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  Service-Worker-Allowed: /
+
+/manifest.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: public, max-age=604800
+
+/i18n/*
+  Cache-Control: public, max-age=86400
+
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

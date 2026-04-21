@@ -1,0 +1,13 @@
+{
+  "name": "ugc-form-proxy",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  }
+}

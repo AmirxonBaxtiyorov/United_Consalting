@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-label="Flag of South Korea">
+  <rect width="900" height="600" fill="#fff"/>
+  <g transform="translate(450 300) rotate(-56.31)">
+    <circle r="90" fill="#cd2e3a"/>
+    <path d="M-90 0 A90 90 0 0 1 90 0 A45 45 0 0 0 0 0 A45 45 0 0 1 -90 0 Z" fill="#0047a0"/>
+  </g>
+  <g fill="#000" transform="translate(450 300) rotate(-56.31)">
+    <g transform="translate(-160 -120)"><rect x="-30" y="-3" width="60" height="6"/><rect x="-30" y="-13" width="60" height="6"/><rect x="-30" y="7" width="60" height="6"/></g>
+    <g transform="translate(160 120)"><rect x="-30" y="-3" width="60" height="6"/><rect x="-30" y="-13" width="25" height="6"/><rect x="5" y="-13" width="25" height="6"/><rect x="-30" y="7" width="25" height="6"/><rect x="5" y="7" width="25" height="6"/></g>
+    <g transform="translate(160 -120)"><rect x="-30" y="-3" width="60" height="6"/><rect x="-30" y="-13" width="60" height="6"/><rect x="-30" y="7" width="25" height="6"/><rect x="5" y="7" width="25" height="6"/></g>
+    <g transform="translate(-160 120)"><rect x="-30" y="-3" width="25" height="6"/><rect x="5" y="-3" width="25" height="6"/><rect x="-30" y="-13" width="60" height="6"/><rect x="-30" y="7" width="25" height="6"/><rect x="5" y="7" width="25" height="6"/></g>
+  </g>
+</svg>

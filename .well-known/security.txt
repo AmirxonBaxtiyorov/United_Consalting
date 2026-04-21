@@ -1,0 +1,7 @@
+Contact: mailto:security@unitedglobal.uz
+Contact: mailto:info@unitedglobal.uz
+Expires: 2027-04-21T00:00:00.000Z
+Preferred-Languages: en, ru, uz
+Canonical: https://unitedglobal.uz/.well-known/security.txt
+Policy: https://unitedglobal.uz/privacy.html
+Acknowledgments: https://unitedglobal.uz/#about

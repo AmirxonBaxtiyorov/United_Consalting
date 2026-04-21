@@ -1,0 +1,6 @@
+# Netlify / Cloudflare Pages redirects
+
+# Language preferences via query (?lang=xx) are handled client-side.
+
+# Not found
+/*    /404.html    404

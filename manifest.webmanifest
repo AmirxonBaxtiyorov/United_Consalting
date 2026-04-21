@@ -1,0 +1,41 @@
+{
+  "name": "United Global Consulting",
+  "short_name": "UGC",
+  "description": "International education consulting agency — admission and visa to top universities.",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0A2540",
+  "theme_color": "#0A2540",
+  "lang": "ru",
+  "dir": "ltr",
+  "categories": ["education", "business"],
+  "icons": [
+    { "src": "favicon.svg",  "sizes": "any",      "type": "image/svg+xml", "purpose": "any" },
+    { "src": "GLODAL.png",   "sizes": "192x192",  "type": "image/png",     "purpose": "any" },
+    { "src": "GLODAL.png",   "sizes": "512x512",  "type": "image/png",     "purpose": "any" },
+    { "src": "GLODAL.png",   "sizes": "512x512",  "type": "image/png",     "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Free consultation",
+      "short_name": "Consult",
+      "description": "Book a free strategy call",
+      "url": "/?utm_source=pwa&utm_medium=shortcut&utm_campaign=consult#contact",
+      "icons": [{ "src": "favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Study in Korea",
+      "short_name": "Korea",
+      "url": "/countries/korea.html?utm_source=pwa&utm_medium=shortcut",
+      "icons": [{ "src": "assets/flags/kr.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Study in Singapore",
+      "short_name": "Singapore",
+      "url": "/countries/singapore.html?utm_source=pwa&utm_medium=shortcut",
+      "icons": [{ "src": "assets/flags/sg.svg", "sizes": "any" }]
+    }
+  ]
+}

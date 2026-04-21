@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+.vercel/
+.cloudflare/
+dist/
+build/
+
+# Worker local state
+workers/**/.wrangler/
+workers/**/wrangler.local.toml
+workers/**/.dev.vars
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+*.log
+
+# Env / secrets
+.env
+.env.*
+!.env.example

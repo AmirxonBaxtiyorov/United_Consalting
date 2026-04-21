@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1235 650" role="img" aria-label="Flag of the United States">
+  <rect width="1235" height="650" fill="#fff"/>
+  <g fill="#B22234">
+    <rect width="1235" height="50"/>
+    <rect y="100" width="1235" height="50"/>
+    <rect y="200" width="1235" height="50"/>
+    <rect y="300" width="1235" height="50"/>
+    <rect y="400" width="1235" height="50"/>
+    <rect y="500" width="1235" height="50"/>
+    <rect y="600" width="1235" height="50"/>
+  </g>
+  <rect width="494" height="350" fill="#3C3B6E"/>
+  <g fill="#fff">
+    <g id="us-row1"><polygon points="0,0 4.88,-15 -12.8,-5.88 7.92,-5.88 -9.76,-15"/></g>
+  </g>
+</svg>
