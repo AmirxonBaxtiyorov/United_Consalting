@@ -55,15 +55,15 @@ export function CalculatorSection() {
         />
 
         <div className="grid lg:grid-cols-5 gap-6 lg:gap-8">
-          <div className="lg:col-span-3 rounded-3xl bg-white border border-border p-6 md:p-8 shadow-[var(--shadow-card)]">
-            <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
+          <div className="lg:col-span-3 rounded-3xl bg-[var(--color-surface)] border border-border p-6 md:p-8 shadow-[var(--shadow-card)]">
+            <div className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-fg)]">
               <Calculator className="size-5 text-accent-dark" />
               {t('title')}
             </div>
 
             <div className="mt-6 space-y-6">
               <div>
-                <label className="text-sm font-medium text-primary">{t('country')}</label>
+                <label className="text-sm font-medium text-[var(--color-fg)]">{t('country')}</label>
                 <div className="mt-2 grid grid-cols-2 sm:grid-cols-3 gap-2">
                   {COUNTRIES.map((c) => (
                     <button
@@ -72,7 +72,7 @@ export function CalculatorSection() {
                       className={`rounded-xl border px-3 py-2 text-sm font-medium text-left transition ${
                         c.slug === country.slug
                           ? 'bg-primary text-white border-primary'
-                          : 'bg-white border-border hover:border-primary'
+                          : 'bg-[var(--color-surface)] border-border hover:border-primary'
                       }`}
                     >
                       {c.name[locale]}
@@ -82,7 +82,7 @@ export function CalculatorSection() {
               </div>
 
               <div>
-                <label className="text-sm font-medium text-primary">{t('degree')}</label>
+                <label className="text-sm font-medium text-[var(--color-fg)]">{t('degree')}</label>
                 <div className="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {DEGREE_OPTS.map((o) => (
                     <button
@@ -91,7 +91,7 @@ export function CalculatorSection() {
                       className={`rounded-xl border px-3 py-2 text-sm font-medium transition ${
                         o.value === degree
                           ? 'bg-accent text-accent-foreground border-accent'
-                          : 'bg-white border-border hover:border-accent'
+                          : 'bg-[var(--color-surface)] border-border hover:border-accent'
                       }`}
                     >
                       {o.label}
@@ -101,7 +101,7 @@ export function CalculatorSection() {
               </div>
 
               <div>
-                <label className="text-sm font-medium text-primary">{t('housing')}</label>
+                <label className="text-sm font-medium text-[var(--color-fg)]">{t('housing')}</label>
                 <div className="mt-2 grid grid-cols-3 gap-2">
                   {HOUSING_OPTS.map((o) => (
                     <button
@@ -110,7 +110,7 @@ export function CalculatorSection() {
                       className={`flex flex-col items-center gap-1.5 rounded-xl border py-3 text-sm font-medium transition ${
                         o.value === housing
                           ? 'bg-primary text-white border-primary'
-                          : 'bg-white border-border hover:border-primary'
+                          : 'bg-[var(--color-surface)] border-border hover:border-primary'
                       }`}
                     >
                       <o.Icon className="size-5" />
@@ -121,7 +121,7 @@ export function CalculatorSection() {
               </div>
 
               <div>
-                <label className="flex items-center justify-between text-sm font-medium text-primary">
+                <label className="flex items-center justify-between text-sm font-medium text-[var(--color-fg)]">
                   <span>{t('duration')}</span>
                   <span className="tabular-nums text-accent-dark">{years} {t(years === 1 ? 'year' : 'years')}</span>
                 </label>

@@ -27,13 +27,13 @@ export function ProcessSection() {
           <ol className="grid lg:grid-cols-5 gap-6">
             {STEPS.map(({ key, Icon }, i) => (
               <li key={key} className="relative">
-                <div className="relative z-10 inline-flex items-center justify-center size-28 rounded-3xl bg-white border border-border text-primary shadow-[var(--shadow-card)]">
+                <div className="relative z-10 inline-flex items-center justify-center size-28 rounded-3xl bg-[var(--color-surface)] border border-border text-[var(--color-fg)] shadow-[var(--shadow-card)]">
                   <Icon className="size-10" />
                   <span className="absolute -top-3 -right-3 inline-flex items-center justify-center size-8 rounded-full bg-accent text-accent-foreground text-sm font-bold border-4 border-muted">
                     {i + 1}
                   </span>
                 </div>
-                <h3 className="mt-5 text-lg font-bold text-primary">{t(`${key}_t`)}</h3>
+                <h3 className="mt-5 text-lg font-bold text-[var(--color-fg)]">{t(`${key}_t`)}</h3>
                 <p className="mt-1.5 text-sm text-muted-fg">{t(`${key}_d`)}</p>
               </li>
             ))}

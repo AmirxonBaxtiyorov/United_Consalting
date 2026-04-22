@@ -1,0 +1,92 @@
+#!/usr/bin/env bash
+# ============================================================
+# Pre-commit secret scanner for United Global Consulting repo
+# ============================================================
+# This hook is invoked by `git commit` BEFORE anything is staged
+# into the commit object. If a forbidden pattern is detected in
+# the staged diff, the commit is REJECTED and the file/line is
+# reported.
+#
+# To install (first time on each machine):
+#   git config core.hooksPath .githooks
+#
+# To bypass (only in emergencies, at your own risk):
+#   git commit --no-verify
+# ============================================================
+
+set -euo pipefail
+
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+echo "🔍 Pre-commit secret scan..."
+
+# Block staged .env.* files (except .env.example)
+STAGED_ENV=$(git diff --cached --name-only --diff-filter=ACM | grep -E "(^|/)\.env($|\.[a-zA-Z]+)" | grep -v "\.env\.example$" || true)
+if [ -n "$STAGED_ENV" ]; then
+  echo -e "${RED}❌ REFUSING to commit .env file(s):${NC}"
+  echo "$STAGED_ENV" | sed 's/^/   /'
+  echo ""
+  echo -e "${YELLOW}Hint:${NC} .env files should never be committed. They are in .gitignore already."
+  echo "If this was a rename, commit it as .env.example (with placeholders)."
+  exit 1
+fi
+
+# Patterns matching REAL production-shaped secrets.
+# These are intentionally tight — they flag actual keys, not placeholders
+# like 're_xxxx' or '123456:ABC-xxxxxxxx'.
+PATTERNS=(
+  # Supabase
+  "sb_secret_[A-Za-z0-9_]{20,}"
+  "sb_publishable_[A-Za-z0-9_]{20,}"
+  # Supabase JWT keys (real keys have many payload bytes after eyJ)
+  "eyJhbGciOi[A-Za-z0-9._-]{180,}"
+  # Resend
+  "re_[A-Za-z0-9_]{24,}"
+  # Telegram bot token: 9+ digits, colon, 35+ chars
+  "[0-9]{8,}:AA[A-Za-z0-9_-]{33,}"
+  # reCAPTCHA secret (40 chars starting with 6L)
+  "6L[A-Za-z0-9_-]{38,}AA[A-Za-z0-9_-]{0,20}"
+  # Generic OpenAI / Anthropic / Stripe
+  "sk-(proj-|live_|test_|ant-api03-)[A-Za-z0-9_-]{20,}"
+  "rk_(live|test)_[A-Za-z0-9]{20,}"
+  # AWS access keys
+  "AKIA[0-9A-Z]{16}"
+  # GitHub tokens
+  "gh[pousr]_[A-Za-z0-9]{36,}"
+  # Google API keys (AIza prefix, 35+ chars)
+  "AIza[0-9A-Za-z_-]{35}"
+  # Private keys in PEM
+  "-----BEGIN (RSA |EC |OPENSSH |DSA |)PRIVATE KEY-----"
+)
+
+# Build combined regex
+REGEX=""
+for p in "${PATTERNS[@]}"; do
+  [ -z "$REGEX" ] && REGEX="$p" || REGEX="$REGEX|$p"
+done
+
+# Scan only added lines in the staged diff
+FOUND=$(git diff --cached --no-color -U0 | grep -nE "^\+.*($REGEX)" 2>/dev/null | grep -v "^\+\+\+" || true)
+
+if [ -n "$FOUND" ]; then
+  echo -e "${RED}❌ REFUSING to commit: potential secret detected${NC}"
+  echo ""
+  echo "$FOUND" | head -20
+  echo ""
+  echo -e "${YELLOW}What to do:${NC}"
+  echo "  1. Move the secret to .env.local (git-ignored)"
+  echo "  2. Replace the value in your code with process.env.X"
+  echo "  3. Replace placeholder in .env.example with e.g. sk_xxx..."
+  echo "  4. Re-stage and commit"
+  echo ""
+  echo -e "${YELLOW}If this is a false positive${NC} (a placeholder that looks like a real key),"
+  echo "you can bypass with:  git commit --no-verify"
+  echo "But DO NOT use --no-verify for actual secrets — ROTATE them instead."
+  exit 1
+fi
+
+echo -e "${GREEN}✅ No secrets detected in staged changes${NC}"
+exit 0

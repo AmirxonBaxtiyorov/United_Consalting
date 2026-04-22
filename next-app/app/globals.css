@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-bg: #ffffff;
   --color-fg: #0a0a0a;
   --color-muted: #f5f7fa;
   --color-muted-fg: #6b7280;
   --color-border: #e5e7eb;
+  --color-surface: #ffffff;
 
   --color-primary: #0a2540;
   --color-primary-light: #1e3a5f;
@@ -38,6 +41,49 @@
 
 :root {
   color-scheme: light;
+  --color-bg: #ffffff;
+  --color-fg: #0a0a0a;
+  --color-muted: #f5f7fa;
+  --color-muted-fg: #6b7280;
+  --color-border: #e5e7eb;
+  --color-surface: #ffffff;
+  --color-primary: #0a2540;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #00d4aa;
+  --color-accent-dark: #00a386;
+  --color-accent-foreground: #052018;
+  --shadow-card: 0 1px 2px rgba(10, 37, 64, 0.04), 0 8px 24px rgba(10, 37, 64, 0.06);
+  --shadow-card-hover: 0 4px 12px rgba(10, 37, 64, 0.08), 0 16px 40px rgba(10, 37, 64, 0.1);
+  --grad-hero: radial-gradient(1200px circle at 10% 0%, rgba(0, 212, 170, 0.12), transparent 40%),
+              radial-gradient(900px circle at 85% 10%, rgba(255, 184, 0, 0.10), transparent 45%),
+              linear-gradient(180deg, #f7fbff 0%, #ffffff 60%);
+  --grad-stats: radial-gradient(900px circle at 20% 20%, rgba(0, 212, 170, 0.18), transparent 45%),
+              radial-gradient(900px circle at 80% 80%, rgba(30, 58, 95, 0.5), transparent 50%),
+              #0a2540;
+}
+
+.dark {
+  color-scheme: dark;
+  --color-bg: #0a0e14;
+  --color-fg: #e8ecf2;
+  --color-muted: #131922;
+  --color-muted-fg: #94a3b8;
+  --color-border: #1e2836;
+  --color-surface: #131922;
+  /* brand colors remain brand-identifying across themes */
+  --color-primary: #0a2540;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #00d4aa;
+  --color-accent-dark: #33ddbb;
+  --color-accent-foreground: #031612;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.4), 0 16px 40px rgba(0, 0, 0, 0.5);
+  --grad-hero: radial-gradient(1200px circle at 10% 0%, rgba(0, 212, 170, 0.18), transparent 40%),
+              radial-gradient(900px circle at 85% 10%, rgba(255, 184, 0, 0.08), transparent 45%),
+              linear-gradient(180deg, #0f1520 0%, #0a0e14 60%);
+  --grad-stats: radial-gradient(900px circle at 20% 20%, rgba(0, 212, 170, 0.20), transparent 45%),
+              radial-gradient(900px circle at 80% 80%, rgba(0, 212, 170, 0.08), transparent 50%),
+              #050810;
 }
 
 * {
@@ -54,6 +100,7 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition: background-color 300ms ease, color 300ms ease;
 }
 
 .font-display {
@@ -77,21 +124,28 @@ h1, h2, h3, h4 {
 }
 
 .bg-hero-grad {
-  background: radial-gradient(1200px circle at 10% 0%, rgba(0, 212, 170, 0.12), transparent 40%),
-              radial-gradient(900px circle at 85% 10%, rgba(255, 184, 0, 0.10), transparent 45%),
-              linear-gradient(180deg, #f7fbff 0%, #ffffff 60%);
+  background: var(--grad-hero);
 }
 
 .bg-dark-stats {
-  background: radial-gradient(900px circle at 20% 20%, rgba(0, 212, 170, 0.18), transparent 45%),
-              radial-gradient(900px circle at 80% 80%, rgba(30, 58, 95, 0.5), transparent 50%),
-              #0a2540;
+  background: var(--grad-stats);
+}
+
+.dark .bg-hero-grad {
+  background: var(--grad-hero);
+}
+.dark .bg-dark-stats {
+  background: var(--grad-stats);
 }
 
 .glass {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: saturate(140%) blur(8px);
   -webkit-backdrop-filter: saturate(140%) blur(8px);
+}
+
+.dark .glass {
+  background: rgba(19, 25, 34, 0.75);
 }
 
 .container-x {
@@ -114,12 +168,12 @@ a, button { transition: color 180ms, background-color 180ms, border-color 180ms,
   outline-offset: 2px;
 }
 
-.prose-body h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; font-weight: 700; }
-.prose-body h3 { font-size: 1.2rem; margin-top: 1.25rem; margin-bottom: 0.5rem; font-weight: 600; }
-.prose-body p { margin: 0.75rem 0; line-height: 1.75; color: #1f2937; }
-.prose-body ul, .prose-body ol { margin: 0.75rem 0 0.75rem 1.25rem; }
+.prose-body h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; font-weight: 700; color: var(--color-fg); }
+.prose-body h3 { font-size: 1.2rem; margin-top: 1.25rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-fg); }
+.prose-body p { margin: 0.75rem 0; line-height: 1.75; color: var(--color-fg); opacity: 0.9; }
+.prose-body ul, .prose-body ol { margin: 0.75rem 0 0.75rem 1.25rem; color: var(--color-fg); opacity: 0.9; }
 .prose-body li { margin: 0.25rem 0; line-height: 1.7; }
-.prose-body strong { font-weight: 600; color: var(--color-primary); }
+.prose-body strong { font-weight: 600; color: var(--color-fg); }
 .prose-body a { color: var(--color-accent-dark); text-decoration: underline; }
 
 .input {
@@ -128,14 +182,23 @@ a, button { transition: color 180ms, background-color 180ms, border-color 180ms,
   border: 1px solid var(--color-border);
   padding: 12px 14px;
   font-size: 15px;
-  background: #fff;
+  background: var(--color-surface);
   color: var(--color-fg);
   outline: none;
-  transition: box-shadow 180ms, border-color 180ms;
+  transition: box-shadow 180ms, border-color 180ms, background-color 180ms;
 }
 .input:focus {
   border-color: var(--color-accent);
   box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.15);
 }
 textarea.input { min-height: 7rem; resize: vertical; }
-select.input { appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; }
+select.input {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+.dark select.input {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");
+}

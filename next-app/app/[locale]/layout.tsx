@@ -11,6 +11,7 @@ import { CookieConsent } from '@/components/widgets/CookieConsent';
 import { SchemaOrg } from '@/components/shared/SchemaOrg';
 import { Analytics } from '@/components/shared/Analytics';
 import { RecaptchaLoader } from '@/components/shared/Recaptcha';
+import { ThemeProvider } from '@/components/shared/ThemeProvider';
 import { SITE } from '@/lib/config';
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'], variable: '--font-inter', display: 'swap' });
@@ -71,16 +72,18 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${inter.variable} ${display.variable}`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
-        <NextIntlClientProvider messages={messages}>
-          <SchemaOrg locale={locale as Locale} />
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <FloatingWidgets />
-          <CookieConsent />
-          <Analytics />
-          <RecaptchaLoader />
-        </NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            <SchemaOrg locale={locale as Locale} />
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <FloatingWidgets />
+            <CookieConsent />
+            <Analytics />
+            <RecaptchaLoader />
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

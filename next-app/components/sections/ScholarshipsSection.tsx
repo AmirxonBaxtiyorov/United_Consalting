@@ -8,7 +8,7 @@ const TIERS = [
   { key: 't1', Icon: Percent, tint: 'bg-info/10 text-info' },
   { key: 't2', Icon: Crown, tint: 'bg-gold/20 text-gold-dark' },
   { key: 't3', Icon: Award, tint: 'bg-accent/15 text-accent-dark' },
-  { key: 't4', Icon: Sparkles, tint: 'bg-primary/10 text-primary' },
+  { key: 't4', Icon: Sparkles, tint: 'bg-primary/10 text-[var(--color-fg)]' },
 ] as const;
 
 export function ScholarshipsSection() {
@@ -27,12 +27,12 @@ export function ScholarshipsSection() {
           {TIERS.map(({ key, Icon, tint }) => (
             <div
               key={key}
-              className="rounded-3xl border border-border bg-white p-6 md:p-7 hover:shadow-[var(--shadow-card-hover)] transition hover:-translate-y-0.5"
+              className="rounded-3xl border border-border bg-[var(--color-surface)] p-6 md:p-7 hover:shadow-[var(--shadow-card-hover)] transition hover:-translate-y-0.5"
             >
               <span className={`inline-flex items-center justify-center size-12 rounded-2xl ${tint}`}>
                 <Icon className="size-6" />
               </span>
-              <h3 className="mt-5 text-lg font-bold text-primary">{t(`${key}_t`)}</h3>
+              <h3 className="mt-5 text-lg font-bold text-[var(--color-fg)]">{t(`${key}_t`)}</h3>
               <p className="mt-2 text-sm text-muted-fg">{t(`${key}_d`)}</p>
             </div>
           ))}

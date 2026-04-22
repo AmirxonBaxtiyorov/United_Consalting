@@ -13,14 +13,14 @@ export function HeroSection() {
       <div className="container-x relative">
         <div className="grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/80 border border-border px-3 py-1 text-xs font-semibold tracking-wide text-primary">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-surface)]/80 border border-border px-3 py-1 text-xs font-semibold tracking-wide text-[var(--color-fg)]">
               <span className="inline-block size-1.5 rounded-full bg-accent animate-pulse" />
               {t('eyebrow')}
             </span>
-            <h1 className="mt-5 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-primary">
+            <h1 className="mt-5 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[var(--color-fg)]">
               {t('title_part1')}{' '}
               <span className="relative inline-block">
-                <span className="relative z-10 text-primary">{t('title_part2')}</span>
+                <span className="relative z-10 text-[var(--color-fg)]">{t('title_part2')}</span>
                 <span className="absolute inset-x-0 bottom-1 h-3 md:h-4 bg-accent/30 rounded-sm -z-0" />
               </span>
             </h1>
@@ -30,7 +30,7 @@ export function HeroSection() {
 
             <ul className="mt-7 space-y-3 max-w-lg">
               {(['bullet_1', 'bullet_2', 'bullet_3'] as const).map((k) => (
-                <li key={k} className="flex items-start gap-3 text-primary">
+                <li key={k} className="flex items-start gap-3 text-[var(--color-fg)]">
                   <CheckCircle2 className="size-5 mt-0.5 shrink-0 text-accent-dark" />
                   <span>{t(k)}</span>
                 </li>
@@ -61,7 +61,7 @@ export function HeroSection() {
           <div className="lg:col-span-5">
             <div className="relative">
               <div className="absolute -inset-6 bg-gradient-to-br from-accent/20 via-gold/10 to-primary/10 blur-2xl rounded-[48px]" aria-hidden />
-              <div className="relative rounded-3xl bg-white border border-border shadow-[var(--shadow-card-hover)] overflow-hidden">
+              <div className="relative rounded-3xl bg-[var(--color-surface)] border border-border shadow-[var(--shadow-card-hover)] overflow-hidden">
                 <div className="relative aspect-[5/4] overflow-hidden">
                   <Image
                     src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
@@ -72,16 +72,16 @@ export function HeroSection() {
                     priority
                   />
                   <div className="absolute inset-x-4 top-4 flex justify-between items-start">
-                    <span className="rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-primary shadow">
+                    <span className="rounded-full bg-[var(--color-surface)]/95 px-3 py-1 text-xs font-semibold text-[var(--color-fg)] shadow">
                       {t('card_title')}
                     </span>
-                    <span className="rounded-full bg-gold/95 px-3 py-1 text-xs font-semibold text-primary shadow">
+                    <span className="rounded-full bg-gold/95 px-3 py-1 text-xs font-semibold text-[var(--color-fg)] shadow">
                       {t('card_scholarship')}
                     </span>
                   </div>
                 </div>
                 <div className="p-5 border-t border-border">
-                  <div className="font-semibold text-primary">{t('card_uni')}</div>
+                  <div className="font-semibold text-[var(--color-fg)]">{t('card_uni')}</div>
                   <div className="mt-3 grid grid-cols-2 gap-3 text-sm">
                     <div className="flex items-center gap-2 text-muted-fg">
                       <Star className="size-4 text-gold" />

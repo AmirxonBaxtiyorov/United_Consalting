@@ -12,11 +12,11 @@ const buttonVariants = cva(
         secondary:
           'bg-primary text-primary-foreground hover:bg-primary-light',
         outline:
-          'bg-white border border-border text-primary hover:bg-muted',
+          'bg-[var(--color-surface)] border border-border text-[var(--color-fg)] hover:bg-muted',
         ghost:
-          'bg-transparent text-primary hover:bg-muted',
+          'bg-transparent text-[var(--color-fg)] hover:bg-muted',
         gold:
-          'bg-gold text-primary hover:bg-gold-dark',
+          'bg-gold text-[var(--color-fg)] hover:bg-gold-dark',
       },
       size: {
         sm: 'text-sm h-9 px-4',

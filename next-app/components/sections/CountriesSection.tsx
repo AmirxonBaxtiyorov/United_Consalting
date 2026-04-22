@@ -24,7 +24,7 @@ export function CountriesSection() {
             <Link
               key={c.slug}
               href={`/countries/${c.slug}`}
-              className="group relative overflow-hidden rounded-2xl bg-white border border-border shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition hover:-translate-y-0.5"
+              className="group relative overflow-hidden rounded-2xl bg-[var(--color-surface)] border border-border shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition hover:-translate-y-0.5"
             >
               <div className="aspect-[4/3] relative overflow-hidden">
                 <Image
@@ -35,7 +35,7 @@ export function CountriesSection() {
                   className="object-cover group-hover:scale-105 transition duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent" />
-                <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 text-xs font-semibold text-primary shadow">
+                <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 text-xs font-semibold text-[var(--color-fg)] shadow">
                   <Image
                     src={`https://flagcdn.com/w40/${c.code}.png`}
                     alt=""
@@ -53,7 +53,7 @@ export function CountriesSection() {
                 <div className="text-sm text-muted-fg">
                   {c.universities_count}+ {t('universities')}
                 </div>
-                <div className="text-sm font-semibold text-primary mt-1">
+                <div className="text-sm font-semibold text-[var(--color-fg)] mt-1">
                   {t('from_year').replace('$', String(c.tuition_year.bachelor))}
                 </div>
               </div>

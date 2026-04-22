@@ -36,10 +36,10 @@ export function AboutSection() {
           <div className="mb-3 text-xs font-semibold tracking-[0.2em] text-accent-dark">
             {t('eyebrow')}
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-fg)]">
             {t('title')}
           </h2>
-          <p className="mt-5 text-lg text-primary/80">{t('lead')}</p>
+          <p className="mt-5 text-lg text-[var(--color-fg)]/80">{t('lead')}</p>
           <p className="mt-3 text-base text-muted-fg">{t('body')}</p>
 
           <ul className="mt-8 space-y-4">
@@ -49,7 +49,7 @@ export function AboutSection() {
                   <Icon className="size-5" />
                 </span>
                 <div>
-                  <div className="font-semibold text-primary">{t(`${key}_t`)}</div>
+                  <div className="font-semibold text-[var(--color-fg)]">{t(`${key}_t`)}</div>
                   <div className="text-sm text-muted-fg">{t(`${key}_d`)}</div>
                 </div>
               </li>

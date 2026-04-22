@@ -7,6 +7,8 @@ node_modules/
 .cloudflare/
 dist/
 build/
+.next/
+**/.next/
 
 # Worker local state
 workers/**/.wrangler/
@@ -21,7 +23,51 @@ Thumbs.db
 .vscode/
 *.log
 
-# Env / secrets
+# ============================================================
+# ENV / SECRETS — NEVER COMMIT ANY OF THESE
+# ============================================================
 .env
 .env.*
+**/.env
+**/.env.*
 !.env.example
+!**/.env.example
+
+# Shell scripts with secrets (sometimes people paste tokens in shell files)
+secrets.sh
+secrets.ps1
+credentials.json
+service-account*.json
+*-service-account.json
+firebase-credentials.json
+
+# SSH / PGP / certs
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+*.crt
+id_rsa
+id_ed25519
+*.gpg
+*.asc
+
+# IDE-specific secret storage
+.vscode/settings.json
+.idea/*.iml
+.idea/workspace.xml
+
+# macOS keychain exports
+*.keychain
+*.keychain-db
+
+# Local-only notes that might contain secrets
+NOTES.md
+TODO.md
+.claude-notes/
+
+# Backup files that might contain credentials
+*.bak
+*.backup
+*~

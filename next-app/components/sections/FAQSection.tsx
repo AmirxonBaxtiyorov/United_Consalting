@@ -27,7 +27,7 @@ export function FAQSection() {
               <div
                 key={q}
                 className={cn(
-                  'rounded-2xl border border-border bg-white transition',
+                  'rounded-2xl border border-border bg-[var(--color-surface)] transition',
                   isOpen && 'shadow-[var(--shadow-card)]'
                 )}
               >
@@ -36,7 +36,7 @@ export function FAQSection() {
                   className="w-full flex items-center justify-between gap-4 p-5 md:p-6 text-left"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-semibold text-primary">{t(q)}</span>
+                  <span className="font-semibold text-[var(--color-fg)]">{t(q)}</span>
                   <ChevronDown
                     className={cn(
                       'size-5 text-muted-fg transition-transform',

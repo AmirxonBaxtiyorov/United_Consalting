@@ -46,7 +46,7 @@ export function ServicesSection() {
               <div
                 key={s.key}
                 className={cn(
-                  'group relative overflow-hidden rounded-3xl bg-white border border-border p-6 md:p-7 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-0.5 transition',
+                  'group relative overflow-hidden rounded-3xl bg-[var(--color-surface)] border border-border p-6 md:p-7 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-0.5 transition',
                   span === 'col' && 'md:col-span-2',
                   span === 'row' && 'md:row-span-2',
                   span === 'both' && 'md:col-span-2 md:row-span-2'
@@ -56,7 +56,7 @@ export function ServicesSection() {
                 <span className="relative inline-flex items-center justify-center size-12 rounded-2xl bg-primary text-primary-foreground">
                   <Icon className="size-6" />
                 </span>
-                <h3 className="relative mt-5 text-xl md:text-2xl font-bold text-primary">
+                <h3 className="relative mt-5 text-xl md:text-2xl font-bold text-[var(--color-fg)]">
                   {t(`${s.key}_t`)}
                 </h3>
                 <p className="relative mt-2 text-sm md:text-base text-muted-fg max-w-md">

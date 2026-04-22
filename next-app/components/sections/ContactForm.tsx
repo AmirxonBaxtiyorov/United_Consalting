@@ -61,11 +61,11 @@ export function ContactForm({ source = 'homepage' }: { source?: string }) {
 
   if (status === 'ok') {
     return (
-      <div className="rounded-3xl bg-white border border-border p-8 text-center">
+      <div className="rounded-3xl bg-[var(--color-surface)] border border-border p-8 text-center">
         <span className="inline-flex items-center justify-center size-14 rounded-2xl bg-accent/10 text-accent-dark mb-4">
           <CheckCircle2 className="size-7" />
         </span>
-        <h3 className="text-2xl font-bold text-primary">{t('success_title')}</h3>
+        <h3 className="text-2xl font-bold text-[var(--color-fg)]">{t('success_title')}</h3>
         <p className="mt-2 text-muted-fg">{t('success_body')}</p>
       </div>
     );
@@ -77,14 +77,14 @@ export function ContactForm({ source = 'homepage' }: { source?: string }) {
         <div className="max-w-6xl mx-auto">
           <div className="max-w-2xl mx-auto text-center mb-10">
             <div className="mb-3 text-xs font-semibold tracking-[0.2em] text-accent-dark">{t('eyebrow')}</div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">{t('title')}</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-fg)]">{t('title')}</h2>
             <p className="mt-4 text-muted-fg">{t('subtitle')}</p>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-6">
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="lg:col-span-3 rounded-3xl bg-white border border-border p-6 md:p-8 space-y-5 shadow-[var(--shadow-card)]"
+              className="lg:col-span-3 rounded-3xl bg-[var(--color-surface)] border border-border p-6 md:p-8 space-y-5 shadow-[var(--shadow-card)]"
               noValidate
             >
               <input
@@ -245,7 +245,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <div className="mb-1.5 text-sm font-medium text-primary">{label}</div>
+      <div className="mb-1.5 text-sm font-medium text-[var(--color-fg)]">{label}</div>
       {children}
       {error && <p className="mt-1 text-xs text-error">{error}</p>}
     </label>

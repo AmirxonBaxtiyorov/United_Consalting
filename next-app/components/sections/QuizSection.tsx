@@ -215,7 +215,7 @@ export function QuizSection() {
           subtitle={t('subtitle')}
         />
 
-        <div className="max-w-3xl mx-auto rounded-3xl bg-white border border-border shadow-[var(--shadow-card)] p-6 md:p-10">
+        <div className="max-w-3xl mx-auto rounded-3xl bg-[var(--color-surface)] border border-border shadow-[var(--shadow-card)] p-6 md:p-10">
           {!done ? (
             <>
               <div className="flex items-center justify-between text-xs font-semibold text-muted-fg tracking-wide">
@@ -231,7 +231,7 @@ export function QuizSection() {
                 />
               </div>
 
-              <h3 className="mt-6 text-xl md:text-2xl font-bold text-primary">
+              <h3 className="mt-6 text-xl md:text-2xl font-bold text-[var(--color-fg)]">
                 {current.q}
               </h3>
 
@@ -244,7 +244,7 @@ export function QuizSection() {
                       'rounded-xl border px-4 py-3 text-left text-sm md:text-base font-medium transition',
                       selected === i
                         ? 'bg-accent text-accent-foreground border-accent'
-                        : 'bg-white text-primary border-border hover:border-accent'
+                        : 'bg-[var(--color-surface)] text-[var(--color-fg)] border-border hover:border-accent'
                     )}
                   >
                     {o.label}
@@ -269,7 +269,7 @@ export function QuizSection() {
             </>
           ) : (
             <>
-              <h3 className="text-2xl md:text-3xl font-bold text-primary">
+              <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-fg)]">
                 {t('result_title')}
               </h3>
               <p className="mt-2 text-muted-fg">{t('result_sub')}</p>
@@ -293,7 +293,7 @@ export function QuizSection() {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="font-semibold text-primary">{r.country.name[locale]}</div>
+                      <div className="font-semibold text-[var(--color-fg)]">{r.country.name[locale]}</div>
                       <div className="text-sm text-muted-fg truncate">
                         {r.country.universities_count}+ universities · from ${r.country.tuition_year.bachelor}/yr
                       </div>

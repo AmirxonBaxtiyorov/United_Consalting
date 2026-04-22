@@ -38,7 +38,7 @@ export function SectionTitle({
       <h2
         className={cn(
           'text-3xl md:text-4xl lg:text-5xl font-bold',
-          inverted ? 'text-white' : 'text-primary'
+          inverted ? 'text-white' : 'text-[var(--color-fg)]'
         )}
       >
         {title}

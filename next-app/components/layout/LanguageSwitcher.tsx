@@ -45,7 +45,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         disabled={isPending}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className="inline-flex items-center gap-1.5 rounded-full border border-border bg-white px-3 h-10 text-sm font-medium text-primary hover:bg-muted"
+        className="inline-flex items-center gap-1.5 rounded-full border border-border bg-[var(--color-surface)] px-3 h-10 text-sm font-medium text-[var(--color-fg)] hover:bg-[var(--color-muted)]"
       >
         <Globe className="size-4" />
         {LOCALE_LABEL[locale].short}
@@ -53,7 +53,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 top-full mt-2 w-40 rounded-xl border border-border bg-white p-1 shadow-[var(--shadow-card-hover)] z-50"
+          className="absolute right-0 top-full mt-2 w-40 rounded-xl border border-border bg-[var(--color-surface)] p-1 shadow-[var(--shadow-card-hover)] z-50"
         >
           {routing.locales.map((loc) => (
             <li key={loc}>
@@ -61,7 +61,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
                 role="option"
                 aria-selected={loc === locale}
                 onClick={() => change(loc as Locale)}
-                className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm hover:bg-muted"
+                className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm text-[var(--color-fg)] hover:bg-[var(--color-muted)]"
               >
                 <span>{LOCALE_LABEL[loc as Locale].full}</span>
                 {loc === locale && <Check className="size-4 text-accent-dark" />}
