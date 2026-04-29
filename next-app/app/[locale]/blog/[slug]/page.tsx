@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { BLOG_POSTS, getBlogPost } from '@/data/blog';
 import { routing, type Locale } from '@/i18n/routing';
-import { Button } from '@/components/ui/button';
 import { Clock, ArrowLeft, ArrowRight, Calendar } from 'lucide-react';
 import { CTASection } from '@/components/sections/CTASection';
 

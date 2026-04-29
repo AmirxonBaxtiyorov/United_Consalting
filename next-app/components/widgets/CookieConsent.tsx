@@ -1,26 +1,39 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Cookie } from 'lucide-react';
 
 const STORAGE_KEY = 'ugc_cookie_consent_v1';
 
+function subscribeStorage(callback: () => void) {
+  window.addEventListener('storage', callback);
+  return () => window.removeEventListener('storage', callback);
+}
+
+function getStored(): string | null {
+  try {
+    return localStorage.getItem(STORAGE_KEY);
+  } catch {
+    return null;
+  }
+}
+
+const getStoredServer = () => null;
+
 export function CookieConsent() {
   const t = useTranslations('widgets');
-  const [visible, setVisible] = useState(false);
+  const stored = useSyncExternalStore(subscribeStorage, getStored, getStoredServer);
+  const [dismissed, setDismissed] = useState(false);
 
-  useEffect(() => {
-    const v = typeof window !== 'undefined' && localStorage.getItem(STORAGE_KEY);
-    if (!v) setVisible(true);
-  }, []);
+  const visible = stored === null && !dismissed;
 
   const decide = (value: 'all' | 'essential') => {
     try {
       localStorage.setItem(STORAGE_KEY, value);
     } catch {}
-    setVisible(false);
+    setDismissed(true);
   };
 
   if (!visible) return null;
