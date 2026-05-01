@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Flag of Türkiye">
-  <rect width="1200" height="800" fill="#e30a17"/>
-  <circle cx="425" cy="400" r="200" fill="#fff"/>
-  <circle cx="475" cy="400" r="160" fill="#e30a17"/>
-  <g fill="#fff" transform="translate(583.5 400)">
-    <polygon points="0,-70 20.57,-21.79 73.33,-21.63 30.22,9.16 46.53,59.78 0,28.79 -46.53,59.78 -30.22,9.16 -73.33,-21.63 -20.57,-21.79"/>
-  </g>
-</svg>

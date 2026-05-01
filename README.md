@@ -1,74 +1,90 @@
-# United Global Consulting — Landing Page
+# United Global Consulting — Next.js 16 site
 
-Premium, static, multilingual landing page for an international education
-consulting agency. One `index.html`, ten country pages, one Cloudflare Worker
-backend, three languages (UZ/RU/EN), PWA-ready, Lighthouse-tuned.
+Marketing site and lead pipeline for United Global Consulting (Tashkent) — international-education agency.
 
-## Quick start (local)
+## Stack
+
+- **Next.js 16** (App Router, Turbopack, Cache Components-ready)
+- **React 19.2** · **TypeScript 5**
+- **Tailwind CSS 4**
+- **next-intl 4** for RU / UZ / EN localization (URL-prefixed, `/ru`, `/uz`, `/en`)
+- **React Hook Form + Zod** for form validation
+- **Framer Motion** + custom IntersectionObserver hooks for animations
+- **Supabase** (leads, newsletter) — Postgres + service-role key on the server
+- **Resend** (manager email + client auto-reply)
+- **Telegram Bot API** (instant lead alerts in managers' chat)
+- **lucide-react** icons
+
+## What's inside
+
+| Page | Route |
+|---|---|
+| Home (Hero, TrustBar, About, Services, Countries, Calculator, Quiz, Process, Stats, Scholarships, Testimonials, FAQ, CTA, Contact) | `/[locale]` |
+| About | `/[locale]/about` |
+| Services | `/[locale]/services` |
+| Countries list | `/[locale]/countries` |
+| Country detail (10 countries with real data) | `/[locale]/countries/[slug]` |
+| Blog list | `/[locale]/blog` |
+| Blog post (3 seed articles, markdown body) | `/[locale]/blog/[slug]` |
+| Cases (placeholder — new agency) | `/[locale]/cases` |
+| Contact | `/[locale]/contact` |
+| Calculator | `/[locale]/calculator` |
+| Quiz | `/[locale]/quiz` |
+| FAQ | `/[locale]/faq` |
+| Privacy / Terms | `/[locale]/privacy`, `/[locale]/terms` |
+| 404 | localised `/[locale]/not-found` |
+| Contact API | `POST /api/contact` |
+| Sitemap | `/sitemap.xml` (81+ URLs w/ hreflang) |
+| robots | `/robots.txt` |
+
+**All 10 countries** (Korea, Singapore, USA, Italy, Luxembourg, Finland, Turkey, Japan, Latvia, Malaysia) have real tuition ranges, living costs, real university lists with QS rankings, upcoming intake deadlines, and quiz-scoring weights.
+
+## Getting started
 
 ```bash
-# Any static server works. Two easy options:
-python -m http.server 8080
-# → http://localhost:8080/
-
-# or
-npx serve .
+npm install
+cp .env.example .env.local
+# fill env vars (see below)
+npm run dev
 ```
 
-## Quick start (production)
+## Environment variables
 
-See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) — short version:
+See [`.env.example`](./.env.example). Only `NEXT_PUBLIC_SITE_URL` is required for local dev; all others gate their integration off gracefully when absent.
 
-1. Deploy the Cloudflare Worker in `workers/form-proxy/` and put its URL in
-   `UGC_CONFIG.formEndpoint` (inline `<script>` inside `index.html`).
-2. Push the repo to Cloudflare Pages. It serves everything as-is.
-3. Add domain, enable HSTS preload.
+### Supabase
 
-## Repo map
+Run [`docs/supabase-schema.sql`](./docs/supabase-schema.sql) once in your Supabase project SQL editor. Tables:
+- `leads`
+- `newsletter_subscribers`
 
-| Path                        | Purpose                                         |
-|-----------------------------|-------------------------------------------------|
-| `index.html`                | Main landing page                               |
-| `countries/<slug>.html`     | 10 SEO-focused country pages                    |
-| `thank-you.html`            | Post-submit conversion page                    |
-| `privacy.html`, `terms.html`, `404.html`, `offline.html` | Static pages |
-| `css/`                      | `styles.css` · `animations.css` · `enhancements.css` |
-| `js/main.js`                | All behavior in one IIFE                        |
-| `js/modules/i18n.js`        | DOM-binding translator                          |
-| `i18n/{uz,ru,en}.json`      | Translations                                    |
-| `data/countries.json`       | Drives calculator + quiz + deadlines + country pages |
-| `assets/flags/*.svg`        | 10 offline SVG flags                            |
-| `workers/form-proxy/`       | Cloudflare Worker — verifies, rate-limits, fans out |
-| `scripts/gen-country-pages.js` | Node generator — 10 country pages from `countries.json` |
-| `scripts/link-country-cards.js` | Node: rewires card anchors on index to country pages |
-| `sitemap.xml`, `robots.txt`, `manifest.webmanifest`, `sw.js`, `_headers`, `_redirects` | Platform files |
-| `docs/`                     | ARCHITECTURE, DEPLOYMENT, CONTENT_EDITING, SETUP |
+### Telegram bot
 
-## Features implemented
+1. Message `@BotFather` → `/newbot` → copy token.
+2. Add the bot to your managers' group chat.
+3. Fetch chat id: `curl https://api.telegram.org/bot<TOKEN>/getUpdates`.
+4. Put both in `.env.local`.
 
-- Dark mode, Uzbek/Russian/English i18n with hreflang, skip-link, focus-trap,
-  reduced-motion, high-contrast support.
-- Lead form with honeypot, time-trap, Cloudflare Turnstile, UZ phone masking,
-  synchronous WhatsApp fallback, Cloudflare Worker backend, Telegram + Google
-  Sheets fan-out, UTM capture, loading/success/error states, GDPR consent.
-- Tuition-cost calculator, country-fit quiz, live admission-deadline
-  countdown — all driven by `data/countries.json`.
-- 10 country landing pages with unique SEO copy, BreadcrumbList + Article
-  schema, university lists, cost tables, cross-linking.
-- PWA: installable, Service Worker precache of 35 assets + offline fallback,
-  shortcuts for consultation + top two countries.
-- Security: strict CSP, SRI-pinned Lucide, HSTS preload, X-Frame DENY,
-  Permissions-Policy, referrer-policy. `security.txt` published.
-- Cookie consent with granular categories (essential / analytics / marketing),
-  gated GA4 loading.
+### Resend
 
-## Known placeholders (fill before launch)
+1. Register at https://resend.com, verify a domain (e.g. `unitedglobal.uz`).
+2. Copy the API key.
+3. `RESEND_FROM` must be on a verified domain.
 
-- `UGC_CONFIG.formEndpoint` — Worker URL
-- `UGC_CONFIG.turnstileSiteKey` — from Cloudflare Turnstile dashboard
-- `UGC_CONFIG.gaId` — GA4 Measurement ID
-- All Worker secrets (Telegram token, chat id, Turnstile secret, optional Sheets URL)
+## Deployment
 
-## License
+This folder is ready to deploy as its own Vercel project. Either:
 
-Proprietary. All rights reserved. © United Global Consulting.
+- **Option A (recommended while static site is still the primary):** create a new Vercel project with **Root Directory = `next-app`** pointed at the same repo.
+- **Option B:** once ready to cut over, delete the static HTML from the repo root and move `next-app/*` to the root.
+
+On Vercel:
+- Build command: `next build`
+- Output: `.next` (automatic)
+- Node.js: 20.x
+
+## Notes on data
+
+- All statistics on the site are framed around *what the agency offers* (partner university count, countries, languages, response time) — not success rates, since the agency is just starting. Lines like "500+ successful students" were intentionally **removed** from the copy.
+- Blog has 3 long-form articles (RU/UZ/EN) seeded in `data/blog.ts`. Move to Supabase when admin UI lands.
+- Team and Cases pages are deliberate placeholders ("will be populated after first enrolment cycle").

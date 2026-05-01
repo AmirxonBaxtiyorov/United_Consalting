@@ -9,11 +9,9 @@ dist/
 build/
 .next/
 **/.next/
-
-# Worker local state
-workers/**/.wrangler/
-workers/**/wrangler.local.toml
-workers/**/.dev.vars
+out/
+*.tsbuildinfo
+next-env.d.ts
 
 # OS / editor
 .DS_Store
