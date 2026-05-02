@@ -13,6 +13,8 @@ import { formatMoney } from '@/lib/utils';
 import type { Locale } from '@/i18n/routing';
 import { routing } from '@/i18n/routing';
 import { Calendar, GraduationCap, BedDouble, Plane, ShieldCheck, FileText, BookOpen, Sparkles, ArrowRight } from 'lucide-react';
+import { BreadcrumbSchema, CountryCoursesSchema } from '@/components/shared/SchemaOrg';
+import { SITE } from '@/lib/config';
 
 export function generateStaticParams() {
   const slugs = allCountrySlugs();
@@ -42,7 +44,6 @@ export async function generateMetadata({
     openGraph: {
       title: name,
       description,
-      images: [country.image],
     },
   };
 }
@@ -58,7 +59,28 @@ export default async function CountryDetailPage({
   const country = getCountry(slug);
   if (!country) notFound();
 
-  return <CountryDetail slug={slug} locale={locale as Locale} />;
+  const safeLocale = locale as Locale;
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
+  const countryName = country.name[safeLocale] ?? country.name.en;
+  const countryUrl = `${SITE.url}/${safeLocale}/countries/${slug}`;
+
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: tNav('home'), url: `${SITE.url}/${safeLocale}` },
+          { name: tNav('countries'), url: `${SITE.url}/${safeLocale}/countries` },
+          { name: countryName, url: countryUrl },
+        ]}
+      />
+      <CountryCoursesSchema
+        countryName={countryName}
+        url={countryUrl}
+        universities={country.universities.map((u) => ({ name: u.name, description: u.desc }))}
+      />
+      <CountryDetail slug={slug} locale={safeLocale} />
+    </>
+  );
 }
 
 function CountryDetail({ slug, locale }: { slug: string; locale: Locale }) {

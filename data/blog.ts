@@ -495,6 +495,661 @@ Dorm: **$200–$400/month**. Food: **$300–$500/month**.
 4. **Skipping Speaking prep.**`,
     },
   },
+  {
+    slug: 'student-visa-korea-2026',
+    category: 'visa',
+    cover: 'https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=1600&q=80',
+    reading_time: 9,
+    published_at: '2026-04-22',
+    title: {
+      ru: 'Студенческая виза D-2 в Корею 2026: полный пошаговый гайд',
+      uz: "Koreya D-2 talaba vizasi 2026: to'liq bosqichma-bosqich qo'llanma",
+      en: 'Korea D-2 student visa 2026: a step-by-step guide',
+    },
+    excerpt: {
+      ru: 'Документы, сроки, финансовое подтверждение, частые отказы и как их избежать. Реальные цифры консульства Кореи в Ташкенте.',
+      uz: "Hujjatlar, muddatlar, moliyaviy tasdiq, ko'p uchragan rad etishlar va ulardan saqlanish. Toshkentdagi Koreya konsulligining haqiqiy raqamlari.",
+      en: 'Documents, timelines, financial proof, common refusals and how to avoid them. Real numbers from the Korean consulate in Tashkent.',
+    },
+    body: {
+      ru: `## Что такое D-2 и кому она подходит
+
+**D-2** — корейская студенческая виза для обучения в аккредитованных вузах: бакалавриат (D-2-2), магистратура (D-2-3), PhD (D-2-4), исследователь (D-2-5), языковые курсы при университете (D-2-7). Срок — на весь период программы.
+
+> Не путать с **D-4** (общеязыковые школы вне университета): другие документы, другая логика. В этом гайде только D-2.
+
+## Когда подавать
+
+- **Spring intake** (март 2027): получение Certificate of Admission в декабре 2026 → подача визы в январе–феврале.
+- **Fall intake** (сентябрь 2026): admission в июне → виза в июле–августе.
+
+Корейское посольство в Ташкенте обрабатывает D-2 за **2–4 недели**. Закладывайте 6 недель буфера до вылета.
+
+## Полный пакет документов
+
+1. **Загранпаспорт** — действителен ещё 6+ месяцев.
+2. **2 фото 3.5×4.5** — белый фон, не старше 6 месяцев.
+3. **Анкета** — заполняется на сайте посольства, печатается, подписывается.
+4. **Certificate of Admission** — оригинал из корейского вуза.
+5. **Business Registration Certificate** вуза — высылается вузом вместе с admission.
+6. **Аттестат / диплом + апостиль + перевод** — нотариальный перевод на корейский или английский.
+7. **Транскрипт оценок + апостиль + перевод**.
+8. **Финансовое подтверждение** — банковская выписка минимум на **\$20,000** на 1 год обучения. Деньги должны лежать на счёте **не менее 1 месяца**.
+9. **Письмо-объяснение происхождения средств** — если деньги на счёте недавно.
+10. **Спонсорское письмо** — если платит родитель: их ID + выписка + объяснение родства (свидетельство о рождении).
+11. **Health check certificate** для туберкулёза — для некоторых программ. Делается в корейской больнице по приезде, но рекомендуется привезти результат от своего врача.
+12. **Языковой сертификат** — TOPIK 3+ для корейских программ, IELTS 5.5+ для английских.
+13. **Sevimage Insurance** — за 1 год.
+
+## Как заполнить финансовое подтверждение правильно
+
+**Самая частая причина отказа.** Что советуем:
+
+- Сумма **строго от \$20,000** (даже если стипендия покрывает обучение — посольство хочет видеть резерв).
+- Деньги должны **лежать минимум 30 дней**. Если завели вчера — откажут.
+- **Не USDT, не наличные** — только банковский счёт в **узбекском или зарубежном банке**. Идеально — мультивалютная карта Капитал банка / Hamkorbank на сум-долларовых ставках.
+- **Источник денег**. Если родитель-предприниматель: справка с ИНН + выписка с бизнес-счёта за 6 месяцев + договор/контракт.
+
+## Частые причины отказа (статистика 2025)
+
+1. **Финансовое подтверждение слабое** (40%) — мало денег или свежее поступление.
+2. **Слабая мотивация** в анкете (20%) — копи-паст шаблонов.
+3. **Языковой сертификат не соответствует программе** (15%) — TOPIK 2 на корейскую магистратуру.
+4. **Подача "fake" admission** от непризнанных школ (10%) — сразу blacklist.
+5. **Прошлые проблемы** (10%) — отказ в шенгенской визе, депортация, overstay.
+6. **Документ просрочен** (5%) — паспорт, апостиль > 6 мес.
+
+## Что делать после получения визы
+
+1. Купить билет — не ранее, чем за 60 дней до начала семестра (D-2 даёт право въехать только в этом окне).
+2. Оформить **Alien Registration Card** в течение 90 дней после прилёта.
+3. Открыть корейский банковский счёт — KEB Hana или Woori (нужен ARC).
+4. Подключиться к **National Health Insurance** через 6 месяцев (автоматически).
+
+## Полезные ссылки
+
+- Embassy of Korea in Uzbekistan: kor.uz
+- HiKorea (госуслуги для иностранцев): hikorea.go.kr
+- Korean visa portal: visa.go.kr`,
+      uz: `## D-2 viza nima va kimga mos
+
+**D-2** — Koreyaning talaba vizasi: bakalavr (D-2-2), magistr (D-2-3), PhD (D-2-4), tadqiqotchi (D-2-5), universitet til kursi (D-2-7). Muddati — butun dastur uchun.
+
+> **D-4** (universitet tashqarisidagi til maktablari) bilan adashtirmang. Bu yerda faqat D-2.
+
+## Qachon topshirish kerak
+
+- **Bahorgi qabul** (mart 2027): Certificate of Admission dekabr 2026'da → viza yanvar–fevralda.
+- **Kuzgi qabul** (sentyabr 2026): admission iyunda → viza iyul–avgustda.
+
+Toshkentdagi Koreya elchixonasi D-2'ni **2–4 hafta**da ko'rib chiqadi. Parvozdan oldin 6 haftalik zaxira qoldiring.
+
+## To'liq hujjatlar to'plami
+
+1. **Xorijiy pasport** — yana 6+ oy amal qiladigan.
+2. **2 ta 3.5×4.5 surat** — oq fon, 6 oydan eski emas.
+3. **Anketa** — elchixona saytidan to'ldiring.
+4. **Certificate of Admission** — Koreya universitetidan original.
+5. **Business Registration Certificate** — admission bilan birga keladi.
+6. **Attestat / diplom + apostil + tarjima** — koreys yoki ingliz tiliga notarial tarjima.
+7. **Baholar transkripti + apostil + tarjima**.
+8. **Moliyaviy tasdiq** — bank ko'chirmasi kamida **\$20,000**. Pul hisobda **kamida 1 oy** turishi kerak.
+9. **Pul kelib chiqishi xat** — agar pul yangi joylangan bo'lsa.
+10. **Homiylik xat** — ota-ona to'lasa: ularning ID + ko'chirma + tug'ilganlik haqida guvohnoma.
+11. **Tibbiy ko'rik (sil)** — ba'zi dasturlar uchun.
+12. **Til sertifikati** — koreys dasturlari uchun TOPIK 3+, ingliz uchun IELTS 5.5+.
+13. **Sug'urta** — 1 yilga.
+
+## Moliyaviy tasdiqni qanday to'g'ri tayyorlash
+
+**Eng ko'p uchraydigan rad sababi.** Maslahatlar:
+
+- Summa **kamida \$20,000** (stipendiya o'qishni qoplagan bo'lsa ham).
+- Pul **kamida 30 kun** turishi kerak.
+- **USDT yoki naqd emas** — faqat bank hisobi (O'zbekiston yoki xorijiy).
+- **Pul manbasini** ko'rsating: tadbirkorlik bo'lsa — STIR + 6 oylik biznes hisob.
+
+## Eng ko'p uchraydigan rad sabablari (2025 statistika)
+
+1. **Zaif moliyaviy tasdiq** (40%)
+2. **Anketadagi zaif motivatsiya** (20%)
+3. **Til sertifikati dasturga mos emas** (15%)
+4. **Tan olinmagan maktabdan "fake" admission** (10%)
+5. **Avvalgi muammolar** (10%) — Schengen rad, deportatsiya, overstay
+6. **Hujjat muddati o'tgan** (5%) — pasport, apostil > 6 oy
+
+## Vizadan keyin nima qilish
+
+1. Chiptani sotib oling — semestr boshlanishidan 60 kun oldindan emas.
+2. **Alien Registration Card**'ni kelganidan keyin 90 kun ichida.
+3. Koreya bankida hisob oching (KEB Hana yoki Woori, ARC kerak).
+4. **National Health Insurance** 6 oydan keyin avtomatik.
+
+## Foydali manbalar
+
+- Koreya Toshkentdagi elchixonasi: kor.uz
+- HiKorea: hikorea.go.kr
+- Koreys viza portali: visa.go.kr`,
+      en: `## What D-2 is and who it's for
+
+**D-2** is Korea's student visa for accredited universities: bachelor (D-2-2), master (D-2-3), PhD (D-2-4), researcher (D-2-5), university language program (D-2-7). It covers the entire program length.
+
+> Don't confuse it with **D-4** (standalone language schools) — different paperwork, different logic. This guide is D-2 only.
+
+## When to apply
+
+- **Spring intake** (March 2027): Certificate of Admission in December 2026 → visa in January–February.
+- **Fall intake** (September 2026): admission in June → visa in July–August.
+
+The Korean embassy in Tashkent processes D-2 in **2–4 weeks**. Plan a 6-week buffer before departure.
+
+## Full document checklist
+
+1. **Passport** — valid for 6+ more months.
+2. **2 photos 3.5×4.5 cm** — white background, under 6 months old.
+3. **Application form** — fill on the embassy site, print, sign.
+4. **Certificate of Admission** — original from the Korean university.
+5. **Business Registration Certificate** — comes with admission.
+6. **Diploma + apostille + translation** — notarized to Korean or English.
+7. **Transcript + apostille + translation**.
+8. **Financial proof** — bank statement of at least **\$20,000**. Money must sit on the account for **at least 1 month**.
+9. **Source-of-funds letter** — if the money is recent.
+10. **Sponsor letter** — if a parent pays: their ID + bank statement + birth certificate (proof of relation).
+11. **TB health check** — for some programs.
+12. **Language certificate** — TOPIK 3+ for Korean-taught, IELTS 5.5+ for English-taught.
+13. **Insurance** — for 1 year.
+
+## How to get financial proof right
+
+**The #1 refusal reason.** Tips:
+
+- Amount **at least \$20,000** (even if a scholarship covers tuition).
+- Funds must **sit at least 30 days** on the account.
+- **Not USDT, not cash** — only a bank account (Uzbek or foreign).
+- **Source of funds**: if a self-employed parent — tax ID + 6-month business account statement.
+
+## Most common refusal reasons (2025)
+
+1. **Weak financial proof** (40%)
+2. **Weak motivation in the form** (20%)
+3. **Language cert below program requirement** (15%)
+4. **"Fake" admission from unrecognized schools** (10%)
+5. **Past issues** (10%) — Schengen refusal, deportation, overstay
+6. **Expired documents** (5%) — passport, apostille > 6 months
+
+## After you get the visa
+
+1. Buy a ticket — not earlier than 60 days before the semester starts.
+2. **Alien Registration Card** within 90 days after arrival.
+3. Open a Korean bank account (KEB Hana or Woori — needs ARC).
+4. **National Health Insurance** after 6 months automatically.
+
+## Useful links
+
+- Embassy of Korea in Uzbekistan: kor.uz
+- HiKorea (gov services for foreigners): hikorea.go.kr
+- Korean visa portal: visa.go.kr`,
+    },
+  },
+  {
+    slug: 'italy-dsu-scholarship-2026',
+    category: 'scholarships',
+    cover: 'https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=1600&q=80',
+    reading_time: 8,
+    published_at: '2026-04-18',
+    title: {
+      ru: 'Бесплатная магистратура в Италии: стипендия DSU 2026',
+      uz: "Italiyada bepul magistratura: 2026 DSU stipendiyasi",
+      en: 'Free master\'s in Italy: the DSU scholarship 2026',
+    },
+    excerpt: {
+      ru: 'Региональная стипендия DSU покрывает всё: обучение, общежитие, питание, до €7,500 в год. Кто может подать и какие нужны документы.',
+      uz: "DSU mintaqaviy stipendiyasi hammasini qoplaydi: o'qish, yotoqxona, oziq-ovqat, yiliga €7,500'gacha. Kim topshira oladi va qanday hujjatlar kerak.",
+      en: 'The regional DSU scholarship covers everything: tuition, dorm, food, up to €7,500/year. Who can apply and what documents you need.',
+    },
+    body: {
+      ru: `## Что такое DSU
+
+**DSU (Diritto allo Studio Universitario)** — региональная стипендия для всех студентов, чей семейный доход ниже порога. Дают **итальянцам и иностранцам одинаково**, нет квоты "только для своих".
+
+Стипендия даёт:
+
+- **Полное освобождение от обучения** (€500–€4,000 в зависимости от вуза).
+- **Общежитие или аренду** (€2,500–€5,500 в год).
+- **Питание в студенческой столовой** (бесплатно или €1.50 за обед).
+- **Стипендия наличными** — €2,000–€7,500 в год (если живёшь не в общежитии).
+
+В сумме — до **€10,000–€12,000 в год** покрытия.
+
+## Кто может получить
+
+Главный фактор — **ISEE** (индикатор семейного дохода и имущества). Для иностранцев из Узбекистана это:
+
+- Справка о доходах семьи за 2024 год (или 2025) с переводом и апостилем.
+- Справка о собственности (квартира, земля).
+- Подтверждение о составе семьи.
+
+Все документы переводятся на итальянский (присяжный переводчик в Италии или Узбекистане + апостиль) и подаются в **CAF Patronato** или вуз.
+
+**Порог дохода:**
+- ISEE до €23,000 → 100% покрытия (тираж + общежитие + €5,500–€7,500 наличными).
+- ISEE €23,000–€26,000 → 75% покрытия.
+- ISEE €26,000–€30,000 → 50% покрытия.
+
+Для Узбекистана средняя семья по ISEE подаёт на 100%.
+
+## Какие университеты дают самые большие DSU
+
+Региональные агентства разные. Топ-5 по размеру стипендии:
+
+1. **Politecnico di Torino** — Piemonte: до €7,200 наличными + общежитие.
+2. **Università di Bologna** — Emilia-Romagna: до €5,500 + общежитие.
+3. **Sapienza Roma** — Lazio: до €5,150 + общежитие.
+4. **Università di Padova** — Veneto: до €5,800.
+5. **Politecnico di Milano** — Lombardia: до €6,200, но Милан дорогой → выгодно жить в общежитии.
+
+## Дедлайны 2026/27
+
+- **Заявка на admission** в Politecnico/Sapienza/Bologna — **январь–март 2026**.
+- **Подача DSU** — **август–октябрь 2026** (после получения admission и приезда).
+- **Регистрация ISEE** в Италии — после прилёта, в CAF Patronato (бесплатно).
+
+## Что нужно сделать сейчас (если хотите осенью 2026)
+
+1. **Сейчас** — выберите 3 университета с английскими/итальянскими программами по специальности.
+2. **Январь–февраль 2026** — IELTS 6.0 или итальянский B2.
+3. **Февраль–март 2026** — подача в universitaly.it (центральный портал).
+4. **Апрель–май 2026** — pre-enrollment в посольство Италии в Ташкенте.
+5. **Июнь–август 2026** — виза D, переезд.
+6. **Сентябрь–октябрь 2026** — подача DSU.
+
+## Документы для DSU (повторный список)
+
+- Свидетельство о рождении + апостиль + перевод.
+- Справка о семье (кто в составе) — местные власти.
+- Справки о доходе родителей за 2 года + апостиль + перевод.
+- Справка о собственности (квартира, машина, бизнес).
+- Студенческий ID Италии (получается после регистрации).
+- Контракт аренды или справка из общежития.
+
+## Главное правило
+
+**Подавать одновременно на admission И на DSU.** Большинство студентов узнают о DSU после переезда и теряют 1 семестр. Заранее соберите документы — за 6 месяцев до подачи.`,
+      uz: `## DSU nima
+
+**DSU (Diritto allo Studio Universitario)** — oilaviy daromadi yetarli bo'lmagan barcha talabalarga beriladigan mintaqaviy stipendiya. **Italyanlar va xorijliklar teng** beriladi.
+
+Stipendiya beradi:
+
+- **O'qishdan to'liq ozod qilish** (€500–€4,000 universitet bo'yicha).
+- **Yotoqxona yoki ijara** (yiliga €2,500–€5,500).
+- **Talabalar oshxonasi** (bepul yoki tushlik €1.50).
+- **Naqd stipendiya** — yotoqxonada yashamasangiz, yiliga €2,000–€7,500.
+
+Jami yiliga **€10,000–€12,000**'gacha qoplash.
+
+## Kim ola oladi
+
+Asosiy omil — **ISEE** (oila daromadi va mol-mulk indikatori). O'zbekistonlik xorijlik uchun:
+
+- 2024 (yoki 2025) yil oila daromadi haqidagi ma'lumotnoma + apostil + tarjima.
+- Mol-mulk haqida ma'lumotnoma (uy, yer).
+- Oila tarkibi haqida tasdiq.
+
+Hujjatlar italyan tiliga tarjima qilinadi (qasamyod tarjimon) va **CAF Patronato** yoki universitetga topshiriladi.
+
+**Daromad chegarasi:**
+- ISEE €23,000 gacha → 100% qoplash.
+- ISEE €23,000–€26,000 → 75%.
+- ISEE €26,000–€30,000 → 50%.
+
+O'zbekiston o'rtacha oilasi 100% topshiradi.
+
+## Eng katta DSU beradigan universitetlar
+
+1. **Politecnico di Torino** — Piemonte: yiliga €7,200 naqd + yotoqxona.
+2. **Università di Bologna** — Emilia-Romagna: €5,500 + yotoqxona.
+3. **Sapienza Roma** — Lazio: €5,150 + yotoqxona.
+4. **Università di Padova** — Veneto: €5,800.
+5. **Politecnico di Milano** — Lombardia: €6,200.
+
+## 2026/27 muddatlari
+
+- **Admission** Politecnico/Sapienza/Bologna — **yanvar–mart 2026**.
+- **DSU topshirish** — **avgust–oktyabr 2026** (admission va kelganidan keyin).
+- **ISEE Italiyada** — kelganidan keyin CAF Patronato'da bepul.
+
+## Hozir nima qilish kerak
+
+1. **Hozir** — 3 ta universitet tanlang.
+2. **Yanvar–fevral 2026** — IELTS 6.0 yoki italyan B2.
+3. **Fevral–mart 2026** — universitaly.it'ga topshirish.
+4. **Aprel–may 2026** — Toshkentdagi Italiya elchixonasiga pre-enrollment.
+5. **Iyun–avgust 2026** — D viza, ko'chish.
+6. **Sentyabr–oktyabr 2026** — DSU topshirish.
+
+## DSU hujjatlar
+
+- Tug'ilganlik haqida guvohnoma + apostil + tarjima.
+- Oila tarkibi haqida ma'lumotnoma.
+- 2 yillik ota-ona daromadi + apostil + tarjima.
+- Mol-mulk ma'lumotnomasi.
+- Italiyada ro'yxatdan o'tgan keyingi talabalar ID.
+- Ijara yoki yotoqxona shartnomasi.
+
+## Asosiy qoida
+
+**Admission'ga va DSU'ga bir vaqtda topshirish.** Ko'p talabalar DSU haqida kech bilib, 1 semestr yo'qotadi.`,
+      en: `## What DSU is
+
+**DSU (Diritto allo Studio Universitario)** is a regional scholarship for any student whose family income is below threshold. Italians and foreigners are treated **equally** — no domestic-only quota.
+
+It provides:
+
+- **Full tuition waiver** (€500–€4,000 depending on the uni).
+- **Dorm or rent reimbursement** (€2,500–€5,500/yr).
+- **Student canteen** (free or €1.50/meal).
+- **Cash stipend** — €2,000–€7,500/yr if not living in a dorm.
+
+Total: up to **€10,000–€12,000/yr** in coverage.
+
+## Who qualifies
+
+The key metric is **ISEE** (family income + assets indicator). For Uzbek students:
+
+- Family income certificate for 2024 (or 2025) + apostille + Italian translation.
+- Property certificate (apartment, land).
+- Family composition certificate.
+
+All documents are translated to Italian (sworn translator in Italy or Uzbekistan + apostille) and submitted to **CAF Patronato** or the university.
+
+**Income brackets:**
+- ISEE up to €23,000 → 100% coverage (waiver + dorm + €5,500–€7,500 cash).
+- ISEE €23,000–€26,000 → 75%.
+- ISEE €26,000–€30,000 → 50%.
+
+A typical Uzbek family qualifies for 100%.
+
+## Top universities for DSU size
+
+1. **Politecnico di Torino** — Piemonte: up to €7,200 cash + dorm.
+2. **Università di Bologna** — Emilia-Romagna: up to €5,500 + dorm.
+3. **Sapienza Roma** — Lazio: up to €5,150 + dorm.
+4. **Università di Padova** — Veneto: up to €5,800.
+5. **Politecnico di Milano** — Lombardia: up to €6,200.
+
+## Deadlines 2026/27
+
+- **Admission** at Polito/Sapienza/Bologna — **January–March 2026**.
+- **DSU application** — **August–October 2026** (after admission and arrival).
+- **ISEE registration in Italy** — after arrival, free at CAF Patronato.
+
+## What to do now (if you want Fall 2026)
+
+1. **Now** — pick 3 universities with English or Italian programs.
+2. **Jan–Feb 2026** — IELTS 6.0 or Italian B2.
+3. **Feb–Mar 2026** — apply on universitaly.it.
+4. **Apr–May 2026** — pre-enrollment at the Italian embassy in Tashkent.
+5. **Jun–Aug 2026** — D visa, move.
+6. **Sep–Oct 2026** — submit DSU.
+
+## DSU document checklist
+
+- Birth certificate + apostille + translation.
+- Family composition certificate.
+- 2-year parental income statements + apostille + translation.
+- Property certificate.
+- Italian student ID after enrollment.
+- Rent contract or dorm certificate.
+
+## The golden rule
+
+**Apply for admission AND DSU together.** Most students learn about DSU after they move and lose a semester. Prepare documents 6 months in advance.`,
+    },
+  },
+  {
+    slug: 'usa-vs-europe-which-is-cheaper',
+    category: 'tips',
+    cover: 'https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?auto=format&fit=crop&w=1600&q=80',
+    reading_time: 11,
+    published_at: '2026-04-15',
+    title: {
+      ru: 'США или Европа: где учиться дешевле в 2026',
+      uz: "AQSh yoki Yevropa: 2026'da qayerda o'qish arzonroq",
+      en: 'USA or Europe: where is studying cheaper in 2026',
+    },
+    excerpt: {
+      ru: 'Реальные цифры по 5 университетам США и 5 европейским. Что вы платите за бренд, что — за реальное качество, что — за географию.',
+      uz: "AQShning 5 ta va Yevropaning 5 ta universiteti bo'yicha haqiqiy raqamlar. Brendga, sifatga va geografiyaga to'lov.",
+      en: 'Real numbers across 5 US and 5 European universities. What you pay for the brand vs. real quality vs. geography.',
+    },
+    body: {
+      ru: `## Короткий ответ
+
+**Европа дешевле почти всегда.** Среднегодовая разница: \$25,000–\$45,000. Но в США есть тропы со \$0 — full-ride scholarship'ы и community college route.
+
+## Сравнение по 5 университетам каждой стороны
+
+### США (бакалавриат, иностранцы, без стипендии)
+
+| Университет | Tuition/год | Жильё/год | Итого |
+|---|---|---|---|
+| MIT | \$59,750 | \$18,500 | \$78,250 |
+| Harvard | \$57,261 | \$20,375 | \$77,636 |
+| University of Michigan | \$57,273 | \$15,500 | \$72,773 |
+| Penn State | \$39,316 | \$13,500 | \$52,816 |
+| Arizona State | \$31,200 | \$13,000 | \$44,200 |
+
+**Среднее по США:** \$65,000/год.
+
+### Европа (бакалавриат, иностранцы, без стипендии)
+
+| Университет | Tuition/год | Жильё/год | Итого |
+|---|---|---|---|
+| Politecnico di Milano | €4,000 (\$4,200) | €7,500 | \$12,000 |
+| Sapienza Roma | €1,000 (\$1,050) | €5,500 | \$6,800 |
+| TU Munich (Германия) | €0 | €9,000 | \$9,500 |
+| Sorbonne (Франция) | €2,800 (\$3,000) | €7,000 | \$10,500 |
+| KU Leuven (Бельгия) | €4,200 (\$4,500) | €7,500 | \$12,500 |
+
+**Среднее по Европе:** \$10,500/год.
+
+**Разница: ×6 в пользу Европы.**
+
+## А что со стипендиями?
+
+### США
+- **Full-ride scholarship** — обучение + жильё + проживание. Дают **30+ университетов**, включая Harvard, Yale, MIT, Stanford, Princeton, Duke, Wesleyan.
+- **Шансы:** 1.5–2.5% (для отличников + SAT 1500+).
+- **Merit-based scholarships** в state university — \$10,000–\$25,000 скидка.
+
+### Европа
+- **DAAD (Германия)** — €934/мес на жизнь, обучение бесплатно.
+- **Erasmus Mundus** — €49,000–€57,000 на 2 года (магистратура).
+- **DSU (Италия)** — €5,000–€7,500/год + жильё (см. отдельную статью).
+- **Stipendium Hungaricum** — полное покрытие.
+
+## Тогда зачем вообще платить за США?
+
+1. **Сильные карьерные возможности** — особенно tech и finance. Зарплата выпускника MIT — \$110,000+ vs €45,000 в Европе.
+2. **Network эффект** — однокурсники = будущие коллеги в Google, Goldman, Tesla.
+3. **OPT visa** — после диплома 1 год работать в США + ещё 2 для STEM. Шанс на H-1B.
+4. **Доступ к венчурному капиталу** — 70% стартапов мира поднимают деньги в США.
+
+## Что выбрать в зависимости от цели
+
+| Ваша цель | Куда |
+|---|---|
+| Полная стипендия + любая страна | Европа (DAAD, Erasmus, DSU) |
+| Tech-карьера в Big Tech / FAANG | США (если есть бюджет) или Singapore/UK |
+| Получить EU паспорт со временем | Европа (любая страна — 5–10 лет резиденства) |
+| Родители платят, главное — престиж | США Ivy League |
+| Учёба + работа неполный день | Германия / Нидерланды (20 ч/нед разрешено, рынок труда сильный) |
+| Минимум денег + магистратура | Италия с DSU, Германия |
+
+## Промежуточные варианты (часто игнорируются)
+
+- **Канада** — между США и Европой по цене (\$22,000–\$35,000), легче иммиграция.
+- **Сингапур / Гонконг** — азиатский MIT, \$16,000–\$25,000, отличная карьера в Азии.
+- **Турция** — €1,500–€4,000/год за обучение, English-medium программы. Самое дешёвое предложение по соотношению цена/качество.
+
+## Финальная формула
+
+**Если бюджет < \$15,000/год → Европа (Германия, Италия, Венгрия) или Турция.**
+**Если бюджет \$30,000–\$50,000 + IELTS 7+ → США state universities или UK.**
+**Если бюджет неограничен + цель Big Tech / Wall Street → США Ivy League.**
+
+Главное — **не платить \$70,000 в Penn State, если ту же специальность дают в TU Munich за €0.** Бренд диплома важен только в первые 3 года карьеры; дальше всё определяют ваши проекты.`,
+      uz: `## Qisqa javob
+
+**Yevropa deyarli har doim arzonroq.** O'rtacha yiliga farq: \$25,000–\$45,000. Lekin AQShda \$0'lik yo'l ham bor — full-ride va community college.
+
+## 5 ta universitet bo'yicha taqqoslash
+
+### AQSh (bakalavr, xorijliklar, stipendiyasiz)
+
+| Universitet | Yiliga o'qish | Yashash | Jami |
+|---|---|---|---|
+| MIT | \$59,750 | \$18,500 | \$78,250 |
+| Harvard | \$57,261 | \$20,375 | \$77,636 |
+| Penn State | \$39,316 | \$13,500 | \$52,816 |
+| Arizona State | \$31,200 | \$13,000 | \$44,200 |
+
+**O'rtacha AQSh:** yiliga \$65,000.
+
+### Yevropa
+
+| Universitet | Yiliga o'qish | Yashash | Jami |
+|---|---|---|---|
+| Politecnico di Milano | €4,000 | €7,500 | \$12,000 |
+| Sapienza Roma | €1,000 | €5,500 | \$6,800 |
+| TU Munich | €0 | €9,000 | \$9,500 |
+| Sorbonne | €2,800 | €7,000 | \$10,500 |
+| KU Leuven | €4,200 | €7,500 | \$12,500 |
+
+**O'rtacha Yevropa:** yiliga \$10,500.
+
+**Farq: Yevropa foydasiga ×6.**
+
+## Stipendiyalar haqida
+
+### AQSh
+- **Full-ride** — Harvard, Yale, MIT, Stanford va 30+ universitet beradi.
+- **Imkoniyat:** 1.5–2.5% (a'lo + SAT 1500+).
+
+### Yevropa
+- **DAAD (Germaniya)** — €934/oy + bepul o'qish.
+- **Erasmus Mundus** — 2 yil uchun €49,000.
+- **DSU (Italiya)** — €5,000–€7,500/yil + yotoqxona.
+- **Stipendium Hungaricum** — to'liq qoplash.
+
+## Nega AQSh uchun to'lash kerak
+
+1. **Karyera imkoniyatlari** — MIT bitiruvchisi yiliga \$110,000+ vs Yevropada €45,000.
+2. **Network** — kursdoshlar = Google, Goldman, Tesla.
+3. **OPT viza** — 1 yil ishlash, STEM uchun yana 2 yil.
+4. **Venchur kapital** — startap pul yig'ish uchun AQSh.
+
+## Maqsadingizga ko'ra tanlov
+
+| Maqsad | Qaerga |
+|---|---|
+| To'liq stipendiya | Yevropa (DAAD, Erasmus, DSU) |
+| Big Tech karyerasi | AQSh yoki Singapur/UK |
+| EU pasporti | Yevropa (5–10 yil rezident) |
+| Prestij | AQSh Ivy League |
+| Ish + o'qish | Germaniya / Niderlandiya |
+| Eng arzon magistr | Italiya DSU, Germaniya |
+
+## Oraliq variantlar
+
+- **Kanada** — \$22,000–\$35,000, immigratsiya oson.
+- **Singapur / Gonkong** — \$16,000–\$25,000.
+- **Turkiya** — yiliga €1,500–€4,000, English-medium.
+
+## Yakuniy formula
+
+- **Yiliga < \$15,000 → Yevropa yoki Turkiya.**
+- **\$30,000–\$50,000 + IELTS 7+ → AQSh davlat yoki UK.**
+- **Cheksiz + Big Tech → AQSh Ivy League.**`,
+      en: `## Short answer
+
+**Europe is almost always cheaper.** Average yearly difference: \$25,000–\$45,000. But the US has \$0 paths — full-ride scholarships and community college transfer.
+
+## 5-university comparison
+
+### USA (bachelor, international, no scholarship)
+
+| University | Tuition/yr | Housing/yr | Total |
+|---|---|---|---|
+| MIT | \$59,750 | \$18,500 | \$78,250 |
+| Harvard | \$57,261 | \$20,375 | \$77,636 |
+| University of Michigan | \$57,273 | \$15,500 | \$72,773 |
+| Penn State | \$39,316 | \$13,500 | \$52,816 |
+| Arizona State | \$31,200 | \$13,000 | \$44,200 |
+
+**US average:** \$65,000/yr.
+
+### Europe
+
+| University | Tuition/yr | Housing/yr | Total |
+|---|---|---|---|
+| Politecnico di Milano | €4,000 | €7,500 | \$12,000 |
+| Sapienza Roma | €1,000 | €5,500 | \$6,800 |
+| TU Munich | €0 | €9,000 | \$9,500 |
+| Sorbonne (France) | €2,800 | €7,000 | \$10,500 |
+| KU Leuven (Belgium) | €4,200 | €7,500 | \$12,500 |
+
+**Europe average:** \$10,500/yr.
+
+**Gap: 6× in favour of Europe.**
+
+## What about scholarships?
+
+### USA
+- **Full-ride scholarships** at Harvard, Yale, MIT, Stanford, Princeton, Duke etc.
+- **Odds:** 1.5–2.5% (top GPA + SAT 1500+).
+- **Merit-based** at state universities — \$10,000–\$25,000 off.
+
+### Europe
+- **DAAD (Germany)** — €934/mo + free tuition.
+- **Erasmus Mundus** — €49,000–€57,000 for 2 years.
+- **DSU (Italy)** — €5,000–€7,500/yr + dorm.
+- **Stipendium Hungaricum** — full coverage.
+
+## Why pay for the USA at all?
+
+1. **Career outcomes** — MIT grad earns \$110,000+ vs €45,000 in Europe.
+2. **Network** — your peers become colleagues at Google, Goldman, Tesla.
+3. **OPT visa** — 1 year US work after grad + 2 more for STEM. Shot at H-1B.
+4. **Access to venture capital** — 70% of world startups raise in the US.
+
+## Pick by goal
+
+| Your goal | Where |
+|---|---|
+| Full scholarship + any country | Europe (DAAD, Erasmus, DSU) |
+| Big Tech / FAANG | USA (if budget) or Singapore/UK |
+| EU passport eventually | Europe (5–10 years residency) |
+| Pure prestige, parents pay | US Ivy League |
+| Study + part-time job | Germany / Netherlands |
+| Minimum cost + master's | Italy DSU, Germany |
+
+## Underrated middle options
+
+- **Canada** — \$22,000–\$35,000, easier immigration.
+- **Singapore / Hong Kong** — \$16,000–\$25,000, strong Asia careers.
+- **Turkey** — €1,500–€4,000/yr, English-medium. Best price/quality ratio.
+
+## Final formula
+
+- **Budget < \$15,000/yr → Europe (Germany, Italy, Hungary) or Turkey.**
+- **\$30,000–\$50,000 + IELTS 7+ → US state universities or UK.**
+- **Unlimited + Big Tech → US Ivy League.**
+
+Don't pay \$70,000 at Penn State for a major TU Munich offers for €0. Brand matters for the first 3 years of your career — after that, it's your projects.`,
+    },
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

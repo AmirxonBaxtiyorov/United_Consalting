@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: https://example.com
+          NEXT_PUBLIC_SUPABASE_URL: https://example.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ci-anon-key
+          SUPABASE_SERVICE_ROLE_KEY: ci-service-role
+          RESEND_API_KEY: ci-resend
+          MANAGER_EMAIL: ci@example.com
+          TELEGRAM_BOT_TOKEN: ci-telegram
+          TELEGRAM_CHAT_ID: '0'
+          RECAPTCHA_SECRET_KEY: ci-recaptcha
+          NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ci-recaptcha-site

@@ -1,6 +1,11 @@
--- Run once in your Supabase SQL editor.
+-- Supabase database schema for United Global Consulting
+-- Run this once in Supabase SQL Editor (Dashboard → SQL Editor → New query).
 
 create extension if not exists "pgcrypto";
+
+-- =========================================================
+-- Tables
+-- =========================================================
 
 -- Leads captured from the site (contact form, quiz, calculator, etc.)
 create table if not exists public.leads (
@@ -35,7 +40,65 @@ create table if not exists public.newsletter_subscribers (
   subscribed_at timestamptz not null default now()
 );
 
--- Row level security: server-side inserts via service role key bypass RLS.
--- Keep tables RLS-enabled so anon keys cannot read directly.
+-- =========================================================
+-- updated_at trigger function
+-- =========================================================
+
+create or replace function public.update_updated_at_column()
+returns trigger
+language plpgsql
+as $$
+begin
+  new.updated_at = now();
+  return new;
+end;
+$$;
+
+drop trigger if exists update_leads_updated_at on public.leads;
+create trigger update_leads_updated_at
+  before update on public.leads
+  for each row execute function public.update_updated_at_column();
+
+-- =========================================================
+-- Row level security
+-- service_role bypasses RLS — anon must NOT read/write directly.
+-- =========================================================
+
 alter table public.leads enable row level security;
 alter table public.newsletter_subscribers enable row level security;
+
+-- Drop existing policies (idempotent re-run safety)
+drop policy if exists "service_role_all_leads" on public.leads;
+drop policy if exists "anon_insert_subscribers" on public.newsletter_subscribers;
+drop policy if exists "service_role_all_subscribers" on public.newsletter_subscribers;
+
+-- leads — only service_role can read/write
+create policy "service_role_all_leads"
+  on public.leads
+  for all
+  to service_role
+  using (true)
+  with check (true);
+
+-- newsletter_subscribers — anon can subscribe (insert), service_role does the rest
+create policy "anon_insert_subscribers"
+  on public.newsletter_subscribers
+  for insert
+  to anon
+  with check (true);
+
+create policy "service_role_all_subscribers"
+  on public.newsletter_subscribers
+  for all
+  to service_role
+  using (true)
+  with check (true);
+
+-- =========================================================
+-- Smoke test (uncomment to verify after running)
+-- =========================================================
+-- insert into public.leads (name, phone, source) values ('Test', '+998000000000', 'sql-test');
+-- select count(*) from public.leads;  -- should be 1
+-- update public.leads set status = 'contacted' where source = 'sql-test';
+-- select updated_at <> created_at as trigger_works from public.leads where source = 'sql-test';
+-- delete from public.leads where source = 'sql-test';

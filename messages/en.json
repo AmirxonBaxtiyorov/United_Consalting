@@ -256,7 +256,8 @@
     "contact_title": "Contact",
     "rights": "All rights reserved",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "cookie_settings": "Cookie settings"
   },
   "widgets": {
     "back_to_top": "Back to top",
@@ -293,5 +294,8 @@
   "terms": {
     "title": "Terms of Service",
     "updated": "Updated"
+  },
+  "a11y": {
+    "skip_to_content": "Skip to main content"
   }
 }

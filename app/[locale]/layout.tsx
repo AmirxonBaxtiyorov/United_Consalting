@@ -8,9 +8,10 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { FloatingWidgets } from '@/components/widgets/FloatingWidgets';
 import { CookieConsent } from '@/components/widgets/CookieConsent';
-import { SchemaOrg } from '@/components/shared/SchemaOrg';
+import { SchemaOrg, WebSiteSchema } from '@/components/shared/SchemaOrg';
 import { Analytics } from '@/components/shared/Analytics';
 import { RecaptchaLoader } from '@/components/shared/Recaptcha';
+import { ServiceWorkerRegister } from '@/components/shared/ServiceWorkerRegister';
 import { ThemeProvider } from '@/components/shared/ThemeProvider';
 import { SITE } from '@/lib/config';
 
@@ -44,16 +45,13 @@ export async function generateMetadata({
       description: t('description'),
       url: `${SITE.url}/${locale}`,
       locale: locale === 'ru' ? 'ru_RU' : locale === 'uz' ? 'uz_UZ' : 'en_US',
-      images: ['/og-image.jpg'],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
     },
-    icons: {
-      icon: '/favicon.ico',
-    },
+    manifest: '/manifest.webmanifest',
   };
 }
 
@@ -68,20 +66,26 @@ export default async function LocaleLayout({
   if (!routing.locales.includes(locale as Locale)) notFound();
   setRequestLocale(locale);
   const messages = await getMessages();
+  const t = await getTranslations({ locale, namespace: 'a11y' });
 
   return (
     <html lang={locale} className={`${inter.variable} ${display.variable}`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
+        <a href="#main" className="skip-link">
+          {t('skip_to_content')}
+        </a>
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             <SchemaOrg locale={locale as Locale} />
+            <WebSiteSchema locale={locale as Locale} />
             <Header />
-            <main className="flex-1">{children}</main>
+            <main id="main" className="flex-1">{children}</main>
             <Footer />
             <FloatingWidgets />
             <CookieConsent />
             <Analytics />
             <RecaptchaLoader />
+            <ServiceWorkerRegister />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

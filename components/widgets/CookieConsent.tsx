@@ -1,47 +1,48 @@
 'use client';
 
-import { useState, useSyncExternalStore } from 'react';
+import { useCallback, useSyncExternalStore } from 'react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Cookie } from 'lucide-react';
+import {
+  CONSENT_EVENT,
+  CONSENT_STORAGE_KEY,
+  readConsent,
+  writeConsent,
+  type ConsentValue,
+} from '@/lib/consent';
 
-const STORAGE_KEY = 'ugc_cookie_consent_v1';
-
-function subscribeStorage(callback: () => void) {
-  window.addEventListener('storage', callback);
-  return () => window.removeEventListener('storage', callback);
+function subscribe(callback: () => void) {
+  if (typeof window === 'undefined') return () => {};
+  const onStorage = (e: StorageEvent) => {
+    if (e.key === CONSENT_STORAGE_KEY) callback();
+  };
+  window.addEventListener('storage', onStorage);
+  window.addEventListener(CONSENT_EVENT, callback);
+  return () => {
+    window.removeEventListener('storage', onStorage);
+    window.removeEventListener(CONSENT_EVENT, callback);
+  };
 }
 
-function getStored(): string | null {
-  try {
-    return localStorage.getItem(STORAGE_KEY);
-  } catch {
-    return null;
-  }
-}
-
-const getStoredServer = () => null;
+const getSnapshot = (): ConsentValue | null => readConsent();
+const getServerSnapshot = (): ConsentValue | null => null;
 
 export function CookieConsent() {
   const t = useTranslations('widgets');
-  const stored = useSyncExternalStore(subscribeStorage, getStored, getStoredServer);
-  const [dismissed, setDismissed] = useState(false);
+  const stored = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
-  const visible = stored === null && !dismissed;
+  const decide = useCallback((value: ConsentValue) => {
+    writeConsent(value);
+  }, []);
 
-  const decide = (value: 'all' | 'essential') => {
-    try {
-      localStorage.setItem(STORAGE_KEY, value);
-    } catch {}
-    setDismissed(true);
-  };
-
-  if (!visible) return null;
+  if (stored !== null) return null;
 
   return (
     <div
       role="dialog"
       aria-live="polite"
+      aria-label={t('cookies_title')}
       className="fixed bottom-4 left-4 right-4 md:left-auto md:max-w-md z-50 rounded-2xl bg-primary text-white shadow-[var(--shadow-card-hover)] p-5 border border-white/10"
     >
       <div className="flex items-start gap-3">

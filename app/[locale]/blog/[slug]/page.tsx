@@ -7,6 +7,8 @@ import { BLOG_POSTS, getBlogPost } from '@/data/blog';
 import { routing, type Locale } from '@/i18n/routing';
 import { Clock, ArrowLeft, ArrowRight, Calendar } from 'lucide-react';
 import { CTASection } from '@/components/sections/CTASection';
+import { ArticleSchema, BreadcrumbSchema } from '@/components/shared/SchemaOrg';
+import { SITE } from '@/lib/config';
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -29,7 +31,6 @@ export async function generateMetadata({
       title: post.title[locale as Locale],
       description: post.excerpt[locale as Locale],
       type: 'article',
-      images: [post.cover],
       publishedTime: post.published_at,
     },
   };
@@ -45,11 +46,29 @@ export default async function BlogPostPage({
   const post = getBlogPost(slug);
   if (!post) notFound();
   const t = await getTranslations({ locale, namespace: 'blog' });
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
 
   const related = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 3);
+  const safeLocale = locale as Locale;
+  const postUrl = `${SITE.url}/${safeLocale}/blog/${slug}`;
 
   return (
     <>
+      <ArticleSchema
+        headline={post.title[safeLocale]}
+        description={post.excerpt[safeLocale]}
+        datePublished={post.published_at}
+        image={post.cover}
+        url={postUrl}
+        inLanguage={safeLocale}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: tNav('home'), url: `${SITE.url}/${safeLocale}` },
+          { name: tNav('blog'), url: `${SITE.url}/${safeLocale}/blog` },
+          { name: post.title[safeLocale], url: postUrl },
+        ]}
+      />
       <article className="py-10 md:py-14">
         <div className="container-x max-w-3xl">
           <Link href="/blog" className="inline-flex items-center gap-1.5 text-sm text-muted-fg hover:text-primary">

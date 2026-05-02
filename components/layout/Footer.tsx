@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SITE } from '@/lib/config';
 import { GraduationCap, Phone, Mail, MapPin, MessageCircle, Send, Instagram } from 'lucide-react';
+import { CookieSettingsButton } from './CookieSettingsButton';
 
 export function Footer() {
   const t = useTranslations();
@@ -95,9 +96,12 @@ export function Footer() {
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
           <p>© {year} {SITE.name}. {t('footer.rights')}.</p>
-          <div className="flex gap-5">
+          <div className="flex flex-wrap gap-5">
             <Link href="/privacy" className="hover:text-white">{t('footer.privacy')}</Link>
             <Link href="/terms" className="hover:text-white">{t('footer.terms')}</Link>
+            <CookieSettingsButton className="hover:text-white text-left">
+              {t('footer.cookie_settings')}
+            </CookieSettingsButton>
           </div>
         </div>
       </div>

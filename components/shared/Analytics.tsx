@@ -1,10 +1,35 @@
 'use client';
 
+import { useSyncExternalStore } from 'react';
 import Script from 'next/script';
+import {
+  CONSENT_EVENT,
+  CONSENT_STORAGE_KEY,
+  hasAnalyticsConsent,
+} from '@/lib/consent';
+
+function subscribe(callback: () => void) {
+  if (typeof window === 'undefined') return () => {};
+  const onStorage = (e: StorageEvent) => {
+    if (e.key === CONSENT_STORAGE_KEY) callback();
+  };
+  window.addEventListener('storage', onStorage);
+  window.addEventListener(CONSENT_EVENT, callback);
+  return () => {
+    window.removeEventListener('storage', onStorage);
+    window.removeEventListener(CONSENT_EVENT, callback);
+  };
+}
+
+const getSnapshot = (): boolean => hasAnalyticsConsent();
+const getServerSnapshot = (): boolean => false;
 
 export function Analytics() {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
   const ymId = process.env.NEXT_PUBLIC_YM_ID;
+  const allowed = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  if (!allowed) return null;
 
   return (
     <>
@@ -41,6 +66,7 @@ type EventParams = Record<string, string | number | boolean | undefined>;
 
 export function trackEvent(name: string, params?: EventParams) {
   if (typeof window === 'undefined') return;
+  if (!hasAnalyticsConsent()) return;
   const w = window as unknown as {
     gtag?: (cmd: string, name: string, params?: EventParams) => void;
     ym?: (id: number, action: string, name: string, params?: EventParams) => void;

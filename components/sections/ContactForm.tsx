@@ -97,33 +97,42 @@ export function ContactForm({ source = 'homepage' }: { source?: string }) {
               />
 
               <div className="grid md:grid-cols-2 gap-4">
-                <Field label={t('name')} error={errors.name?.message}>
+                <Field label={t('name')} error={errors.name?.message} fieldId="contact-name">
                   <input
                     type="text"
                     {...register('name')}
+                    id="contact-name"
                     className="input"
                     placeholder="Ivan Petrov"
                     autoComplete="name"
+                    aria-invalid={errors.name ? 'true' : 'false'}
+                    aria-describedby={errors.name ? 'contact-name-error' : undefined}
                   />
                 </Field>
-                <Field label={t('phone')} error={errors.phone?.message}>
+                <Field label={t('phone')} error={errors.phone?.message} fieldId="contact-phone">
                   <input
                     type="tel"
                     {...register('phone')}
+                    id="contact-phone"
                     className="input"
                     placeholder="+998 ..."
                     autoComplete="tel"
+                    aria-invalid={errors.phone ? 'true' : 'false'}
+                    aria-describedby={errors.phone ? 'contact-phone-error' : undefined}
                   />
                 </Field>
               </div>
 
-              <Field label={t('email')} error={errors.email?.message}>
+              <Field label={t('email')} error={errors.email?.message} fieldId="contact-email">
                 <input
                   type="email"
                   {...register('email')}
+                  id="contact-email"
                   className="input"
                   placeholder="you@example.com"
                   autoComplete="email"
+                  aria-invalid={errors.email ? 'true' : 'false'}
+                  aria-describedby={errors.email ? 'contact-email-error' : undefined}
                 />
               </Field>
 
@@ -172,11 +181,11 @@ export function ContactForm({ source = 'homepage' }: { source?: string }) {
                 </span>
               </label>
               {errors.consent && (
-                <p className="text-sm text-error">{t('consent')}</p>
+                <p role="alert" className="text-sm text-error">{t('consent')}</p>
               )}
 
               {status === 'error' && (
-                <div className="flex items-start gap-2 rounded-xl bg-error/10 border border-error/30 p-3 text-sm text-error">
+                <div role="alert" className="flex items-start gap-2 rounded-xl bg-error/10 border border-error/30 p-3 text-sm text-error">
                   <AlertCircle className="size-4 mt-0.5" />
                   <div>
                     <div className="font-semibold">{t('error_title')}</div>
@@ -238,16 +247,22 @@ function Field({
   label,
   error,
   children,
+  fieldId,
 }: {
   label: string;
   error?: string;
   children: React.ReactNode;
+  fieldId?: string;
 }) {
   return (
-    <label className="block">
+    <label className="block" htmlFor={fieldId}>
       <div className="mb-1.5 text-sm font-medium text-[var(--color-fg)]">{label}</div>
       {children}
-      {error && <p className="mt-1 text-xs text-error">{error}</p>}
+      {error && (
+        <p id={fieldId ? `${fieldId}-error` : undefined} role="alert" className="mt-1 text-xs text-error">
+          {error}
+        </p>
+      )}
     </label>
   );
 }

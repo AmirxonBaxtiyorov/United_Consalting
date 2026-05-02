@@ -73,9 +73,12 @@ export function Header() {
             <Button size="sm">{t('cta')}</Button>
           </Link>
           <button
+            type="button"
             aria-label={mobile ? t('menu_close') : t('menu_open')}
+            aria-expanded={mobile}
+            aria-controls="mobile-menu"
             onClick={() => setMobile((v) => !v)}
-            className="lg:hidden inline-flex items-center justify-center size-10 rounded-full border border-border bg-[var(--color-surface)] text-[var(--color-fg)]"
+            className="lg:hidden inline-flex items-center justify-center size-11 rounded-full border border-border bg-[var(--color-surface)] text-[var(--color-fg)]"
           >
             {mobile ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -83,7 +86,13 @@ export function Header() {
       </div>
 
       {mobile && (
-        <div className="lg:hidden fixed inset-0 top-16 bg-[var(--color-bg)] z-30 overflow-auto">
+        <div
+          id="mobile-menu"
+          role="dialog"
+          aria-modal="true"
+          aria-label={t('menu_open')}
+          className="lg:hidden fixed inset-0 top-16 bg-[var(--color-bg)] z-30 overflow-auto"
+        >
           <div className="container-x py-6 flex flex-col gap-1">
             {NAV.map((item) => (
               <Link

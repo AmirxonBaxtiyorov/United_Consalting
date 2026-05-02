@@ -256,7 +256,8 @@
     "contact_title": "Aloqa",
     "rights": "Barcha huquqlar himoyalangan",
     "privacy": "Maxfiylik siyosati",
-    "terms": "Foydalanish shartlari"
+    "terms": "Foydalanish shartlari",
+    "cookie_settings": "Cookie sozlamalari"
   },
   "widgets": {
     "back_to_top": "Yuqoriga",
@@ -293,5 +294,8 @@
   "terms": {
     "title": "Foydalanish shartlari",
     "updated": "Yangilangan"
+  },
+  "a11y": {
+    "skip_to_content": "Asosiy kontentga o'tish"
   }
 }

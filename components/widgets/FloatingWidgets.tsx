@@ -24,7 +24,7 @@ export function FloatingWidgets() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t('whatsapp')}
-        className="inline-flex items-center justify-center size-12 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-105 transition"
+        className="inline-flex items-center justify-center size-12 min-w-12 min-h-12 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-105 transition"
       >
         <MessageCircle className="size-5" />
       </a>
@@ -33,15 +33,17 @@ export function FloatingWidgets() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t('telegram')}
-        className="inline-flex items-center justify-center size-12 rounded-full bg-[#229ED9] text-white shadow-lg hover:scale-105 transition"
+        className="inline-flex items-center justify-center size-12 min-w-12 min-h-12 rounded-full bg-[#229ED9] text-white shadow-lg hover:scale-105 transition"
       >
         <Send className="size-5" />
       </a>
       <button
+        type="button"
         aria-label={t('back_to_top')}
+        aria-hidden={!show}
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className={cn(
-          'inline-flex items-center justify-center size-12 rounded-full bg-primary text-white shadow-lg hover:scale-105 transition',
+          'inline-flex items-center justify-center size-12 min-w-12 min-h-12 rounded-full bg-primary text-white shadow-lg hover:scale-105 transition',
           show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
         )}
       >
