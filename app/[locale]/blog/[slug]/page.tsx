@@ -105,7 +105,7 @@ export default async function BlogPostPage({
 
       <section className="py-16">
         <div className="container-x max-w-5xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">More articles</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">{t('more_articles')}</h2>
           <div className="grid md:grid-cols-3 gap-5">
             {related.map((p) => (
               <Link key={p.slug} href={`/blog/${p.slug}`} className="group rounded-2xl bg-white border border-border overflow-hidden shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition">

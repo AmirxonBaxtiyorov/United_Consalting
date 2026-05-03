@@ -103,7 +103,7 @@ export function ContactForm({ source = 'homepage' }: { source?: string }) {
                     {...register('name')}
                     id="contact-name"
                     className="input"
-                    placeholder="Ivan Petrov"
+                    placeholder={t('name_placeholder')}
                     autoComplete="name"
                     aria-invalid={errors.name ? 'true' : 'false'}
                     aria-describedby={errors.name ? 'contact-name-error' : undefined}
@@ -115,7 +115,7 @@ export function ContactForm({ source = 'homepage' }: { source?: string }) {
                     {...register('phone')}
                     id="contact-phone"
                     className="input"
-                    placeholder="+998 ..."
+                    placeholder={t('phone_placeholder')}
                     autoComplete="tel"
                     aria-invalid={errors.phone ? 'true' : 'false'}
                     aria-describedby={errors.phone ? 'contact-phone-error' : undefined}
@@ -129,7 +129,7 @@ export function ContactForm({ source = 'homepage' }: { source?: string }) {
                   {...register('email')}
                   id="contact-email"
                   className="input"
-                  placeholder="you@example.com"
+                  placeholder={t('email_placeholder')}
                   autoComplete="email"
                   aria-invalid={errors.email ? 'true' : 'false'}
                   aria-describedby={errors.email ? 'contact-email-error' : undefined}

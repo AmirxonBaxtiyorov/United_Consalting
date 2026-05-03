@@ -115,18 +115,22 @@ function CountryDetail({ slug, locale }: { slug: string; locale: Locale }) {
               {nameLocalized}
             </h1>
             <p className="mt-4 text-lg text-muted-fg max-w-xl">
-              {country.universities_count}+ universities · {country.language} · tuition from {formatMoney(country.tuition_year.bachelor)}/yr
+              {tc('detail_summary', {
+                count: country.universities_count,
+                language: country.language,
+                price: formatMoney(country.tuition_year.bachelor),
+              })}
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/contact">
                 <Button size="lg">
-                  Get admission plan
+                  {tc('detail_cta_admission')}
                   <ArrowRight className="size-4" />
                 </Button>
               </Link>
               <Link href="/calculator">
                 <Button size="lg" variant="outline">
-                  Calculate cost
+                  {tc('detail_cta_calculate')}
                 </Button>
               </Link>
             </div>
@@ -148,21 +152,25 @@ function CountryDetail({ slug, locale }: { slug: string; locale: Locale }) {
 
       <section className="py-16 md:py-20">
         <div className="container-x">
-          <SectionTitle title={`Why ${nameLocalized}?`} align="left" />
+          <SectionTitle title={tc('detail_why_title', { country: nameLocalized })} align="left" />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-            <WhyCard Icon={GraduationCap} title="Top-ranked universities" body={`${country.universities_count}+ accredited institutions, QS-ranked flagships.`} />
-            <WhyCard Icon={BookOpen} title="Language flexibility" body={country.language} />
-            <WhyCard Icon={Sparkles} title="Scholarship pathways" body={`Merit + government scholarships covering up to 100% of tuition.`} />
-            <WhyCard Icon={ShieldCheck} title="Low refusal rate" body="Well-documented track record of student visa approvals." />
-            <WhyCard Icon={Plane} title="Strong diaspora" body="Uzbek student communities in major cities." />
-            <WhyCard Icon={FileText} title="Clear process" body="From offer to visa in a structured, predictable timeline." />
+            <WhyCard
+              Icon={GraduationCap}
+              title={tc('detail_why_card1_t')}
+              body={tc('detail_why_card1_d', { count: country.universities_count })}
+            />
+            <WhyCard Icon={BookOpen} title={tc('detail_why_card2_t')} body={country.language} />
+            <WhyCard Icon={Sparkles} title={tc('detail_why_card3_t')} body={tc('detail_why_card3_d')} />
+            <WhyCard Icon={ShieldCheck} title={tc('detail_why_card4_t')} body={tc('detail_why_card4_d')} />
+            <WhyCard Icon={Plane} title={tc('detail_why_card5_t')} body={tc('detail_why_card5_d')} />
+            <WhyCard Icon={FileText} title={tc('detail_why_card6_t')} body={tc('detail_why_card6_d')} />
           </div>
         </div>
       </section>
 
       <section className="py-16 md:py-20 bg-muted">
         <div className="container-x">
-          <SectionTitle title="Top universities" align="left" />
+          <SectionTitle title={tc('detail_top_universities')} align="left" />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
             {country.universities.map((u) => (
               <div key={u.name} className="rounded-3xl bg-white border border-border p-6 shadow-[var(--shadow-card)]">
@@ -179,10 +187,14 @@ function CountryDetail({ slug, locale }: { slug: string; locale: Locale }) {
 
       <section className="py-16 md:py-20">
         <div className="container-x">
-          <SectionTitle title="Cost of study + living" subtitle="Realistic annual estimate per official university and consulate data" align="left" />
+          <SectionTitle
+            title={tc('detail_cost_title')}
+            subtitle={tc('detail_cost_subtitle')}
+            align="left"
+          />
           <div className="grid md:grid-cols-2 gap-6">
             <div className="rounded-3xl bg-white border border-border p-6 md:p-8">
-              <h3 className="font-bold text-primary">Tuition (per year)</h3>
+              <h3 className="font-bold text-primary">{tc('detail_tuition_year')}</h3>
               <ul className="mt-4 space-y-2 text-sm">
                 <CostRow label={t('bachelor')} value={formatMoney(country.tuition_year.bachelor)} />
                 <CostRow label={t('master')} value={formatMoney(country.tuition_year.master)} />
@@ -191,16 +203,16 @@ function CountryDetail({ slug, locale }: { slug: string; locale: Locale }) {
               </ul>
             </div>
             <div className="rounded-3xl bg-white border border-border p-6 md:p-8">
-              <h3 className="font-bold text-primary">Living (per year)</h3>
+              <h3 className="font-bold text-primary">{tc('detail_living_year')}</h3>
               <ul className="mt-4 space-y-2 text-sm">
                 <CostRow label={t('dorm')} value={formatMoney(country.living_year.dorm)} icon={<BedDouble className="size-4" />} />
                 <CostRow label={t('shared')} value={formatMoney(country.living_year.shared)} />
                 <CostRow label={t('rent')} value={formatMoney(country.living_year.rent)} />
               </ul>
               <div className="mt-5 p-4 rounded-2xl bg-accent/10">
-                <div className="text-sm text-muted-fg">Lowest realistic annual budget</div>
+                <div className="text-sm text-muted-fg">{tc('detail_lowest_budget')}</div>
                 <div className="text-2xl font-bold text-primary">{formatMoney(yearlyLowest)}</div>
-                <div className="text-xs text-muted-fg mt-1">Bachelor + dormitory + insurance</div>
+                <div className="text-xs text-muted-fg mt-1">{tc('detail_lowest_budget_hint')}</div>
               </div>
             </div>
           </div>
@@ -209,7 +221,7 @@ function CountryDetail({ slug, locale }: { slug: string; locale: Locale }) {
 
       <section className="py-16 md:py-20 bg-muted">
         <div className="container-x">
-          <SectionTitle title="Upcoming deadlines" align="left" />
+          <SectionTitle title={tc('detail_deadlines')} align="left" />
           <ul className="grid md:grid-cols-2 gap-4">
             {country.typical_deadlines.map((d) => (
               <li key={d.id} className="flex items-start gap-4 rounded-3xl bg-white border border-border p-5">
@@ -244,7 +256,7 @@ function CountryDetail({ slug, locale }: { slug: string; locale: Locale }) {
 
       <section className="py-16 md:py-20">
         <div className="container-x">
-          <SectionTitle title="Other destinations" align="left" />
+          <SectionTitle title={tc('detail_other_destinations')} align="left" />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {others.map((c) => (
               <Link

@@ -1,12 +1,18 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SITE } from '@/lib/config';
 import { GraduationCap, Phone, Mail, MapPin, MessageCircle, Send, Instagram } from 'lucide-react';
 import { CookieSettingsButton } from './CookieSettingsButton';
+import { getCountry } from '@/data/countries';
+import type { Locale } from '@/i18n/routing';
 
 export function Footer() {
   const t = useTranslations();
+  const locale = useLocale() as Locale;
   const year = new Date().getFullYear();
+  const featured = (['korea', 'singapore', 'usa'] as const)
+    .map((slug) => getCountry(slug))
+    .filter((c): c is NonNullable<ReturnType<typeof getCountry>> => Boolean(c));
 
   return (
     <footer className="bg-primary text-white/90 mt-16">
@@ -69,9 +75,13 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/calculator" className="hover:text-accent">{t('nav.calculator')}</Link></li>
               <li><Link href="/quiz" className="hover:text-accent">{t('nav.quiz')}</Link></li>
-              <li><Link href="/countries/korea" className="hover:text-accent">South Korea</Link></li>
-              <li><Link href="/countries/singapore" className="hover:text-accent">Singapore</Link></li>
-              <li><Link href="/countries/usa" className="hover:text-accent">USA</Link></li>
+              {featured.map((c) => (
+                <li key={c.slug}>
+                  <Link href={`/countries/${c.slug}`} className="hover:text-accent">
+                    {c.name[locale] ?? c.name.en}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
