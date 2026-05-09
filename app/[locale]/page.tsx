@@ -4,7 +4,7 @@ import { TrustBar } from '@/components/sections/TrustBar';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
 import { CountriesSection } from '@/components/sections/CountriesSection';
-import { CalculatorSection } from '@/components/sections/CalculatorSection';
+import { UniversitiesSection } from '@/components/sections/UniversitiesSection';
 import { QuizSection } from '@/components/sections/QuizSection';
 import { ProcessSection } from '@/components/sections/ProcessSection';
 import { StatsSection } from '@/components/sections/StatsSection';
@@ -29,7 +29,7 @@ export default async function HomePage({
       <AboutSection />
       <ServicesSection />
       <CountriesSection />
-      <CalculatorSection />
+      <UniversitiesSection />
       <QuizSection />
       <ProcessSection />
       <StatsSection />

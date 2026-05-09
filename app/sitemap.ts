@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
 import { COUNTRIES } from '@/data/countries';
+import { UNIVERSITIES } from '@/data/universities';
 import { BLOG_POSTS } from '@/data/blog';
 import { SITE } from '@/lib/config';
 
@@ -12,10 +13,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/about',
     '/services',
     '/countries',
+    '/universities',
     '/blog',
     '/cases',
     '/contact',
-    '/calculator',
     '/quiz',
     '/faq',
     '/privacy',
@@ -44,6 +45,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.8,
+      });
+    }
+    for (const u of UNIVERSITIES) {
+      urls.push({
+        url: `${base}/${locale}/universities/${u.slug}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.7,
       });
     }
     for (const post of BLOG_POSTS) {

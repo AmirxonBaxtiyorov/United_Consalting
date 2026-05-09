@@ -128,9 +128,9 @@ function CountryDetail({ slug, locale }: { slug: string; locale: Locale }) {
                   <ArrowRight className="size-4" />
                 </Button>
               </Link>
-              <Link href="/calculator">
+              <Link href="/universities">
                 <Button size="lg" variant="outline">
-                  {tc('detail_cta_calculate')}
+                  {tc('detail_cta_universities')}
                 </Button>
               </Link>
             </div>

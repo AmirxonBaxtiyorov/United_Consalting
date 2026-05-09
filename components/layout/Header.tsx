@@ -6,7 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ThemeToggle } from '@/components/shared/ThemeToggle';
 import { Button } from '@/components/ui/button';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X, GraduationCap, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export function Header() {
@@ -30,6 +30,7 @@ export function Header() {
     { href: '/about', label: t('about') },
     { href: '/services', label: t('services') },
     { href: '/countries', label: t('countries') },
+    { href: '/universities', label: t('universities') },
     { href: '/blog', label: t('blog') },
     { href: '/contact', label: t('contact') },
   ];
@@ -51,7 +52,7 @@ export function Header() {
           <span className="inline-flex items-center justify-center size-9 rounded-lg bg-[#0a2540] dark:bg-accent text-white dark:text-[#031612]">
             <GraduationCap className="size-5" />
           </span>
-          <span className="hidden sm:inline">United Global</span>
+          <span className="hidden sm:inline">United Consulting</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-[var(--color-fg)]/80">
@@ -70,7 +71,10 @@ export function Header() {
           <ThemeToggle />
           <LanguageSwitcher />
           <Link href="/contact" className="hidden md:inline-flex">
-            <Button size="sm">{t('cta')}</Button>
+            <Button variant="apply" size="md">
+              {t('apply')}
+              <ArrowRight className="size-4" />
+            </Button>
           </Link>
           <button
             type="button"
@@ -105,13 +109,6 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="/calculator"
-              onClick={() => setMobile(false)}
-              className="py-3 text-lg font-medium text-[var(--color-fg)] border-b border-border"
-            >
-              {t('calculator')}
-            </Link>
-            <Link
               href="/quiz"
               onClick={() => setMobile(false)}
               className="py-3 text-lg font-medium text-[var(--color-fg)] border-b border-border"
@@ -123,8 +120,9 @@ export function Header() {
               onClick={() => setMobile(false)}
               className="mt-4"
             >
-              <Button size="lg" className="w-full">
-                {t('cta')}
+              <Button variant="apply" size="lg" className="w-full">
+                {t('apply')}
+                <ArrowRight className="size-4" />
               </Button>
             </Link>
           </div>

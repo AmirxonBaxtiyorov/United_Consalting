@@ -10,7 +10,7 @@ export function Footer() {
   const t = useTranslations();
   const locale = useLocale() as Locale;
   const year = new Date().getFullYear();
-  const featured = (['korea', 'singapore', 'usa'] as const)
+  const featured = (['usa', 'italy', 'turkey'] as const)
     .map((slug) => getCountry(slug))
     .filter((c): c is NonNullable<ReturnType<typeof getCountry>> => Boolean(c));
 
@@ -23,7 +23,7 @@ export function Footer() {
               <span className="inline-flex items-center justify-center size-9 rounded-lg bg-white/10">
                 <GraduationCap className="size-5" />
               </span>
-              United Global
+              United Consulting
             </Link>
             <p className="mt-4 text-sm text-white/70 max-w-xs">
               {t('footer.tagline')}
@@ -73,7 +73,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-4">{t('footer.services_title')}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/calculator" className="hover:text-accent">{t('nav.calculator')}</Link></li>
+              <li><Link href="/universities" className="hover:text-accent">{t('nav.universities')}</Link></li>
               <li><Link href="/quiz" className="hover:text-accent">{t('nav.quiz')}</Link></li>
               {featured.map((c) => (
                 <li key={c.slug}>

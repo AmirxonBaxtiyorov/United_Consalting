@@ -1,20 +1,21 @@
 {
   "meta": {
-    "title": "United Global Consulting — Chet elda o'qish: Koreya, AQSh, Yevropa, Singapur",
-    "description": "O'zbekistonlik talabalarga dunyoning yetakchi universitetlariga kirishda yordam beramiz. Bepul maslahat, universitet tanlash, hujjatlar, stipendiya, viza.",
-    "keywords": "chet elda o'qish, universitetga kirish, stipendiya, Koreyada o'qish, AQShda o'qish, Yevropada o'qish"
+    "title": "United Consulting — Chet elda o'qish: AQSh, Yevropa, Turkiya, Malayziya",
+    "description": "O'zbekistonlik talabalarga dunyoning yetakchi universitetlariga kirishda yordam beramiz. 36+ hamkor universitet, 13 davlat. Bepul maslahat, universitet tanlash, hujjatlar, stipendiya, viza.",
+    "keywords": "chet elda o'qish, universitetga kirish, stipendiya, AQShda o'qish, Yevropada o'qish, Turkiyada o'qish, Malayziyada o'qish"
   },
   "nav": {
     "home": "Bosh sahifa",
     "about": "Biz haqimizda",
     "services": "Xizmatlar",
     "countries": "Davlatlar",
+    "universities": "Universitetlar",
     "scholarships": "Stipendiyalar",
     "blog": "Blog",
     "contact": "Aloqa",
-    "calculator": "Kalkulyator",
     "quiz": "Davlat tanlash",
     "cta": "Bepul maslahat",
+    "apply": "So'rovnoma to'ldirish",
     "menu_open": "Menyuni ochish",
     "menu_close": "Menyuni yopish"
   },
@@ -22,17 +23,17 @@
     "eyebrow": "Xalqaro ta'lim agentligi",
     "title_part1": "Kelajagingizni",
     "title_part2": "chet elda boshlang",
-    "subtitle": "Koreya, AQSh, Yevropa, Singapur va boshqa davlatlarning yetakchi universitetlariga kirishda yordam beramiz. Dastur tanlashdan vizagacha.",
+    "subtitle": "AQSh, Yevropa, Turkiya, Malayziya va boshqa 13 davlatning 36+ hamkor universitetiga kirishda yordam beramiz. Dastur tanlashdan vizagacha.",
     "bullet_1": "Sizga mos universitet",
     "bullet_2": "Xatosiz hujjatlar",
     "bullet_3": "Vizagacha kuzatib boramiz",
     "cta_primary": "Bepul maslahat",
     "cta_whatsapp": "WhatsApp'ga yozish",
     "trust_line": "Rasmiy hamkor universitetlar bilan ishlaymiz",
-    "card_title": "Koreya · bakalavr",
-    "card_uni": "Sungkyunkwan University",
-    "card_scholarship": "Stipendiya 70%",
-    "card_tuition": "yiliga $6,500 dan",
+    "card_title": "Italiya · magistr",
+    "card_uni": "Università di Bologna",
+    "card_scholarship": "100% Unibo Action",
+    "card_tuition": "€11,000 grant",
     "card_visa": "viza 4–6 haftada"
   },
   "trust_bar": {
@@ -83,7 +84,7 @@
     "learn_more": "Batafsil",
     "detail_summary": "{count}+ universitet · {language} · o'qish {price}/yildan",
     "detail_cta_admission": "Qabul rejasini olish",
-    "detail_cta_calculate": "Narxni hisoblash",
+    "detail_cta_universities": "Universitetlarni ko'rish",
     "detail_why_title": "Nima uchun {country}?",
     "detail_why_card1_t": "Yuqori reytingdagi universitetlar",
     "detail_why_card1_d": "{count}+ akkreditatsiya olgan oliygohlar, QS reytingidagi yetakchilar.",
@@ -107,13 +108,6 @@
     "detail_other_destinations": "Boshqa yo'nalishlar"
   },
   "calculator": {
-    "eyebrow": "KALKULYATOR",
-    "title": "O'qish narxini hisoblang",
-    "subtitle": "Universitet va konsullikning rasmiy ma'lumotlari asosida haqiqiy raqamlar",
-    "country": "Davlat",
-    "degree": "Daraja",
-    "housing": "Yashash",
-    "duration": "Davomiyligi",
     "bachelor": "Bakalavr",
     "master": "Magistr",
     "phd": "PhD / Doktorlik",
@@ -121,18 +115,32 @@
     "dorm": "Yotoqxona",
     "shared": "Sherikchilik uy",
     "rent": "Alohida kvartira",
-    "year": "yil",
-    "years": "yil",
-    "tuition": "O'qish",
-    "living": "Yashash",
     "documents": "Hujjatlar",
     "visa": "Viza",
     "insurance": "Sug'urta",
-    "flight": "Parvoz",
-    "total_year": "Yillik jami",
-    "total_program": "Dastur bo'yicha jami",
-    "cta": "Shaxsiy reja olish",
-    "disclaimer": "Raqamlar taxminiy. Yakuniy summa universitet va dasturga bog'liq."
+    "flight": "Parvoz"
+  },
+  "universities": {
+    "eyebrow": "UNIVERSITETLAR",
+    "title": "Biz hamkorlik qiladigan universitetlar",
+    "subtitle": "13 davlatda 36+ hamkor universitet — bakalavr, magistr, PhD va foundation dasturlari",
+    "see_all": "Barcha universitetlarni ko'rish",
+    "full_title": "Barcha hamkor universitetlar",
+    "full_subtitle": "13 davlatda 36+ universitet. Davlat va private. Kontrakt $400 dan boshlanadi, scholarship 25% dan to'liq grantgacha.",
+    "universities_in_country": "ta universitet"
+  },
+  "university_detail": {
+    "breadcrumb_home": "Bosh sahifa",
+    "breadcrumb_universities": "Universitetlar",
+    "apply_cta": "So'rovnoma to'ldirish",
+    "country_cta": "{country} haqida ko'proq",
+    "gallery": "Kampus va talabalar",
+    "programs_title": "Yo'nalishlar",
+    "language_label": "Ta'lim tili",
+    "scholarships_title": "Stipendiyalar va grantlar",
+    "tuition_label": "O'qish narxi",
+    "advantages_title": "Nima uchun shu universitet?",
+    "other_in_country": "{country}'dagi boshqa universitetlar"
   },
   "quiz": {
     "eyebrow": "DAVLAT TANLASH",

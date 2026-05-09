@@ -1,20 +1,21 @@
 {
   "meta": {
-    "title": "United Global Consulting — Study Abroad: Korea, USA, Europe, Singapore",
-    "description": "We help students from Uzbekistan enroll in leading universities worldwide. Free consultation, university selection, documents, scholarships, visa.",
-    "keywords": "study abroad, university admission, scholarships, study in Korea, study in USA, study in Europe, F-1 visa, IELTS, TOPIK"
+    "title": "United Consulting — Study Abroad: USA, Europe, Türkiye, Malaysia",
+    "description": "We help students from Uzbekistan enrol at leading universities worldwide. 36+ partner universities across 13 countries. Free consultation, university selection, documents, scholarships, visa.",
+    "keywords": "study abroad, university admission, scholarships, study in USA, study in Europe, study in Turkey, study in Malaysia, F-1 visa, IELTS"
   },
   "nav": {
     "home": "Home",
     "about": "About",
     "services": "Services",
     "countries": "Countries",
+    "universities": "Universities",
     "scholarships": "Scholarships",
     "blog": "Blog",
     "contact": "Contact",
-    "calculator": "Calculator",
     "quiz": "Country Quiz",
     "cta": "Free Consultation",
+    "apply": "Apply Now",
     "menu_open": "Open menu",
     "menu_close": "Close menu"
   },
@@ -22,17 +23,17 @@
     "eyebrow": "International Education Agency",
     "title_part1": "Start your future",
     "title_part2": "abroad",
-    "subtitle": "We help you enroll in top universities in Korea, USA, Europe, Singapore and beyond. From program selection to visa approval.",
+    "subtitle": "We help you enrol at 36+ partner universities across the USA, Europe, Türkiye, Malaysia and 13 countries in total. From program selection to visa approval.",
     "bullet_1": "The right university for you",
     "bullet_2": "Flawless documents",
     "bullet_3": "Support all the way to visa",
     "cta_primary": "Free consultation",
     "cta_whatsapp": "Message on WhatsApp",
     "trust_line": "Working with officially accredited partner universities",
-    "card_title": "Korea · Bachelor's",
-    "card_uni": "Sungkyunkwan University",
-    "card_scholarship": "70% scholarship",
-    "card_tuition": "from $6,500 / year",
+    "card_title": "Italy · Master's",
+    "card_uni": "Università di Bologna",
+    "card_scholarship": "100% Unibo Action",
+    "card_tuition": "€11,000 grant",
     "card_visa": "visa in 4–6 weeks"
   },
   "trust_bar": {
@@ -83,7 +84,7 @@
     "learn_more": "Learn more",
     "detail_summary": "{count}+ universities · {language} · tuition from {price}/yr",
     "detail_cta_admission": "Get admission plan",
-    "detail_cta_calculate": "Calculate cost",
+    "detail_cta_universities": "View universities",
     "detail_why_title": "Why {country}?",
     "detail_why_card1_t": "Top-ranked universities",
     "detail_why_card1_d": "{count}+ accredited institutions, QS-ranked flagships.",
@@ -107,13 +108,6 @@
     "detail_other_destinations": "Other destinations"
   },
   "calculator": {
-    "eyebrow": "CALCULATOR",
-    "title": "Estimate your study cost",
-    "subtitle": "Real numbers based on official data from universities and consulates",
-    "country": "Country",
-    "degree": "Level",
-    "housing": "Housing",
-    "duration": "Duration",
     "bachelor": "Bachelor's",
     "master": "Master's",
     "phd": "PhD",
@@ -121,18 +115,32 @@
     "dorm": "Dormitory",
     "shared": "Shared rental",
     "rent": "Private apartment",
-    "year": "year",
-    "years": "years",
-    "tuition": "Tuition",
-    "living": "Living",
     "documents": "Documents",
     "visa": "Visa",
     "insurance": "Insurance",
-    "flight": "Flight",
-    "total_year": "Yearly total",
-    "total_program": "Program total",
-    "cta": "Get a personal plan",
-    "disclaimer": "Numbers are approximate. Final cost depends on the university and program."
+    "flight": "Flight"
+  },
+  "universities": {
+    "eyebrow": "UNIVERSITIES",
+    "title": "Our partner universities",
+    "subtitle": "36+ universities in 13 countries — Bachelor, Master, PhD and Foundation programs",
+    "see_all": "View all universities",
+    "full_title": "All partner universities",
+    "full_subtitle": "36+ universities in 13 countries. Public and private. Tuition starts from $400/year, scholarships from 25% to full grant.",
+    "universities_in_country": "universities"
+  },
+  "university_detail": {
+    "breadcrumb_home": "Home",
+    "breadcrumb_universities": "Universities",
+    "apply_cta": "Apply now",
+    "country_cta": "More about {country}",
+    "gallery": "Campus and students",
+    "programs_title": "Programs",
+    "language_label": "Language of instruction",
+    "scholarships_title": "Scholarships and grants",
+    "tuition_label": "Tuition",
+    "advantages_title": "Why this university?",
+    "other_in_country": "Other universities in {country}"
   },
   "quiz": {
     "eyebrow": "COUNTRY QUIZ",

@@ -64,8 +64,8 @@ export function HeroSection() {
               <div className="relative rounded-3xl bg-[var(--color-surface)] border border-border shadow-[var(--shadow-card-hover)] overflow-hidden">
                 <div className="relative aspect-[5/4] overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
-                    alt="International students on campus"
+                    src="/universities/bologna.jpg"
+                    alt="Università di Bologna campus"
                     fill
                     sizes="(max-width: 1024px) 100vw, 480px"
                     className="object-cover"
