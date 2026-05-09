@@ -1,4 +1,4 @@
-# Contributing — United Global Consulting
+# Contributing — United Consulting
 
 Welcome! This document is a quickstart for new developers.
 
@@ -184,4 +184,4 @@ When fixing a bug, **add a regression test first** if practical — proves the b
 
 ## Questions?
 
-Telegram: t.me/unitedglobal · Email: info@unitedglobal.uz
+Telegram: t.me/unitedglobalconsulting · Email: info@unitedglobalconsulting.uz

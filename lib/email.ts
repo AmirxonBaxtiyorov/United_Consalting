@@ -14,7 +14,7 @@ type LeadPayload = {
 export async function sendManagerEmail(lead: LeadPayload): Promise<boolean> {
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.MANAGER_EMAIL;
-  const from = process.env.RESEND_FROM ?? `${SITE.name} <noreply@unitedglobal.uz>`;
+  const from = process.env.RESEND_FROM ?? `${SITE.name} <noreply@unitedglobalconsulting.uz>`;
   if (!apiKey || !to) return false;
 
   try {
@@ -46,7 +46,7 @@ export async function sendManagerEmail(lead: LeadPayload): Promise<boolean> {
 
 export async function sendClientAutoReply(lead: LeadPayload): Promise<boolean> {
   const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.RESEND_FROM ?? `${SITE.name} <noreply@unitedglobal.uz>`;
+  const from = process.env.RESEND_FROM ?? `${SITE.name} <noreply@unitedglobalconsulting.uz>`;
   if (!apiKey || !lead.email) return false;
   try {
     const resend = new Resend(apiKey);

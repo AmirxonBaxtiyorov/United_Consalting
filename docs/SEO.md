@@ -64,9 +64,9 @@ Har birida **valid items** ro'yxati chiqadi.
 CIS bozor uchun majburiy. Yandex.Metrika allaqachon kodda — endi Webmaster ham qo'shamiz.
 
 1. https://webmaster.yandex.com → **+ Add site**.
-2. URL: `https://unitedglobal.uz`.
+2. URL: `https://unitedglobalconsulting.uz`.
 3. Verification — **HTML file** yoki **DNS TXT** orqali.
-4. Sidebar → **Indexing → Sitemap** → URL: `https://unitedglobal.uz/sitemap.xml`.
+4. Sidebar → **Indexing → Sitemap** → URL: `https://unitedglobalconsulting.uz/sitemap.xml`.
 5. **Geography**: **Tashkent, Uzbekistan**.
 6. **Language**: 3 ta til qo'shing.
 

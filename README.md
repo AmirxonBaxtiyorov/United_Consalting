@@ -1,6 +1,6 @@
-# United Global Consulting — Next.js 16 site
+# United Consulting — Next.js 16 site
 
-Marketing site and lead pipeline for United Global Consulting (Tashkent) — international-education agency.
+Marketing site and lead pipeline for United Consulting (Tashkent) — international-education agency.
 
 ## Stack
 
@@ -67,7 +67,7 @@ Run [`docs/supabase-schema.sql`](./docs/supabase-schema.sql) once in your Supaba
 
 ### Resend
 
-1. Register at https://resend.com, verify a domain (e.g. `unitedglobal.uz`).
+1. Register at https://resend.com, verify a domain (e.g. `unitedglobalconsulting.uz`).
 2. Copy the API key.
 3. `RESEND_FROM` must be on a verified domain.
 

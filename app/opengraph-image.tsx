@@ -119,10 +119,10 @@ export default function OpenGraphImage() {
                 display: 'flex',
               }}
             />
-            unitedglobal.uz
+            unitedglobalconsulting.uz
           </div>
           <div style={{ color: '#475569' }}>·</div>
-          <div>10 countries · partner universities</div>
+          <div>13 countries · 36+ partner universities</div>
         </div>
       </div>
     ),

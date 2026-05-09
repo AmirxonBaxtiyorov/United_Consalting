@@ -10,7 +10,7 @@ Lead yuborish. ContactForm va boshqa joylardan chaqiriladi.
 
 ### Request
 
-**URL:** `https://unitedglobal.uz/api/contact`
+**URL:** `https://unitedglobalconsulting.uz/api/contact`
 **Method:** `POST`
 **Content-Type:** `application/json`
 

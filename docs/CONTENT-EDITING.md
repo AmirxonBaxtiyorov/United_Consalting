@@ -157,11 +157,11 @@ Ranglarni o'zgartirsangiz, `app/icon.tsx`, `app/apple-icon.tsx`, `app/opengraph-
 ```ts
 export const SITE = {
   phone: '+998 88 526 30 00',
-  email: 'info@unitedglobal.uz',
+  email: 'info@unitedglobalconsulting.uz',
   social: {
     whatsapp: 'https://wa.me/998885263000',
-    telegram: 'https://t.me/unitedglobal',
-    instagram: 'https://instagram.com/unitedglobal.uz',
+    telegram: 'https://t.me/unitedglobalconsulting',
+    instagram: 'https://instagram.com/unitedglobalconsulting.uz',
   },
 };
 ```

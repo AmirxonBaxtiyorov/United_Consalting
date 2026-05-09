@@ -145,7 +145,7 @@ export default async function BlogOgImage({
               display: 'flex',
             }}
           />
-          unitedglobal.uz/blog
+          unitedglobalconsulting.uz/blog
         </div>
       </div>
     ),

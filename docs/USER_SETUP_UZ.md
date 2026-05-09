@@ -75,7 +75,7 @@ TELEGRAM_CHAT_ID=-1001234567890
 | 3 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase → API → anon |
 | 4 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase → API → service_role |
 | 5 | `RESEND_API_KEY` | Resend → API Keys |
-| 6 | `RESEND_FROM` | `United Global Consulting <onboarding@resend.dev>` (vaqtinchalik) |
+| 6 | `RESEND_FROM` | `United Consulting <onboarding@resend.dev>` (vaqtinchalik) |
 | 7 | `MANAGER_EMAIL` | sizning gmail (vaqtincha amrxonn.baxtiyorov@gmail.com) |
 | 8 | `TELEGRAM_BOT_TOKEN` | BotFather token |
 | 9 | `TELEGRAM_CHAT_ID` | A1 dan to'g'rilangan |
@@ -138,14 +138,14 @@ Sinov natijalari:
 
 # 🟠 TEZ QILISH (1–2 kun)
 
-## B1 — Domen `unitedglobal.uz` sotib olish
+## B1 — Domen `unitedglobalconsulting.uz` sotib olish
 
-> **Nima uchun?** `global-consalting.vercel.app` — vaqtinchalik subdomen. Mijozlar `unitedglobal.uz` ni ko'rsa, ishonchliroq bo'ladi. SEO uchun ham asosiy.
+> **Nima uchun?** `global-consalting.vercel.app` — vaqtinchalik subdomen. Mijozlar `unitedglobalconsulting.uz` ni ko'rsa, ishonchliroq bo'ladi. SEO uchun ham asosiy.
 
 ### Qadamlar:
 
 1. [https://uznic.uz](https://uznic.uz) (yoki [https://my.tashhost.uz](https://my.tashhost.uz)) ga kiring
-2. **`unitedglobal.uz`** mavjudligini tekshiring (~300 000–400 000 so'm/yil)
+2. **`unitedglobalconsulting.uz`** mavjudligini tekshiring (~300 000–400 000 so'm/yil)
 3. Sotib oling — `.uz` zonasi uchun **STIR (INN)** kerak bo'ladi (yuridik shaxs uchun) yoki shaxsiy passport
 4. Pul to'lash → domen ro'yxatdan o'tkazish (1–24 soat ichida faollashadi)
 
@@ -153,7 +153,7 @@ Sinov natijalari:
 
 ```
 Domen sotib olindi: ha / yo'q
-unitedglobal.uz registratoringiz: uznic.uz / boshqa
+unitedglobalconsulting.uz registratoringiz: uznic.uz / boshqa
 ```
 
 ---
@@ -166,7 +166,7 @@ unitedglobal.uz registratoringiz: uznic.uz / boshqa
 
 1. **Vercel:**
    - Loyiha → **Settings** → **Domains** → **Add**
-   - `unitedglobal.uz` kiriting → **Add**
+   - `unitedglobalconsulting.uz` kiriting → **Add**
    - Vercel sizga ikki variant beradi — quyidagisini tanlang:
    - **`A` yozuv** variant (oddiyroq):
      - Type: `A`, Name: `@`, Value: `76.76.21.21`
@@ -182,28 +182,28 @@ unitedglobal.uz registratoringiz: uznic.uz / boshqa
    | `CNAME` | `www` | `cname.vercel-dns.com` | 3600 |
 
 3. **Vercel'da `www`'ni redirect qiling:**
-   - Settings → Domains → `www.unitedglobal.uz` qo'shing
-   - Redirect to: `unitedglobal.uz` (status 308)
+   - Settings → Domains → `www.unitedglobalconsulting.uz` qo'shing
+   - Redirect to: `unitedglobalconsulting.uz` (status 308)
 
 4. **DNS yangilanishini kuting** — 15 daqiqa – 24 soat. Tekshirish:
    ```
-   nslookup unitedglobal.uz
+   nslookup unitedglobalconsulting.uz
    ```
    Vercel IP'si (`76.76.21.21`) ko'rinishi kerak.
 
 5. **SSL sertifikatini kuting** — Vercel avtomatik Let's Encrypt chiqaradi (5–60 daqiqa).
-6. `https://unitedglobal.uz` ochiladimi tekshiring.
+6. `https://unitedglobalconsulting.uz` ochiladimi tekshiring.
 
 ### 📤 Menga yuborish:
 
 ```
 Domen ulandi: ha / yo'q
-https://unitedglobal.uz ochiladi: ha / yo'q
+https://unitedglobalconsulting.uz ochiladi: ha / yo'q
 ```
 
 Men shundan keyin quyidagilarni avtomat yangilayman:
-- `NEXT_PUBLIC_SITE_URL` → `https://unitedglobal.uz` (Vercel + lib/config)
-- `vercel.json` da redirect (`global-consalting.vercel.app` → `unitedglobal.uz`)
+- `NEXT_PUBLIC_SITE_URL` → `https://unitedglobalconsulting.uz` (Vercel + lib/config)
+- `vercel.json` da redirect (`global-consalting.vercel.app` → `unitedglobalconsulting.uz`)
 - Sitemap qayta yaratiladi
 - OpenGraph, hreflang yangilanadi
 
@@ -211,15 +211,15 @@ Men shundan keyin quyidagilarni avtomat yangilayman:
 
 # 🟡 KEYINGI HAFTA (domen ulangach)
 
-## C1 — Resend'da `unitedglobal.uz` ni VERIFY qilish
+## C1 — Resend'da `unitedglobalconsulting.uz` ni VERIFY qilish
 
 > **Hozir:** `RESEND_FROM=onboarding@resend.dev` — sandbox rejimda **faqat sizning gmail'ingizga** xat boradi. Boshqa mijozlar avtojavob ololmaydi.
-> **Maqsad:** `noreply@unitedglobal.uz` dan istalgan mijozga xat yuborish.
+> **Maqsad:** `noreply@unitedglobalconsulting.uz` dan istalgan mijozga xat yuborish.
 
 ### Qadamlar:
 
 1. [https://resend.com/domains](https://resend.com/domains) ga kiring
-2. **+ Add Domain** → `unitedglobal.uz` → **Add**
+2. **+ Add Domain** → `unitedglobalconsulting.uz` → **Add**
 3. Resend sizga **3 ta DNS yozuv** beradi:
    - `TXT` `send` subdomain uchun (SPF — `v=spf1 ...`)
    - `TXT` `resend._domainkey` uchun (DKIM — `p=MIGfMA0GCSqGSIb...`)
@@ -234,19 +234,19 @@ Men shundan keyin quyidagilarni avtomat yangilayman:
 Resend domen verified: ha / yo'q
 ```
 
-Shundan keyin men `RESEND_FROM=United Global Consulting <noreply@unitedglobal.uz>` ga yangilayman.
+Shundan keyin men `RESEND_FROM=United Consulting <noreply@unitedglobalconsulting.uz>` ga yangilayman.
 
 ---
 
-## C2 — `info@unitedglobal.uz` korporativ pochta (Cloudflare Email Routing — BEPUL)
+## C2 — `info@unitedglobalconsulting.uz` korporativ pochta (Cloudflare Email Routing — BEPUL)
 
-> Saytda `info@unitedglobal.uz` ko'rsatilgan, lekin u hali mavjud emas. Bepul Cloudflare Email Routing orqali sozlaymiz.
+> Saytda `info@unitedglobalconsulting.uz` ko'rsatilgan, lekin u hali mavjud emas. Bepul Cloudflare Email Routing orqali sozlaymiz.
 
 ### Qadamlar:
 
 1. **Cloudflare'da sayt qo'shish (agar yo'q bo'lsa):**
    - [https://dash.cloudflare.com](https://dash.cloudflare.com) → ro'yxatdan o'ting (bepul)
-   - **+ Add a Site** → `unitedglobal.uz` → **Free plan**
+   - **+ Add a Site** → `unitedglobalconsulting.uz` → **Free plan**
    - Cloudflare sizga **2 ta nameserver** beradi (masalan `dana.ns.cloudflare.com`)
    - uznic.uz panelida nameserver'larni Cloudflare'ga o'zgartiring (yoki uznic'da MX yozuvini to'g'ridan-to'g'ri qo'shing — keyingi qadam)
 
@@ -264,22 +264,22 @@ Shundan keyin men `RESEND_FROM=United Global Consulting <noreply@unitedglobal.uz
 
 3. **Custom address yaratish:**
    - **Routing rules** → **Create address**:
-     - `info@unitedglobal.uz` → forward to → sizning gmail (`amrxonn.baxtiyorov@gmail.com`)
-     - `manager@unitedglobal.uz` → forward to → menejer gmail
-     - `noreply@unitedglobal.uz` → forward to → sizning gmail (Resend yuborgan, javob shu yerga keladi)
+     - `info@unitedglobalconsulting.uz` → forward to → sizning gmail (`amrxonn.baxtiyorov@gmail.com`)
+     - `manager@unitedglobalconsulting.uz` → forward to → menejer gmail
+     - `noreply@unitedglobalconsulting.uz` → forward to → sizning gmail (Resend yuborgan, javob shu yerga keladi)
 
 4. Forward'ni **gmail'ingizda tasdiqlang** (Cloudflare confirm xatini yuboradi).
 
-5. **Sinab ko'ring:** istalgan pochtadan `info@unitedglobal.uz` ga xat yozing → gmail'ingizga kelishi kerak.
+5. **Sinab ko'ring:** istalgan pochtadan `info@unitedglobalconsulting.uz` ga xat yozing → gmail'ingizga kelishi kerak.
 
 ### 📤 Menga yuborish:
 
 ```
-info@unitedglobal.uz: ishlaydi / yo'q
-manager@unitedglobal.uz: ishlaydi / yo'q
+info@unitedglobalconsulting.uz: ishlaydi / yo'q
+manager@unitedglobalconsulting.uz: ishlaydi / yo'q
 ```
 
-Men shundan keyin `MANAGER_EMAIL` ni `manager@unitedglobal.uz` ga yangilayman.
+Men shundan keyin `MANAGER_EMAIL` ni `manager@unitedglobalconsulting.uz` ga yangilayman.
 
 ---
 
@@ -291,11 +291,11 @@ Men shundan keyin `MANAGER_EMAIL` ni `manager@unitedglobal.uz` ga yangilayman.
 
 **reCAPTCHA admin:**
 
-1. [https://www.google.com/recaptcha/admin](https://www.google.com/recaptcha/admin) → United Global Consulting site'ni oching
+1. [https://www.google.com/recaptcha/admin](https://www.google.com/recaptcha/admin) → United Consulting site'ni oching
 2. **⚙️ Settings** → **Domains** ro'yxatiga qo'shing:
    ```
-   unitedglobal.uz
-   www.unitedglobal.uz
+   unitedglobalconsulting.uz
+   www.unitedglobalconsulting.uz
    ```
 3. **Save**.
 
@@ -303,13 +303,13 @@ Men shundan keyin `MANAGER_EMAIL` ni `manager@unitedglobal.uz` ga yangilayman.
 
 1. [https://analytics.google.com](https://analytics.google.com) → loyiha
 2. **Admin** → **Data Streams** → mavjud stream'ni oching
-3. **Stream URL** ni `https://unitedglobal.uz` ga o'zgartiring
+3. **Stream URL** ni `https://unitedglobalconsulting.uz` ga o'zgartiring
 4. **Save**.
 
 **Yandex Metrika:**
 
 1. [https://metrika.yandex.com](https://metrika.yandex.com) → counter
-2. **Settings** → **Counter address** → `unitedglobal.uz`, `www.unitedglobal.uz` qo'shing
+2. **Settings** → **Counter address** → `unitedglobalconsulting.uz`, `www.unitedglobalconsulting.uz` qo'shing
 3. **Save**.
 
 ### 📤 Menga yuborish:
@@ -329,20 +329,20 @@ YM counter address yangilandi: ✅
 ### C4.1 Google Search Console
 
 1. [https://search.google.com/search-console](https://search.google.com/search-console)
-2. **+ Add property** → **Domain** turini tanlang → `unitedglobal.uz`
+2. **+ Add property** → **Domain** turini tanlang → `unitedglobalconsulting.uz`
 3. Google sizga **TXT yozuv** beradi: `google-site-verification=AbCdEf...`
 4. uznic / Cloudflare DNS panelida bu TXT'ni qo'shing
 5. **Verify** → bir necha daqiqa
-6. **Sitemaps** → `https://unitedglobal.uz/sitemap.xml` qo'shing → **Submit**
+6. **Sitemaps** → `https://unitedglobalconsulting.uz/sitemap.xml` qo'shing → **Submit**
 7. Bir hafta kuting — Google sahifalarni indekslay boshlaydi
 
 ### C4.2 Yandex Webmaster
 
 1. [https://webmaster.yandex.ru](https://webmaster.yandex.ru)
-2. **+ Add site** → `https://unitedglobal.uz`
+2. **+ Add site** → `https://unitedglobalconsulting.uz`
 3. Tasdiqlash usuli: **Meta tag** (oson) yoki **DNS TXT** (xavfsizroq)
 4. **Meta tag** tanlasangiz — kodni menga yuboring (`<meta name="yandex-verification" content="..." />`), men HTML head'ga qo'shaman
-5. Tasdiqlangach: **Indexing** → **Sitemap files** → `https://unitedglobal.uz/sitemap.xml` qo'shing
+5. Tasdiqlangach: **Indexing** → **Sitemap files** → `https://unitedglobalconsulting.uz/sitemap.xml` qo'shing
 
 ### C4.3 Bing Webmaster (ixtiyoriy)
 
@@ -387,7 +387,7 @@ Endi GA4'da: **Reports → Engagement → Conversions** sahifasida har bir lid h
 2. **+ Add New Monitor:**
    - Type: `HTTP(s)`
    - Name: `UGC Production`
-   - URL: `https://unitedglobal.uz` (yoki hozircha `https://global-consalting.vercel.app`)
+   - URL: `https://unitedglobalconsulting.uz` (yoki hozircha `https://global-consalting.vercel.app`)
    - Interval: `5 minutes`
 3. **Alert Contacts** → **+ Add Alert Contact** → **Telegram**:
    - Bot orqali ulang (UptimeRobot bot)
@@ -465,7 +465,7 @@ Yuqoridagi barcha akkauntlar va `.env.local` ichidagi tokenlar — **hammasini m
 > Shart: domen Vercel'da kamida 90 kun bo'lishi va HSTS header `max-age ≥ 31536000` (allaqachon shunday — `vercel.json`'da `63072000`).
 
 1. [https://hstspreload.org](https://hstspreload.org)
-2. `unitedglobal.uz` kiriting
+2. `unitedglobalconsulting.uz` kiriting
 3. Tekshirgich avtomatik test qiladi
 4. ✅ "Status: Eligible" bo'lsa — **Submit**
 5. 6–12 hafta ichida brauzerlarning preload list'iga kiradi
@@ -495,7 +495,7 @@ Hamma narsa tugagach, men quyidagilarni jonli holatda tekshiraman:
 
 | # | Tekshiruv | Qayerda |
 |---|---|---|
-| 1 | Sayt 200 OK | curl https://unitedglobal.uz |
+| 1 | Sayt 200 OK | curl https://unitedglobalconsulting.uz |
 | 2 | SSL A+ | ssllabs.com/ssltest |
 | 3 | Security headers A+ | securityheaders.com |
 | 4 | Mozilla Observatory A+ | observatory.mozilla.org |

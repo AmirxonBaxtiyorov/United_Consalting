@@ -1,4 +1,4 @@
-# Production Launch Roadmap — United Global Consulting
+# Production Launch Roadmap — United Consulting
 
 > Bu hujjat loyihani **production**ga to'liq tayyor qilish uchun barcha qolgan ishlarning to'liq ro'yxati. Har bir qadam mustaqil prompt sifatida ishlatilishi mumkin.
 
@@ -134,18 +134,18 @@ CREATE TRIGGER update_leads_updated_at
 
 ### 1.4 — Resend email domenini verifikatsiya qilish
 
-**Nima:** `unitedglobal.uz` (yoki real domen) ni Resend'da DNS orqali tasdiqlash, `RESEND_FROM` ni o'zgartirish.
+**Nima:** `unitedglobalconsulting.uz` (yoki real domen) ni Resend'da DNS orqali tasdiqlash, `RESEND_FROM` ni o'zgartirish.
 
 **Nega kerak:** Hozir `RESEND_FROM=onboarding@resend.dev` — bu Resend'ning test domeni va u faqat akkaunt egasining email'iga xat yubora oladi (boshqa odamlarga emas). Production'da auto-reply mijozga yuborilmaydi.
 
 **Qadamlar:**
-1. Real domen kerak — `unitedglobal.uz` (yoki shunga o'xshash). Agar yo'q bo'lsa — domain registrar (Namecheap, GoDaddy, .uz registratorlari) dan sotib oling.
-2. https://resend.com/domains → **Add Domain** → `unitedglobal.uz`
+1. Real domen kerak — `unitedglobalconsulting.uz` (yoki shunga o'xshash). Agar yo'q bo'lsa — domain registrar (Namecheap, GoDaddy, .uz registratorlari) dan sotib oling.
+2. https://resend.com/domains → **Add Domain** → `unitedglobalconsulting.uz`
 3. Resend ko'rsatadigan **TXT** va **MX** yozuvlarni domen DNS sozlamalariga qo'shing (SPF, DKIM, optional DMARC).
 4. DNS tarqalishini kuting (10-30 daqiqa) → Resend'da **Verify** bosing.
 5. `.env.local` va Vercel'da:
    ```
-   RESEND_FROM="United Global Consulting <noreply@unitedglobal.uz>"
+   RESEND_FROM="United Consulting <noreply@unitedglobalconsulting.uz>"
    ```
 6. `MANAGER_EMAIL` ni real manager email'iga o'zgartiring (hozir `amrxonn.baxtiyorov@gmail.com`).
 
@@ -153,7 +153,7 @@ CREATE TRIGGER update_leads_updated_at
 
 ---
 
-### 1.5 — Custom domen ulash (`unitedglobal.uz`)
+### 1.5 — Custom domen ulash (`unitedglobalconsulting.uz`)
 
 **Nima:** Vercel'da real domenni ulab, `NEXT_PUBLIC_SITE_URL` ni yangilash.
 
@@ -161,14 +161,14 @@ CREATE TRIGGER update_leads_updated_at
 
 **Qadamlar:**
 1. Vercel Dashboard → `united-consalting` → **Settings → Domains** → **Add**
-2. `unitedglobal.uz` va `www.unitedglobal.uz` ni qo'shing.
+2. `unitedglobalconsulting.uz` va `www.unitedglobalconsulting.uz` ni qo'shing.
 3. Vercel ko'rsatadigan **A record** (`76.76.21.21`) yoki **CNAME** ni domen DNS'ga qo'shing.
 4. SSL sertifikati avtomatik chiqishini kuting (~5 daqiqa).
-5. Vercel env var'da `NEXT_PUBLIC_SITE_URL=https://unitedglobal.uz` ga o'zgartiring.
+5. Vercel env var'da `NEXT_PUBLIC_SITE_URL=https://unitedglobalconsulting.uz` ga o'zgartiring.
 6. **lib/config.ts:9** da default URL ham yangilanishi kerak (yoki shunchaki env'dan o'qiladi).
 7. `app/sitemap.ts` ham avtomatik yangi URL bilan ishlaydi.
 
-**Qabul kriteriyasi:** `https://unitedglobal.uz` ochiladi va u `https://www.unitedglobal.uz` ga (yoki teskari) redirect qilib turadi.
+**Qabul kriteriyasi:** `https://unitedglobalconsulting.uz` ochiladi va u `https://www.unitedglobalconsulting.uz` ga (yoki teskari) redirect qilib turadi.
 
 ---
 
@@ -248,9 +248,9 @@ Bularsiz sayt ishlaydi, lekin sifat past, GDPR risk, SEO zaif.
    {
      "@context": "https://schema.org",
      "@type": "EducationalOrganization",
-     "name": "United Global Consulting",
-     "url": "https://unitedglobal.uz",
-     "logo": "https://unitedglobal.uz/logo.png",
+     "name": "United Consulting",
+     "url": "https://unitedglobalconsulting.uz",
+     "logo": "https://unitedglobalconsulting.uz/logo.png",
      "address": {...},
      "contactPoint": {...},
      "sameAs": ["https://t.me/...", "https://instagram.com/..."]
@@ -428,9 +428,9 @@ Sayt ishlasa ham, sifati past — bu qadamlar foydalanuvchi tajribasini va konve
 **Nega kerak:** Aks holda Google sayt borligini bilmaydi yoki sekin indekslaydi.
 
 **Qadamlar:**
-1. https://search.google.com/search-console → **Add property** → `unitedglobal.uz` (yoki vercel URL).
+1. https://search.google.com/search-console → **Add property** → `unitedglobalconsulting.uz` (yoki vercel URL).
 2. DNS-record yoki HTML-meta orqali tasdiqlang.
-3. **Sitemaps** bo'limida `https://unitedglobal.uz/sitemap.xml` qo'shing.
+3. **Sitemaps** bo'limida `https://unitedglobalconsulting.uz/sitemap.xml` qo'shing.
 4. `/robots.txt` ni tekshiring: `User-agent: *\nAllow: /\nSitemap: ...`
 5. Yandex Webmaster'ga ham qo'shing (https://webmaster.yandex.com).
 
@@ -535,7 +535,7 @@ Ushbu jadval to'liq bo'lganda — sayt **production**!
 - [ ] Supabase schema o'rnatilgan + RLS policy'lar
 - [ ] Telegram bot guruhda + chat_id to'g'ri
 - [ ] Resend domeni verifikatsiyalangan + `RESEND_FROM` real domen
-- [ ] Custom domen (`unitedglobal.uz`) ulangan + SSL
+- [ ] Custom domen (`unitedglobalconsulting.uz`) ulangan + SSL
 - [ ] **Test:** Real forma to'ldirilib, lead Supabase + Telegram + email'ga keladi
 
 ### ⚠️ Important
@@ -564,7 +564,7 @@ Ushbu jadval to'liq bo'lganda — sayt **production**!
 
 Bu phase'larni boshlash uchun siz tomondan kerak:
 
-1. **Domen** — `unitedglobal.uz` (yoki shunga o'xshash) registratsiya/access.
+1. **Domen** — `unitedglobalconsulting.uz` (yoki shunga o'xshash) registratsiya/access.
 2. **Logo** — yuqori sifat PNG/SVG, kamida 512×512 transparent fon.
 3. **Manager email** — kim leadlarni qabul qilishi (real ish email).
 4. **Telegram** — bot kim ulanadigan guruh + admin huquq.

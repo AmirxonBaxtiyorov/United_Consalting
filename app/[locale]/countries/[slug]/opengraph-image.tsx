@@ -139,7 +139,7 @@ export default async function CountryOgImage({
               display: 'flex',
             }}
           />
-          unitedglobal.uz/countries
+          unitedglobalconsulting.uz/countries
         </div>
       </div>
     ),

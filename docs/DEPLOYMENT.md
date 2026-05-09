@@ -1,4 +1,4 @@
-# Deployment qo'llanmasi — United Global Consulting
+# Deployment qo'llanmasi — United Consulting
 
 Bu hujjat saytni nol holatdan production'ga chiqarish uchun barcha qadamlarni o'z ichiga oladi. Barchasini ketma-ket bajaring.
 
@@ -12,12 +12,12 @@ Quyidagi 13 ta o'zgaruvchini **Production**, **Preview** va **Development** muhi
 
 | Nomi | Maxfiymi? | Qiymati |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | ❌ | `https://unitedglobal.uz` (yoki `https://global-consalting.vercel.app`) |
+| `NEXT_PUBLIC_SITE_URL` | ❌ | `https://unitedglobalconsulting.uz` (yoki `https://global-consalting.vercel.app`) |
 | `NEXT_PUBLIC_SUPABASE_URL` | ❌ | Supabase Project URL |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | ❌ | Supabase anon public key |
 | `SUPABASE_SERVICE_ROLE_KEY` | ✅ | Supabase service role secret (server-only) |
 | `RESEND_API_KEY` | ✅ | Resend API kalitlari |
-| `RESEND_FROM` | ❌ | `"United Global Consulting <noreply@unitedglobal.uz>"` |
+| `RESEND_FROM` | ❌ | `"United Consulting <noreply@unitedglobalconsulting.uz>"` |
 | `MANAGER_EMAIL` | ❌ | Real manager email manzili |
 | `TELEGRAM_BOT_TOKEN` | ✅ | BotFather'dan olingan token |
 | `TELEGRAM_CHAT_ID` | ❌ | Manfiy son: `-1001234567890` |
@@ -76,28 +76,28 @@ Anon kalit bilan `select * from leads` urinib ko'ring — RLS bloklashi kerak (`
 
 ## 4. Resend — domen verifikatsiya
 
-1. `unitedglobal.uz` domenini Resend'ga qo'shing: https://resend.com/domains → **Add Domain**.
+1. `unitedglobalconsulting.uz` domenini Resend'ga qo'shing: https://resend.com/domains → **Add Domain**.
 2. Resend bergan **TXT**, **MX**, **DKIM**, **SPF** yozuvlarini DNS'ga qo'shing.
 3. Yashil "Verified" statusini kuting (10–30 daqiqa).
 4. `.env.local` va Vercel'da:
    ```
-   RESEND_FROM="United Global Consulting <noreply@unitedglobal.uz>"
-   MANAGER_EMAIL=manager@unitedglobal.uz
+   RESEND_FROM="United Consulting <noreply@unitedglobalconsulting.uz>"
+   MANAGER_EMAIL=manager@unitedglobalconsulting.uz
    ```
 
 **Qabul kriteriyasi:** Forma to'ldirilganda mijoz email'iga auto-reply tushadi (spam'da emas).
 
 ---
 
-## 5. Custom domain — `unitedglobal.uz`
+## 5. Custom domain — `unitedglobalconsulting.uz`
 
 1. Vercel Dashboard → `united-consalting` → **Settings → Domains → Add**.
-2. `unitedglobal.uz` va `www.unitedglobal.uz` ni qo'shing.
+2. `unitedglobalconsulting.uz` va `www.unitedglobalconsulting.uz` ni qo'shing.
 3. DNS'da:
    - A record: `@ → 76.76.21.21`
    - CNAME: `www → cname.vercel-dns.com`
 4. SSL avtomatik chiqishini kuting.
-5. Vercel env'da `NEXT_PUBLIC_SITE_URL=https://unitedglobal.uz`.
+5. Vercel env'da `NEXT_PUBLIC_SITE_URL=https://unitedglobalconsulting.uz`.
 
 ---
 
@@ -121,7 +121,7 @@ Anon kalit bilan `select * from leads` urinib ko'ring — RLS bloklashi kerak (`
 
 1. https://www.google.com/recaptcha/admin → **+ Register a new site**.
 2. **reCAPTCHA v3** tanlang.
-3. Domains: `unitedglobal.uz`, `global-consalting.vercel.app`, `localhost`.
+3. Domains: `unitedglobalconsulting.uz`, `global-consalting.vercel.app`, `localhost`.
 4. Site Key → `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`.
 5. Secret Key → `RECAPTCHA_SECRET_KEY`.
 
@@ -131,15 +131,15 @@ Anon kalit bilan `select * from leads` urinib ko'ring — RLS bloklashi kerak (`
 
 ### Google Search Console
 
-1. https://search.google.com/search-console → **Add property** → `unitedglobal.uz`.
+1. https://search.google.com/search-console → **Add property** → `unitedglobalconsulting.uz`.
 2. DNS TXT record yoki HTML-meta orqali tasdiqlang.
-3. **Sitemaps** bo'limida qo'shing: `https://unitedglobal.uz/sitemap.xml`.
+3. **Sitemaps** bo'limida qo'shing: `https://unitedglobalconsulting.uz/sitemap.xml`.
 
 ### Yandex Webmaster
 
 1. https://webmaster.yandex.com → **Add site**.
 2. Tasdiqlang.
-3. Sitemap: `https://unitedglobal.uz/sitemap.xml`.
+3. Sitemap: `https://unitedglobalconsulting.uz/sitemap.xml`.
 
 ---
 
