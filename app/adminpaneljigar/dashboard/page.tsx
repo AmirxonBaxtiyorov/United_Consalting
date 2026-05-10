@@ -45,17 +45,17 @@ export default async function DashboardPage() {
       </header>
 
       <section className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3">
-        <StatCard label="Jami" value={leads.length} Icon={Inbox} accent="primary" />
-        <StatCard label="Bugun" value={todayCount} Icon={Calendar} accent="info" />
-        <StatCard label="7 kunda" value={weekCount} Icon={Calendar} accent="info" />
-        <StatCard label="Yangi" value={counts.new ?? 0} Icon={Inbox} accent="info" />
-        <StatCard label="Bog'lanildi" value={counts.contacted ?? 0} Icon={PhoneCall} accent="gold" />
-        <StatCard label="Tasdiqlandi" value={counts.qualified ?? 0} Icon={BadgeCheck} accent="accent" />
+        <StatCard label="Jami" value={leads.length} Icon={Inbox} accent="primary" href="/adminpaneljigar/leads" />
+        <StatCard label="Bugun" value={todayCount} Icon={Calendar} accent="info" href="/adminpaneljigar/leads?range=today" />
+        <StatCard label="7 kunda" value={weekCount} Icon={Calendar} accent="info" href="/adminpaneljigar/leads?range=7d" />
+        <StatCard label="Yangi" value={counts.new ?? 0} Icon={Inbox} accent="info" href="/adminpaneljigar/leads?status=new" />
+        <StatCard label="Bog'lanildi" value={counts.contacted ?? 0} Icon={PhoneCall} accent="gold" href="/adminpaneljigar/leads?status=contacted" />
+        <StatCard label="Tasdiqlandi" value={counts.qualified ?? 0} Icon={BadgeCheck} accent="accent" href="/adminpaneljigar/leads?status=qualified" />
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-3">
-        <StatCard label="Yutuq" value={counts.won ?? 0} Icon={Trophy} accent="success" size="lg" />
-        <StatCard label="Yutqazildi" value={counts.lost ?? 0} Icon={X} accent="error" size="lg" />
+        <StatCard label="Yutuq" value={counts.won ?? 0} Icon={Trophy} accent="success" size="lg" href="/adminpaneljigar/leads?status=won" />
+        <StatCard label="Yutqazildi" value={counts.lost ?? 0} Icon={X} accent="error" size="lg" href="/adminpaneljigar/leads?status=lost" />
       </section>
 
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-4">

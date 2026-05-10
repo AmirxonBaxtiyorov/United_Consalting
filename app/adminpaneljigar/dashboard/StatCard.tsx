@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -18,20 +19,17 @@ export function StatCard({
   Icon,
   accent = 'primary',
   size = 'md',
+  href,
 }: {
   label: string;
   value: number | string;
   Icon: LucideIcon;
   accent?: Accent;
   size?: 'md' | 'lg';
+  href?: string;
 }) {
-  return (
-    <div
-      className={cn(
-        'rounded-2xl bg-[var(--color-surface)] border border-border shadow-[var(--shadow-card)] p-4 transition hover:shadow-[var(--shadow-card-hover)]',
-        size === 'lg' && 'p-5',
-      )}
-    >
+  const inner = (
+    <>
       <div className="flex items-center justify-between gap-3">
         <div className="min-w-0">
           <div className="text-xs uppercase tracking-wider text-muted-fg truncate">{label}</div>
@@ -41,6 +39,22 @@ export function StatCard({
           <Icon className="size-5" />
         </span>
       </div>
-    </div>
+    </>
   );
+
+  const className = cn(
+    'block rounded-2xl bg-[var(--color-surface)] border border-border shadow-[var(--shadow-card)] p-4 transition',
+    size === 'lg' && 'p-5',
+    href && 'hover:shadow-[var(--shadow-card-hover)] hover:border-accent/50 hover:-translate-y-0.5 cursor-pointer',
+    !href && 'hover:shadow-[var(--shadow-card-hover)]',
+  );
+
+  if (href) {
+    return (
+      <Link href={href} className={className}>
+        {inner}
+      </Link>
+    );
+  }
+  return <div className={className}>{inner}</div>;
 }

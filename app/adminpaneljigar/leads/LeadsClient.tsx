@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Search, Download, Inbox, X } from 'lucide-react';
 import type { LeadRow, LeadStatus } from '@/lib/supabase';
 import { LeadCard } from './LeadCard';
@@ -8,6 +9,20 @@ import { downloadLeadsCsv } from './csv';
 import { cn } from '@/lib/utils';
 
 type DateRange = 'all' | 'today' | '7d' | '30d';
+
+const ALL_STATUSES: LeadStatus[] = ['new', 'contacted', 'qualified', 'won', 'lost'];
+const ALL_RANGES: DateRange[] = ['all', 'today', '7d', '30d'];
+
+function parseStatusParam(value: string | null): Set<LeadStatus> {
+  if (!value) return new Set();
+  const parts = value.split(',').map((s) => s.trim()).filter(Boolean) as LeadStatus[];
+  return new Set(parts.filter((s) => ALL_STATUSES.includes(s)));
+}
+
+function parseRangeParam(value: string | null): DateRange {
+  if (!value) return 'all';
+  return (ALL_RANGES as string[]).includes(value) ? (value as DateRange) : 'all';
+}
 
 const STATUS_FILTERS: { value: LeadStatus; label: string; color: string }[] = [
   { value: 'new', label: 'Yangi', color: 'bg-info/15 text-info border-info/30' },
@@ -33,9 +48,27 @@ function isInRange(iso: string, range: DateRange): boolean {
 }
 
 export function LeadsClient({ leads }: { leads: LeadRow[] }) {
+  const router = useRouter();
+  const params = useSearchParams();
+
+  // URL is the source of truth for filters so dashboard links and refreshes
+  // restore state. The free-text search box stays local — debouncing every
+  // keystroke into the URL is noisy and not worth it.
+  const statuses = useMemo(() => parseStatusParam(params.get('status')), [params]);
+  const range = useMemo(() => parseRangeParam(params.get('range')), [params]);
   const [query, setQuery] = useState('');
-  const [statuses, setStatuses] = useState<Set<LeadStatus>>(new Set());
-  const [range, setRange] = useState<DateRange>('all');
+
+  function updateUrl(next: { statuses?: Set<LeadStatus>; range?: DateRange }) {
+    const sp = new URLSearchParams(params.toString());
+    const nextStatuses = next.statuses ?? statuses;
+    const nextRange = next.range ?? range;
+    if (nextStatuses.size > 0) sp.set('status', Array.from(nextStatuses).join(','));
+    else sp.delete('status');
+    if (nextRange !== 'all') sp.set('range', nextRange);
+    else sp.delete('range');
+    const qs = sp.toString();
+    router.replace(qs ? `?${qs}` : '?', { scroll: false });
+  }
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -61,18 +94,19 @@ export function LeadsClient({ leads }: { leads: LeadRow[] }) {
   }, [leads]);
 
   function toggleStatus(s: LeadStatus) {
-    setStatuses((prev) => {
-      const next = new Set(prev);
-      if (next.has(s)) next.delete(s);
-      else next.add(s);
-      return next;
-    });
+    const next = new Set(statuses);
+    if (next.has(s)) next.delete(s);
+    else next.add(s);
+    updateUrl({ statuses: next });
+  }
+
+  function setRange(r: DateRange) {
+    updateUrl({ range: r });
   }
 
   function clearFilters() {
     setQuery('');
-    setStatuses(new Set());
-    setRange('all');
+    router.replace('?', { scroll: false });
   }
 
   const hasFilters = query || statuses.size > 0 || range !== 'all';
