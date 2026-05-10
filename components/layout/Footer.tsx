@@ -25,13 +25,13 @@ export function Footer() {
               className="flex items-center gap-2 text-white font-display font-bold text-lg"
               aria-label="United Global Consulting"
             >
-              <span className="inline-flex items-center justify-center size-9 rounded-lg bg-white/10 overflow-hidden">
+              <span className="inline-flex items-center justify-center size-10 rounded-lg bg-white overflow-hidden">
                 <Image
-                  src="/logo-mark.svg"
+                  src="/logo-mark.png"
                   alt=""
-                  width={36}
-                  height={36}
-                  className="size-9"
+                  width={80}
+                  height={80}
+                  className="size-10 object-contain"
                 />
               </span>
               United Global Consulting

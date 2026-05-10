@@ -52,12 +52,12 @@ export function Header() {
           aria-label="United Global Consulting"
         >
           <Image
-            src="/logo-mark.svg"
+            src="/logo-mark.png"
             alt=""
-            width={36}
-            height={36}
+            width={72}
+            height={72}
             priority
-            className="size-9"
+            className="size-10 object-contain"
           />
           <span className="hidden sm:inline">United Global Consulting</span>
         </Link>

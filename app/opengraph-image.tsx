@@ -1,10 +1,16 @@
 import { ImageResponse } from 'next/og';
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
 
 export const alt = 'United Global Consulting — Study abroad without middlemen';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
+  const logoPath = path.join(process.cwd(), 'public', 'logo-mark.png');
+  const logoBuffer = await readFile(logoPath);
+  const logoSrc = `data:image/png;base64,${logoBuffer.toString('base64')}`;
+
   return new ImageResponse(
     (
       <div
@@ -34,30 +40,20 @@ export default function OpenGraphImage() {
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: 16,
+            gap: 18,
             position: 'relative',
           }}
         >
+          <img
+            src={logoSrc}
+            width={88}
+            height={88}
+            alt=""
+            style={{ borderRadius: 16, background: '#ffffff', padding: 4 }}
+          />
           <div
             style={{
-              width: 64,
-              height: 64,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              background: '#00d4aa',
-              borderRadius: 16,
-              fontSize: 30,
-              fontWeight: 800,
-              color: '#031612',
-              letterSpacing: '-0.04em',
-            }}
-          >
-            UG
-          </div>
-          <div
-            style={{
-              fontSize: 28,
+              fontSize: 32,
               fontWeight: 700,
               letterSpacing: '-0.01em',
             }}
