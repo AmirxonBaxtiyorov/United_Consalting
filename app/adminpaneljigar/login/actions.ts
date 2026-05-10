@@ -10,7 +10,7 @@ export async function loginAction(_: LoginState, formData: FormData): Promise<Lo
     return { error: 'Tizim sozlanmagan. Administrator bilan bog\'laning.' };
   }
   const login = String(formData.get('login') ?? '').trim();
-  const password = String(formData.get('password') ?? '');
+  const password = String(formData.get('password') ?? '').trim();
   if (!login || !password) return { error: 'Login va parolni kiriting.' };
   if (!verifyCredentials(login, password)) return { error: 'Login yoki parol noto\'g\'ri.' };
   await setAdminCookie();

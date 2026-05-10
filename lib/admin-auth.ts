@@ -10,7 +10,7 @@ function getLogin(): string {
 }
 
 function getPassword(): string | null {
-  const pw = process.env.ADMIN_PASSWORD;
+  const pw = process.env.ADMIN_PASSWORD?.trim();
   if (!pw || pw.length < 4) return null;
   return pw;
 }
