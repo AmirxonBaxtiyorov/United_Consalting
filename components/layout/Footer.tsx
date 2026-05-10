@@ -22,16 +22,16 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link
               href="/"
-              className="flex items-center gap-2 text-white font-display font-bold text-lg"
+              className="flex items-center gap-3 text-white font-display font-bold text-lg"
               aria-label="United Global Consulting"
             >
-              <span className="inline-flex items-center justify-center size-10 rounded-lg bg-white overflow-hidden">
+              <span className="inline-flex items-center justify-center size-16 rounded-xl bg-white overflow-hidden p-1">
                 <Image
                   src="/logo-mark.png"
                   alt=""
-                  width={80}
-                  height={80}
-                  className="size-10 object-contain"
+                  width={160}
+                  height={160}
+                  className="size-full object-contain"
                 />
               </span>
               United Global Consulting

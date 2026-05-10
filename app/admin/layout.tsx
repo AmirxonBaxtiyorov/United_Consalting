@@ -19,9 +19,9 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-fg)]">
       <header className="sticky top-0 z-30 bg-[var(--color-surface)] border-b border-border">
-        <div className="container-x h-14 flex items-center justify-between gap-4">
-          <Link href="/admin/leads" className="flex items-center gap-2 font-display font-bold">
-            <Image src="/logo-mark.png" alt="" width={32} height={32} className="size-8 object-contain" />
+        <div className="container-x h-16 flex items-center justify-between gap-4">
+          <Link href="/admin/leads" className="flex items-center gap-3 font-display font-bold">
+            <Image src="/logo-mark.png" alt="" width={120} height={120} className="size-12 object-contain" />
             <span>Admin</span>
           </Link>
           <nav className="flex items-center gap-4 text-sm">

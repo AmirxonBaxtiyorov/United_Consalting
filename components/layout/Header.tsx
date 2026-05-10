@@ -41,23 +41,23 @@ export function Header() {
       className={cn(
         'sticky top-0 z-40 w-full transition-all',
         scrolled
-          ? 'bg-[var(--color-bg)]/90 backdrop-blur border-b border-border h-16'
-          : 'bg-transparent h-20'
+          ? 'bg-[var(--color-bg)]/90 backdrop-blur border-b border-border h-20'
+          : 'bg-transparent h-24'
       )}
     >
       <div className="container-x h-full flex items-center justify-between gap-4">
         <Link
           href="/"
-          className="flex items-center gap-2 font-display font-bold text-lg text-[var(--color-fg)]"
+          className="flex items-center gap-3 font-display font-bold text-lg text-[var(--color-fg)]"
           aria-label="United Global Consulting"
         >
           <Image
             src="/logo-mark.png"
             alt=""
-            width={72}
-            height={72}
+            width={160}
+            height={160}
             priority
-            className="size-10 object-contain"
+            className="size-14 md:size-16 object-contain"
           />
           <span className="hidden sm:inline">United Global Consulting</span>
         </Link>
@@ -102,7 +102,7 @@ export function Header() {
           role="dialog"
           aria-modal="true"
           aria-label={t('menu_open')}
-          className="lg:hidden fixed inset-0 top-16 bg-[var(--color-bg)] z-30 overflow-auto"
+          className="lg:hidden fixed inset-0 top-20 bg-[var(--color-bg)] z-30 overflow-auto"
         >
           <div className="container-x py-6 flex flex-col gap-1">
             {NAV.map((item) => (
