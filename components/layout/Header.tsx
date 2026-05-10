@@ -39,10 +39,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-40 w-full transition-all',
-        scrolled
-          ? 'bg-[var(--color-bg)]/90 backdrop-blur border-b border-border h-20'
-          : 'bg-transparent h-24'
+        'sticky top-0 z-40 w-full transition-all bg-[var(--color-bg)]/95 backdrop-blur border-b border-border',
+        scrolled ? 'h-20 shadow-sm' : 'h-24'
       )}
     >
       <div className="container-x h-full flex items-center justify-between gap-4">
