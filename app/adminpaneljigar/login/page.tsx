@@ -4,7 +4,7 @@ import { isAdmin, isAdminConfigured } from '@/lib/admin-auth';
 import { LoginForm } from './LoginForm';
 
 export default async function LoginPage() {
-  if (await isAdmin()) redirect('/admin/leads');
+  if (await isAdmin()) redirect('/adminpaneljigar/leads');
   const configured = isAdminConfigured();
 
   return (

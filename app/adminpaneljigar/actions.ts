@@ -5,5 +5,5 @@ import { clearAdminCookie } from '@/lib/admin-auth';
 
 export async function logoutAction() {
   await clearAdminCookie();
-  redirect('/admin/login');
+  redirect('/adminpaneljigar/login');
 }

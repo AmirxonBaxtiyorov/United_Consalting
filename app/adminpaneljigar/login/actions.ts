@@ -13,5 +13,5 @@ export async function loginAction(_: LoginState, formData: FormData): Promise<Lo
   if (!password) return { error: 'Parol kiriting.' };
   if (!verifyPassword(password)) return { error: 'Parol notog\'ri.' };
   await setAdminCookie();
-  redirect('/admin/leads');
+  redirect('/adminpaneljigar/leads');
 }
