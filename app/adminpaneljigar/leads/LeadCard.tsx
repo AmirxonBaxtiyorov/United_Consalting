@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import { Phone, Mail, MessageCircle, Send, Trash2, ChevronDown, ChevronUp, FileText, MapPin, GraduationCap, Globe, Clock } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Trash2, ChevronDown, ChevronUp, FileText, GraduationCap, Globe, Clock } from 'lucide-react';
 import { StatusBadge } from './StatusBadge';
 import { setStatusAction, setNotesAction, deleteLeadAction } from './actions';
 import type { LeadRow, LeadStatus } from '@/lib/supabase';
@@ -131,6 +131,7 @@ export function LeadCard({ lead }: { lead: LeadRow }) {
                 >
                   <input type="hidden" name="id" value={lead.id} />
                   <input type="hidden" name="status" value={s.value} />
+                  <input type="hidden" name="label" value={lead.name} />
                   <button
                     type="submit"
                     disabled={pending}
@@ -155,6 +156,7 @@ export function LeadCard({ lead }: { lead: LeadRow }) {
             }
           >
             <input type="hidden" name="id" value={lead.id} />
+            <input type="hidden" name="label" value={lead.name} />
             <label className="block">
               <div className="text-xs font-medium text-muted-fg mb-1.5">Eslatma</div>
               <textarea
@@ -185,6 +187,7 @@ export function LeadCard({ lead }: { lead: LeadRow }) {
             className="pt-2 border-t border-border"
           >
             <input type="hidden" name="id" value={lead.id} />
+            <input type="hidden" name="label" value={lead.name} />
             <button
               type="submit"
               disabled={pending}

@@ -1,10 +1,20 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { PARTNERS } from '@/data/partners';
+import { getPartners, isSupabaseConfigured } from '@/lib/supabase';
 import Image from 'next/image';
 
-export function TrustBar() {
-  const t = useTranslations('trust_bar');
-  const doubled = [...PARTNERS, ...PARTNERS];
+export async function TrustBar() {
+  const t = await getTranslations('trust_bar');
+
+  // Static partners always render; dynamic ones from Supabase (added via the
+  // admin panel) are appended so the homepage stays alive even if the DB is
+  // unreachable.
+  const dynamic = isSupabaseConfigured() ? await getPartners() : [];
+  const all = [
+    ...PARTNERS,
+    ...dynamic.map((d) => ({ name: d.name, logo: d.logo_url })),
+  ];
+  const doubled = [...all, ...all];
 
   return (
     <section className="py-10 bg-[var(--color-surface)] border-y border-border">
@@ -29,6 +39,7 @@ export function TrustBar() {
                 fill
                 sizes="176px"
                 className="object-contain p-3"
+                unoptimized={p.logo.startsWith('http')}
               />
             </div>
           ))}
