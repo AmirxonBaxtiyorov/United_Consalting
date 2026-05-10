@@ -20,16 +20,15 @@ export function TrustBar() {
           {doubled.map((p, i) => (
             <div
               key={`${p.name}-${i}`}
-              className="shrink-0 h-16 w-40 relative grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition"
+              className="shrink-0 h-20 w-44 relative bg-white rounded-xl border border-border p-3 flex items-center justify-center opacity-90 hover:opacity-100 transition"
               title={p.name}
             >
               <Image
                 src={p.logo}
                 alt={p.name}
                 fill
-                sizes="160px"
-                className="object-contain"
-                unoptimized
+                sizes="176px"
+                className="object-contain p-3"
               />
             </div>
           ))}

@@ -8,7 +8,7 @@ import { z } from 'zod';
 import { Button } from '@/components/ui/button';
 import { SITE } from '@/lib/config';
 import { COUNTRIES } from '@/data/countries';
-import { CheckCircle2, AlertCircle, Phone, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
+import { CheckCircle2, AlertCircle, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
 import type { Locale } from '@/i18n/routing';
 import { getRecaptchaToken } from '@/components/shared/Recaptcha';
 import { trackEvent } from '@/components/shared/Analytics';
@@ -202,17 +202,20 @@ export function ContactForm({ source = 'homepage' }: { source?: string }) {
             <aside className="lg:col-span-2 rounded-3xl bg-primary text-white p-6 md:p-8">
               <h3 className="text-xl font-bold">{t('info_title')}</h3>
               <ul className="mt-5 space-y-4 text-sm">
-                <InfoRow Icon={Phone} label={t('phone_label')}>
-                  <div className="flex flex-col gap-0.5">
-                    <a href={`tel:${SITE.phoneTel}`} className="hover:text-accent">{SITE.phone}</a>
-                    <a href={`tel:${SITE.phone2Tel}`} className="hover:text-accent">{SITE.phone2}</a>
+                <InfoRow Icon={MapPin} label={t('office_tashkent_label')}>
+                  <div className="flex flex-col gap-1">
+                    <span>{t('office_tashkent_value')}</span>
+                    <a href={`tel:${SITE.phone2Tel}`} className="text-accent hover:underline">{SITE.phone2}</a>
+                  </div>
+                </InfoRow>
+                <InfoRow Icon={MapPin} label={t('office_khorazm_label')}>
+                  <div className="flex flex-col gap-1">
+                    <span>{t('office_khorazm_value')}</span>
+                    <a href={`tel:${SITE.phoneTel}`} className="text-accent hover:underline">{SITE.phone}</a>
                   </div>
                 </InfoRow>
                 <InfoRow Icon={Mail} label={t('email_label')}>
                   <a href={`mailto:${SITE.email}`} className="hover:text-accent">{SITE.email}</a>
-                </InfoRow>
-                <InfoRow Icon={MapPin} label={t('address_label')}>
-                  {t('address_value')}
                 </InfoRow>
                 <InfoRow Icon={Clock} label={t('hours_label')}>
                   {t('hours_value')}
