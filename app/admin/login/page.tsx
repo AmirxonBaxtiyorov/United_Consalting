@@ -11,9 +11,8 @@ export default async function LoginPage() {
     <div className="min-h-screen flex items-center justify-center px-4 bg-hero-grad">
       <div className="w-full max-w-sm rounded-3xl bg-[var(--color-surface)] border border-border p-7 shadow-[var(--shadow-card)]">
         <div className="flex flex-col items-center text-center mb-6">
-          <Image src="/logo-mark.png" alt="" width={64} height={64} className="size-14 object-contain" />
+          <Image src="/logo.png" alt="United Global Consulting" width={180} height={180} className="h-auto w-32 object-contain" priority />
           <h1 className="mt-3 text-xl font-bold">Admin Panel</h1>
-          <p className="text-sm text-muted-fg">United Global Consulting</p>
         </div>
         {!configured && (
           <div className="mb-4 rounded-xl bg-warning/10 border border-warning/30 p-3 text-xs text-[var(--color-fg)]">
