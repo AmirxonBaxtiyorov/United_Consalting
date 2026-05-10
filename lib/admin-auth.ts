@@ -3,6 +3,11 @@ import { cookies } from 'next/headers';
 
 const COOKIE_NAME = 'ugc_admin';
 const MAX_AGE_DAYS = 30;
+const DEFAULT_LOGIN = 'admin';
+
+function getLogin(): string {
+  return (process.env.ADMIN_LOGIN || DEFAULT_LOGIN).trim();
+}
 
 function getPassword(): string | null {
   const pw = process.env.ADMIN_PASSWORD;
@@ -14,24 +19,31 @@ export function isAdminConfigured(): boolean {
   return getPassword() !== null;
 }
 
-function tokenFor(password: string): string {
-  return createHmac('sha256', password).update('ugc-admin-v1').digest('hex');
+function tokenFor(login: string, password: string): string {
+  return createHmac('sha256', password).update(`ugc-admin-v2:${login}`).digest('hex');
 }
 
-export function verifyPassword(input: string): boolean {
+function safeEqualStr(a: string, b: string): boolean {
+  const ab = Buffer.from(a);
+  const bb = Buffer.from(b);
+  if (ab.length !== bb.length) return false;
+  return timingSafeEqual(ab, bb);
+}
+
+export function verifyCredentials(loginInput: string, passwordInput: string): boolean {
   const password = getPassword();
   if (!password) return false;
-  const a = Buffer.from(input);
-  const b = Buffer.from(password);
-  if (a.length !== b.length) return false;
-  return timingSafeEqual(a, b);
+  return (
+    safeEqualStr(loginInput, getLogin()) &&
+    safeEqualStr(passwordInput, password)
+  );
 }
 
 export async function setAdminCookie(): Promise<void> {
   const password = getPassword();
   if (!password) return;
   const store = await cookies();
-  store.set(COOKIE_NAME, tokenFor(password), {
+  store.set(COOKIE_NAME, tokenFor(getLogin(), password), {
     httpOnly: true,
     secure: true,
     sameSite: 'lax',
@@ -51,11 +63,6 @@ export async function isAdmin(): Promise<boolean> {
   const store = await cookies();
   const value = store.get(COOKIE_NAME)?.value;
   if (!value) return false;
-  const expected = tokenFor(password);
-  if (value.length !== expected.length) return false;
-  try {
-    return timingSafeEqual(Buffer.from(value), Buffer.from(expected));
-  } catch {
-    return false;
-  }
+  const expected = tokenFor(getLogin(), password);
+  return safeEqualStr(value, expected);
 }

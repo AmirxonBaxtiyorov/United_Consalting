@@ -13,12 +13,23 @@ export function LoginForm() {
   return (
     <form action={formAction} className="space-y-4">
       <label className="block">
+        <div className="mb-1.5 text-sm font-medium">Login</div>
+        <input
+          type="text"
+          name="login"
+          required
+          autoFocus
+          className="input"
+          placeholder="admin"
+          autoComplete="username"
+        />
+      </label>
+      <label className="block">
         <div className="mb-1.5 text-sm font-medium">Parol</div>
         <input
           type="password"
           name="password"
           required
-          autoFocus
           className="input"
           placeholder="••••••••"
           autoComplete="current-password"
