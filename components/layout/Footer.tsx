@@ -1,7 +1,8 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SITE } from '@/lib/config';
-import { GraduationCap, Phone, Mail, MapPin, MessageCircle, Send, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Send, Instagram } from 'lucide-react';
+import Image from 'next/image';
 import { CookieSettingsButton } from './CookieSettingsButton';
 import { getCountry } from '@/data/countries';
 import type { Locale } from '@/i18n/routing';
@@ -19,11 +20,21 @@ export function Footer() {
       <div className="container-x py-14">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 text-white font-display font-bold text-lg">
-              <span className="inline-flex items-center justify-center size-9 rounded-lg bg-white/10">
-                <GraduationCap className="size-5" />
+            <Link
+              href="/"
+              className="flex items-center gap-2 text-white font-display font-bold text-lg"
+              aria-label="United Global Consulting"
+            >
+              <span className="inline-flex items-center justify-center size-9 rounded-lg bg-white/10 overflow-hidden">
+                <Image
+                  src="/logo-mark.svg"
+                  alt=""
+                  width={36}
+                  height={36}
+                  className="size-9"
+                />
               </span>
-              United Consulting
+              United Global Consulting
             </Link>
             <p className="mt-4 text-sm text-white/70 max-w-xs">
               {t('footer.tagline')}

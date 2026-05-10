@@ -15,14 +15,14 @@ export default function Icon() {
           justifyContent: 'center',
           background: '#0a2540',
           color: '#00d4aa',
-          fontSize: 22,
+          fontSize: 18,
           fontWeight: 800,
           fontFamily: 'system-ui, sans-serif',
           letterSpacing: '-0.04em',
           borderRadius: 6,
         }}
       >
-        UG
+        UGC
       </div>
     ),
     { ...size }

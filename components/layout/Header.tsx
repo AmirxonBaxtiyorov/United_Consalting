@@ -6,7 +6,8 @@ import { Link } from '@/i18n/navigation';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ThemeToggle } from '@/components/shared/ThemeToggle';
 import { Button } from '@/components/ui/button';
-import { Menu, X, GraduationCap, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 export function Header() {
@@ -48,11 +49,17 @@ export function Header() {
         <Link
           href="/"
           className="flex items-center gap-2 font-display font-bold text-lg text-[var(--color-fg)]"
+          aria-label="United Global Consulting"
         >
-          <span className="inline-flex items-center justify-center size-9 rounded-lg bg-[#0a2540] dark:bg-accent text-white dark:text-[#031612]">
-            <GraduationCap className="size-5" />
-          </span>
-          <span className="hidden sm:inline">United Consulting</span>
+          <Image
+            src="/logo-mark.svg"
+            alt=""
+            width={36}
+            height={36}
+            priority
+            className="size-9"
+          />
+          <span className="hidden sm:inline">United Global Consulting</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-[var(--color-fg)]/80">

@@ -1,6 +1,6 @@
 export const SITE = {
-  name: 'United Consulting',
-  shortName: 'UC',
+  name: 'United Global Consulting',
+  shortName: 'UGC',
   tagline_ru: 'Учёба за рубежом без посредников и ложных обещаний',
   tagline_en: 'Study abroad without middlemen or false promises',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://unitedglobalconsulting.uz',

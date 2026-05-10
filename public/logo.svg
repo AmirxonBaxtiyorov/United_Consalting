@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" role="img" aria-label="United Global Consulting">
+  <defs>
+    <linearGradient id="ugcMark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a2540"/>
+      <stop offset="100%" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <rect x="2" y="8" width="48" height="48" rx="12" fill="url(#ugcMark)"/>
+    <path d="M26 20 L42 26 L26 32 L10 26 Z" fill="#00d4aa"/>
+    <path d="M16 28 V36 C16 39 20 41 26 41 C32 41 36 39 36 36 V28" fill="none" stroke="#00d4aa" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="42" y1="26" x2="42" y2="38" stroke="#ffb800" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="42" cy="40" r="2.2" fill="#ffb800"/>
+  </g>
+  <g font-family="Inter, system-ui, sans-serif" font-weight="800" letter-spacing="-0.02em">
+    <text x="60" y="30" font-size="18" fill="#0a2540">United Global</text>
+    <text x="60" y="50" font-size="18" fill="#00a386">Consulting</text>
+  </g>
+</svg>

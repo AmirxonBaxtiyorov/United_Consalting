@@ -18,7 +18,7 @@ const buttonVariants = cva(
         gold:
           'bg-gold text-[var(--color-fg)] hover:bg-gold-dark',
         apply:
-          'bg-[#e11d2a] text-white hover:bg-[#c5101c] shadow-[0_8px_24px_rgba(225,29,42,0.35)] hover:-translate-y-0.5',
+          'bg-primary text-white hover:bg-primary-light shadow-[0_8px_24px_rgba(10,37,64,0.35)] hover:-translate-y-0.5 ring-1 ring-accent/30',
       },
       size: {
         sm: 'text-sm h-9 px-4',
