@@ -203,7 +203,10 @@ export function ContactForm({ source = 'homepage' }: { source?: string }) {
               <h3 className="text-xl font-bold">{t('info_title')}</h3>
               <ul className="mt-5 space-y-4 text-sm">
                 <InfoRow Icon={Phone} label={t('phone_label')}>
-                  <a href={`tel:${SITE.phoneTel}`} className="hover:text-accent">{SITE.phone}</a>
+                  <div className="flex flex-col gap-0.5">
+                    <a href={`tel:${SITE.phoneTel}`} className="hover:text-accent">{SITE.phone}</a>
+                    <a href={`tel:${SITE.phone2Tel}`} className="hover:text-accent">{SITE.phone2}</a>
+                  </div>
                 </InfoRow>
                 <InfoRow Icon={Mail} label={t('email_label')}>
                   <a href={`mailto:${SITE.email}`} className="hover:text-accent">{SITE.email}</a>

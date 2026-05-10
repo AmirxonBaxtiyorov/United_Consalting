@@ -101,7 +101,10 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Phone className="size-4 mt-0.5 text-accent" />
-                <a href={`tel:${SITE.phoneTel}`} className="hover:text-accent">{SITE.phone}</a>
+                <div className="flex flex-col gap-0.5">
+                  <a href={`tel:${SITE.phoneTel}`} className="hover:text-accent">{SITE.phone}</a>
+                  <a href={`tel:${SITE.phone2Tel}`} className="hover:text-accent">{SITE.phone2}</a>
+                </div>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="size-4 mt-0.5 text-accent" />

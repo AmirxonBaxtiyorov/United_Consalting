@@ -35,6 +35,13 @@ export function SchemaOrg({ locale }: { locale: Locale }) {
         areaServed: ['UZ', 'RU', 'KZ'],
         availableLanguage: ['Russian', 'Uzbek', 'English'],
       },
+      {
+        '@type': 'ContactPoint',
+        telephone: SITE.phone2Tel,
+        contactType: 'customer service',
+        areaServed: ['UZ', 'RU', 'KZ'],
+        availableLanguage: ['Russian', 'Uzbek', 'English'],
+      },
     ],
     email: SITE.email,
     foundingDate: String(SITE.founded),
