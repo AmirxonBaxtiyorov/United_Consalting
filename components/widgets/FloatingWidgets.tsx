@@ -18,13 +18,13 @@ export function FloatingWidgets() {
   }, []);
 
   return (
-    <div className="fixed bottom-5 right-5 z-40 flex flex-col gap-2">
+    <div className="fixed bottom-4 right-4 md:bottom-5 md:right-5 z-40 flex flex-col gap-2">
       <a
         href={SITE.social.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t('whatsapp')}
-        className="inline-flex items-center justify-center size-12 min-w-12 min-h-12 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-105 transition"
+        className="inline-flex items-center justify-center size-11 md:size-12 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-105 transition"
       >
         <MessageCircle className="size-5" />
       </a>
@@ -33,7 +33,7 @@ export function FloatingWidgets() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t('telegram')}
-        className="inline-flex items-center justify-center size-12 min-w-12 min-h-12 rounded-full bg-[#229ED9] text-white shadow-lg hover:scale-105 transition"
+        className="inline-flex items-center justify-center size-11 md:size-12 rounded-full bg-[#229ED9] text-white shadow-lg hover:scale-105 transition"
       >
         <Send className="size-5" />
       </a>
@@ -43,7 +43,7 @@ export function FloatingWidgets() {
         aria-hidden={!show}
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className={cn(
-          'inline-flex items-center justify-center size-12 min-w-12 min-h-12 rounded-full bg-primary text-white shadow-lg hover:scale-105 transition',
+          'inline-flex items-center justify-center size-11 md:size-12 rounded-full bg-primary text-white shadow-lg hover:scale-105 transition',
           show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
         )}
       >
