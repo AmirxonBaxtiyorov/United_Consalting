@@ -15,6 +15,7 @@ export function SchemaOrg({ locale }: { locale: Locale }) {
     '@type': 'EducationalOrganization',
     name: SITE.name,
     alternateName: SITE.shortName,
+    legalName: SITE.legalName,
     url: localeUrl(locale),
     logo: `${SITE.url}/icon`,
     image: `${SITE.url}/opengraph-image`,

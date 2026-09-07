@@ -30,7 +30,7 @@ export default async function PartnershipPage({
     <>
       <PartnershipSection />
       <CompanyDetails />
-      <ContactForm source="partnership" />
+      <ContactForm source="partnership" showStudyFields={false} />
     </>
   );
 }

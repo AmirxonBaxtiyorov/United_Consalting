@@ -1,6 +1,8 @@
 export const SITE = {
   name: 'United Global Consulting',
   shortName: 'UGC',
+  // Registered entity behind the brand; localized copies live under contact.legal_name.
+  legalName: "GLOBAL O'QISH MCHJ",
   tagline_ru: 'Учёба за рубежом без посредников и ложных обещаний',
   tagline_en: 'Study abroad without middlemen or false promises',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://unitedglobalconsulting.uz',

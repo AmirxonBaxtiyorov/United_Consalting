@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { SITE } from '@/lib/config';
 import {
   Building2,
+  Landmark,
   Briefcase,
   Phone,
   Mail,
@@ -35,6 +36,7 @@ export function CompanyDetails() {
 
   const plainText = [
     SITE.name,
+    `${t('d_legal')}: ${tc('legal_name')}`,
     `${t('d_activity')}: ${t('d_activity_value')}`,
     `${t('d_phone')}: ${SITE.phone}, ${SITE.phone2} (WhatsApp)`,
     `${t('d_email')}: ${SITE.email}`,
@@ -92,6 +94,9 @@ export function CompanyDetails() {
             <dl className="grid md:grid-cols-2 gap-x-8 gap-y-5">
               <Row Icon={Building2} label={t('d_company')}>
                 <span className="font-semibold">{SITE.name}</span> ({SITE.shortName})
+              </Row>
+              <Row Icon={Landmark} label={t('d_legal')}>
+                <span className="font-semibold">{tc('legal_name')}</span>
               </Row>
               <Row Icon={Briefcase} label={t('d_activity')}>
                 {t('d_activity_value')}

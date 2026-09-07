@@ -1,7 +1,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SITE } from '@/lib/config';
-import { Mail, MapPin, Phone, MessageCircle, Send, Instagram } from 'lucide-react';
+import { Building2, Mail, MapPin, Phone, MessageCircle, Send, Instagram } from 'lucide-react';
 import Image from 'next/image';
 import { CookieSettingsButton } from './CookieSettingsButton';
 import { getCountry } from '@/data/countries';
@@ -125,6 +125,10 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Mail className="size-4 mt-0.5 text-accent shrink-0" />
                 <a href={`mailto:${SITE.email}`} className="hover:text-accent">{SITE.email}</a>
+              </li>
+              <li className="flex items-start gap-2">
+                <Building2 className="size-4 mt-0.5 text-accent shrink-0" />
+                <span>{t('contact.legal_name')}</span>
               </li>
             </ul>
           </div>

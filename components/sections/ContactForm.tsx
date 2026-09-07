@@ -28,7 +28,15 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-export function ContactForm({ source = 'homepage' }: { source?: string }) {
+export function ContactForm({
+  source = 'homepage',
+  // Partner enquiries are not about a country or a degree, so those two
+  // selects are dropped there instead of being sent empty.
+  showStudyFields = true,
+}: {
+  source?: string;
+  showStudyFields?: boolean;
+}) {
   const t = useTranslations('contact');
   const locale = useLocale() as Locale;
   const [status, setStatus] = useState<'idle' | 'loading' | 'ok' | 'error'>('idle');
@@ -152,28 +160,30 @@ export function ContactForm({ source = 'homepage' }: { source?: string }) {
                 </Field>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
-                <Field label={t('country_interest')}>
-                  <select {...register('country')} className="input" defaultValue="">
-                    <option value="">{t('select_placeholder')}</option>
-                    {COUNTRIES.map((c) => (
-                      <option key={c.slug} value={c.slug}>
-                        {c.name[locale]}
-                      </option>
-                    ))}
-                  </select>
-                </Field>
-                <Field label={t('degree')}>
-                  <select {...register('degree')} className="input" defaultValue="">
-                    <option value="">{t('select_placeholder')}</option>
-                    <option value="bachelor">{t('degree_bachelor')}</option>
-                    <option value="master">{t('degree_master')}</option>
-                    <option value="phd">{t('degree_phd')}</option>
-                    <option value="language">{t('degree_language')}</option>
-                    <option value="undecided">{t('degree_undecided')}</option>
-                  </select>
-                </Field>
-              </div>
+              {showStudyFields && (
+                <div className="grid md:grid-cols-2 gap-4">
+                  <Field label={t('country_interest')}>
+                    <select {...register('country')} className="input" defaultValue="">
+                      <option value="">{t('select_placeholder')}</option>
+                      {COUNTRIES.map((c) => (
+                        <option key={c.slug} value={c.slug}>
+                          {c.name[locale]}
+                        </option>
+                      ))}
+                    </select>
+                  </Field>
+                  <Field label={t('degree')}>
+                    <select {...register('degree')} className="input" defaultValue="">
+                      <option value="">{t('select_placeholder')}</option>
+                      <option value="bachelor">{t('degree_bachelor')}</option>
+                      <option value="master">{t('degree_master')}</option>
+                      <option value="phd">{t('degree_phd')}</option>
+                      <option value="language">{t('degree_language')}</option>
+                      <option value="undecided">{t('degree_undecided')}</option>
+                    </select>
+                  </Field>
+                </div>
+              )}
 
               <Field label={t('message')}>
                 <textarea
