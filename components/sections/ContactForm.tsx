@@ -8,15 +8,17 @@ import { z } from 'zod';
 import { Button } from '@/components/ui/button';
 import { SITE } from '@/lib/config';
 import { COUNTRIES } from '@/data/countries';
-import { CheckCircle2, AlertCircle, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
+import { CheckCircle2, AlertCircle, Mail, MapPin, Phone, Clock, MessageCircle, Send } from 'lucide-react';
 import type { Locale } from '@/i18n/routing';
 import { getRecaptchaToken } from '@/components/shared/Recaptcha';
 import { trackEvent } from '@/components/shared/Analytics';
+import { TELEGRAM_RE } from '@/lib/validations';
 
 const formSchema = z.object({
   name: z.string().trim().min(2).max(100),
   phone: z.string().trim().regex(/^[+()\d\s-]{7,}$/),
   email: z.string().trim().email().optional().or(z.literal('')),
+  telegram: z.string().trim().max(64).regex(TELEGRAM_RE).optional().or(z.literal('')),
   country: z.string().optional(),
   degree: z.string().optional(),
   message: z.string().max(2000).optional(),
@@ -123,18 +125,32 @@ export function ContactForm({ source = 'homepage' }: { source?: string }) {
                 </Field>
               </div>
 
-              <Field label={t('email')} error={errors.email?.message} fieldId="contact-email">
-                <input
-                  type="email"
-                  {...register('email')}
-                  id="contact-email"
-                  className="input"
-                  placeholder={t('email_placeholder')}
-                  autoComplete="email"
-                  aria-invalid={errors.email ? 'true' : 'false'}
-                  aria-describedby={errors.email ? 'contact-email-error' : undefined}
-                />
-              </Field>
+              <div className="grid md:grid-cols-2 gap-4">
+                <Field label={t('email')} error={errors.email?.message} fieldId="contact-email">
+                  <input
+                    type="email"
+                    {...register('email')}
+                    id="contact-email"
+                    className="input"
+                    placeholder={t('email_placeholder')}
+                    autoComplete="email"
+                    aria-invalid={errors.email ? 'true' : 'false'}
+                    aria-describedby={errors.email ? 'contact-email-error' : undefined}
+                  />
+                </Field>
+                <Field label={t('telegram')} error={errors.telegram?.message} fieldId="contact-telegram">
+                  <input
+                    type="text"
+                    {...register('telegram')}
+                    id="contact-telegram"
+                    className="input"
+                    placeholder={t('telegram_placeholder')}
+                    autoComplete="off"
+                    aria-invalid={errors.telegram ? 'true' : 'false'}
+                    aria-describedby={errors.telegram ? 'contact-telegram-error' : undefined}
+                  />
+                </Field>
+              </div>
 
               <div className="grid md:grid-cols-2 gap-4">
                 <Field label={t('country_interest')}>
@@ -202,17 +218,17 @@ export function ContactForm({ source = 'homepage' }: { source?: string }) {
             <aside className="lg:col-span-2 rounded-3xl bg-primary text-white p-6 md:p-8">
               <h3 className="text-xl font-bold">{t('info_title')}</h3>
               <ul className="mt-5 space-y-4 text-sm">
-                <InfoRow Icon={MapPin} label={t('office_tashkent_label')}>
+                <InfoRow Icon={Phone} label={t('phone_label')}>
                   <div className="flex flex-col gap-1">
-                    <span>{t('office_tashkent_value')}</span>
-                    <a href={`tel:${SITE.phone2Tel}`} className="text-accent hover:underline">{SITE.phone2}</a>
+                    <a href={`tel:${SITE.phoneTel}`} className="hover:text-accent">{SITE.phone}</a>
+                    <a href={`tel:${SITE.phone2Tel}`} className="hover:text-accent">{SITE.phone2}</a>
                   </div>
                 </InfoRow>
+                <InfoRow Icon={MapPin} label={t('office_tashkent_label')}>
+                  {t('office_tashkent_value')}
+                </InfoRow>
                 <InfoRow Icon={MapPin} label={t('office_khorazm_label')}>
-                  <div className="flex flex-col gap-1">
-                    <span>{t('office_khorazm_value')}</span>
-                    <a href={`tel:${SITE.phoneTel}`} className="text-accent hover:underline">{SITE.phone}</a>
-                  </div>
+                  {t('office_khorazm_value')}
                 </InfoRow>
                 <InfoRow Icon={Mail} label={t('email_label')}>
                   <a href={`mailto:${SITE.email}`} className="hover:text-accent">{SITE.email}</a>

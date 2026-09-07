@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { contactSchema } from './validations';
+import { contactSchema, normalizeTelegram } from './validations';
 
 const base = {
   name: 'Ali',
@@ -38,6 +38,18 @@ describe('contactSchema', () => {
     expect(r.success).toBe(false);
   });
 
+  it('accepts telegram usernames, links, phones and an empty value', () => {
+    for (const telegram of ['@aziz_karimov', 'aziz_karimov', 't.me/aziz', 'https://t.me/aziz', '+998901234567', '']) {
+      expect(contactSchema.safeParse({ ...base, telegram }).success).toBe(true);
+    }
+  });
+
+  it('rejects malformed telegram values', () => {
+    for (const telegram of ['!!!', 'a b c', 'ab', 'x'.repeat(65)]) {
+      expect(contactSchema.safeParse({ ...base, telegram }).success).toBe(false);
+    }
+  });
+
   it('rejects unknown degree values', () => {
     const r = contactSchema.safeParse({ ...base, degree: 'unknown' });
     expect(r.success).toBe(false);
@@ -72,6 +84,16 @@ describe('contactSchema', () => {
     expect(contactSchema.safeParse({ ...base, locale: 'uz' }).success).toBe(true);
     expect(contactSchema.safeParse({ ...base, locale: 'en' }).success).toBe(true);
     expect(contactSchema.safeParse({ ...base, locale: 'de' }).success).toBe(false);
+  });
+
+  it('normalizes telegram values to @username or a phone', () => {
+    expect(normalizeTelegram('aziz_karimov')).toBe('@aziz_karimov');
+    expect(normalizeTelegram('@aziz_karimov')).toBe('@aziz_karimov');
+    expect(normalizeTelegram('t.me/aziz_karimov')).toBe('@aziz_karimov');
+    expect(normalizeTelegram('https://t.me/aziz_karimov')).toBe('@aziz_karimov');
+    expect(normalizeTelegram(' +998 90 123 45 67 ')).toBe('+998901234567');
+    expect(normalizeTelegram('')).toBeNull();
+    expect(normalizeTelegram(undefined)).toBeNull();
   });
 
   it('strips/trims whitespace on name and phone', () => {

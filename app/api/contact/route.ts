@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { contactSchema } from '@/lib/validations';
+import { contactSchema, normalizeTelegram } from '@/lib/validations';
 import { saveLead } from '@/lib/supabase';
 import { sendTelegramNotification } from '@/lib/telegram';
 import { sendManagerEmail, sendClientAutoReply } from '@/lib/email';
@@ -51,6 +51,7 @@ export async function POST(req: Request) {
     name: data.name,
     phone: data.phone,
     email: data.email || null,
+    telegram: normalizeTelegram(data.telegram),
     country: data.country || null,
     degree: data.degree || null,
     message: data.message || null,
@@ -69,6 +70,7 @@ export async function POST(req: Request) {
       name: lead.name,
       phone: lead.phone,
       email: lead.email ?? undefined,
+      telegram: lead.telegram ?? undefined,
       country: lead.country ?? undefined,
       degree: lead.degree ?? undefined,
       message: lead.message ?? undefined,
@@ -79,6 +81,7 @@ export async function POST(req: Request) {
       name: lead.name,
       phone: lead.phone,
       email: lead.email ?? undefined,
+      telegram: lead.telegram ?? undefined,
       country: lead.country ?? undefined,
       degree: lead.degree ?? undefined,
       message: lead.message ?? undefined,

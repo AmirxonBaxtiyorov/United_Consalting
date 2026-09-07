@@ -68,6 +68,16 @@ describe('POST /api/contact', () => {
     expect(sendClientAutoReply).toHaveBeenCalledTimes(1);
   });
 
+  it('normalizes the telegram contact before handing it to the delivery channels', async () => {
+    const res = await POST(makeReq({ ...validBody, telegram: 't.me/aziz' }));
+    expect(res.status).toBe(200);
+    expect(saveLead).toHaveBeenCalledWith(expect.objectContaining({ telegram: '@aziz' }));
+    expect(sendTelegramNotification).toHaveBeenCalledWith(
+      expect.objectContaining({ telegram: '@aziz' })
+    );
+    expect(sendManagerEmail).toHaveBeenCalledWith(expect.objectContaining({ telegram: '@aziz' }));
+  });
+
   it('returns 400 for malformed JSON', async () => {
     const res = await POST(makeReq('{not-json', {}));
     expect(res.status).toBe(400);

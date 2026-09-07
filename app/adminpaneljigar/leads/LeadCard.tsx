@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import { Phone, Mail, MessageCircle, Trash2, ChevronDown, ChevronUp, FileText, GraduationCap, Globe, Clock } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Send, Trash2, ChevronDown, ChevronUp, FileText, GraduationCap, Globe, Clock } from 'lucide-react';
 import { StatusBadge } from './StatusBadge';
 import { setStatusAction, setNotesAction, deleteLeadAction } from './actions';
 import type { LeadRow, LeadStatus } from '@/lib/supabase';
@@ -89,6 +89,24 @@ export function LeadCard({ lead }: { lead: LeadRow }) {
             <span className="truncate">{lead.email}</span>
           </a>
         )}
+
+        {lead.telegram &&
+          (lead.telegram.startsWith('@') ? (
+            <a
+              href={`https://t.me/${lead.telegram.slice(1)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 flex items-center gap-2 rounded-xl border border-border px-3 py-2 text-sm hover:border-accent/50 hover:text-accent-dark"
+            >
+              <Send className="size-4 text-accent-dark" />
+              <span className="truncate">{lead.telegram}</span>
+            </a>
+          ) : (
+            <div className="mt-2 flex items-center gap-2 rounded-xl border border-border px-3 py-2 text-sm">
+              <Send className="size-4 text-accent-dark" />
+              <span className="truncate">{lead.telegram}</span>
+            </div>
+          ))}
 
         {(lead.country || lead.degree) && (
           <div className="mt-3 flex flex-wrap gap-2 text-xs text-muted-fg">

@@ -13,6 +13,7 @@ create table if not exists public.leads (
   name varchar(100) not null,
   phone varchar(25) not null,
   email varchar(120),
+  telegram varchar(64),
   country varchar(50),
   degree varchar(20),
   message text,

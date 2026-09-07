@@ -80,6 +80,7 @@ export function LeadsClient({ leads }: { leads: LeadRow[] }) {
         l.name.toLowerCase().includes(q) ||
         l.phone.toLowerCase().includes(q) ||
         (l.email?.toLowerCase().includes(q) ?? false) ||
+        (l.telegram?.toLowerCase().includes(q) ?? false) ||
         (l.country?.toLowerCase().includes(q) ?? false) ||
         (l.message?.toLowerCase().includes(q) ?? false)
       );

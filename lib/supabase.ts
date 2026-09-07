@@ -4,6 +4,7 @@ type LeadInsert = {
   name: string;
   phone: string;
   email: string | null;
+  telegram: string | null;
   country: string | null;
   degree: string | null;
   message: string | null;
@@ -21,6 +22,7 @@ export type LeadRow = {
   name: string;
   phone: string;
   email: string | null;
+  telegram: string | null;
   country: string | null;
   degree: string | null;
   message: string | null;
@@ -45,16 +47,37 @@ export function isSupabaseConfigured(): boolean {
   );
 }
 
+// The `telegram` column ships with docs/migrations/001-add-lead-telegram.sql.
+// Until that migration is run in Supabase the insert would fail and the lead
+// would be lost, so fall back to inserting without it once.
+function isMissingTelegramColumn(error: { code?: string; message?: string }): boolean {
+  return (
+    error.code === 'PGRST204' ||
+    Boolean(error.message?.includes('telegram') && error.message?.includes('column'))
+  );
+}
+
 export async function saveLead(lead: LeadInsert): Promise<boolean> {
   const client = getServerClient();
   if (!client) return false;
   try {
     const { error } = await client.from('leads').insert([{ ...lead, status: 'new' }]);
-    if (error) {
-      console.error('[supabase] insert error', error.message);
+    if (!error) return true;
+
+    if (isMissingTelegramColumn(error)) {
+      console.warn(
+        '[supabase] leads.telegram column missing — run docs/migrations/001-add-lead-telegram.sql',
+      );
+      const { telegram: _telegram, ...rest } = lead;
+      void _telegram;
+      const retry = await client.from('leads').insert([{ ...rest, status: 'new' }]);
+      if (!retry.error) return true;
+      console.error('[supabase] insert error', retry.error.message);
       return false;
     }
-    return true;
+
+    console.error('[supabase] insert error', error.message);
+    return false;
   } catch (e) {
     console.error('[supabase] exception', e);
     return false;

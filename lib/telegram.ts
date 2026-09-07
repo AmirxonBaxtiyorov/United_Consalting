@@ -2,6 +2,7 @@ type LeadPayload = {
   name: string;
   phone: string;
   email?: string;
+  telegram?: string;
   country?: string;
   degree?: string;
   message?: string;
@@ -20,6 +21,7 @@ export async function sendTelegramNotification(lead: LeadPayload): Promise<boole
     `👤 <b>Name:</b> ${escape(lead.name)}`,
     `📱 <b>Phone:</b> ${escape(lead.phone)}`,
     lead.email ? `📧 <b>Email:</b> ${escape(lead.email)}` : '',
+    lead.telegram ? `✈️ <b>Telegram:</b> ${escape(lead.telegram)}` : '',
     lead.country ? `🌍 <b>Country:</b> ${escape(lead.country)}` : '',
     lead.degree ? `🎓 <b>Degree:</b> ${escape(lead.degree)}` : '',
     lead.message ? `💬 <b>Message:</b> ${escape(lead.message)}` : '',

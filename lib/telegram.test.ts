@@ -49,6 +49,16 @@ describe('sendTelegramNotification', () => {
     expect(body.disable_web_page_preview).toBe(true);
   });
 
+  it('includes the telegram contact when provided', async () => {
+    const fetchSpy = vi.fn(async () => new Response('{}', { status: 200 })) as typeof fetch;
+    globalThis.fetch = fetchSpy;
+    await sendTelegramNotification({ ...lead, telegram: '@aziz' });
+    const init = (fetchSpy as unknown as { mock: { calls: [string, RequestInit][] } }).mock.calls[0][1];
+    const body = JSON.parse(init.body as string);
+    expect(body.text).toContain('Telegram:');
+    expect(body.text).toContain('@aziz');
+  });
+
   it('escapes HTML metacharacters in lead fields', async () => {
     const fetchSpy = vi.fn(async () => new Response('{}', { status: 200 })) as typeof fetch;
     globalThis.fetch = fetchSpy;
@@ -81,6 +91,7 @@ describe('sendTelegramNotification', () => {
     const init = (fetchSpy as unknown as { mock: { calls: [string, RequestInit][] } }).mock.calls[0][1];
     const body = JSON.parse(init.body as string);
     expect(body.text).not.toContain('Email:');
+    expect(body.text).not.toContain('Telegram:');
     expect(body.text).not.toContain('Country:');
     expect(body.text).not.toContain('Degree:');
     expect(body.text).not.toContain('Message:');

@@ -184,4 +184,4 @@ When fixing a bug, **add a regression test first** if practical — proves the b
 
 ## Questions?
 
-Telegram: t.me/unitedglobalconsulting · Email: info@unitedglobalconsulting.uz
+Telegram: t.me/United_global_consulting · Email: unitedglobalconsultinguz@gmail.com

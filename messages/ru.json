@@ -260,6 +260,8 @@
     "phone_placeholder": "+998 ...",
     "email": "Email (опционально)",
     "email_placeholder": "you@example.com",
+    "telegram": "Telegram (необязательно)",
+    "telegram_placeholder": "@username или +998 ...",
     "country_interest": "Страна интереса",
     "degree": "Уровень обучения",
     "message": "Дополнительно",

@@ -5,6 +5,7 @@ type LeadPayload = {
   name: string;
   phone: string;
   email?: string;
+  telegram?: string;
   country?: string;
   degree?: string;
   message?: string;
@@ -26,6 +27,7 @@ export async function sendManagerEmail(lead: LeadPayload): Promise<boolean> {
         <tr><td style="padding:6px 12px;color:#6b7280">Name</td><td style="padding:6px 12px"><b>${escapeHtml(lead.name)}</b></td></tr>
         <tr><td style="padding:6px 12px;color:#6b7280">Phone</td><td style="padding:6px 12px">${escapeHtml(lead.phone)}</td></tr>
         ${lead.email ? `<tr><td style="padding:6px 12px;color:#6b7280">Email</td><td style="padding:6px 12px">${escapeHtml(lead.email)}</td></tr>` : ''}
+        ${lead.telegram ? `<tr><td style="padding:6px 12px;color:#6b7280">Telegram</td><td style="padding:6px 12px">${escapeHtml(lead.telegram)}</td></tr>` : ''}
         ${lead.country ? `<tr><td style="padding:6px 12px;color:#6b7280">Country</td><td style="padding:6px 12px">${escapeHtml(lead.country)}</td></tr>` : ''}
         ${lead.degree ? `<tr><td style="padding:6px 12px;color:#6b7280">Degree</td><td style="padding:6px 12px">${escapeHtml(lead.degree)}</td></tr>` : ''}
         ${lead.message ? `<tr><td style="padding:6px 12px;color:#6b7280">Message</td><td style="padding:6px 12px">${escapeHtml(lead.message)}</td></tr>` : ''}

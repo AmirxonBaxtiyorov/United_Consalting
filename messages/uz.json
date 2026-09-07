@@ -260,6 +260,8 @@
     "phone_placeholder": "+998 ...",
     "email": "Email (majburiy emas)",
     "email_placeholder": "you@example.com",
+    "telegram": "Telegram (ixtiyoriy)",
+    "telegram_placeholder": "@username yoki +998 ...",
     "country_interest": "Qiziqqan davlat",
     "degree": "Ta'lim darajasi",
     "message": "Qo'shimcha",

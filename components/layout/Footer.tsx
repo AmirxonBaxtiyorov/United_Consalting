@@ -1,7 +1,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SITE } from '@/lib/config';
-import { Mail, MapPin, MessageCircle, Send, Instagram } from 'lucide-react';
+import { Mail, MapPin, Phone, MessageCircle, Send, Instagram } from 'lucide-react';
 import Image from 'next/image';
 import { CookieSettingsButton } from './CookieSettingsButton';
 import { getCountry } from '@/data/countries';
@@ -100,11 +100,18 @@ export function Footer() {
             <h3 className="font-semibold text-white mb-4">{t('footer.contact_title')}</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
+                <Phone className="size-4 mt-0.5 text-accent shrink-0" />
+                <div className="flex flex-col gap-0.5">
+                  <span className="text-white/60 text-xs">{t('contact.phone_label')}</span>
+                  <a href={`tel:${SITE.phoneTel}`} className="hover:text-accent">{SITE.phone}</a>
+                  <a href={`tel:${SITE.phone2Tel}`} className="hover:text-accent">{SITE.phone2}</a>
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
                 <MapPin className="size-4 mt-0.5 text-accent shrink-0" />
                 <div className="flex flex-col gap-0.5">
                   <span className="text-white/60 text-xs">{t('contact.office_tashkent_label')}</span>
                   <span>{t('contact.office_tashkent_value')}</span>
-                  <a href={`tel:${SITE.phone2Tel}`} className="hover:text-accent">{SITE.phone2}</a>
                 </div>
               </li>
               <li className="flex items-start gap-2">
@@ -112,7 +119,6 @@ export function Footer() {
                 <div className="flex flex-col gap-0.5">
                   <span className="text-white/60 text-xs">{t('contact.office_khorazm_label')}</span>
                   <span>{t('contact.office_khorazm_value')}</span>
-                  <a href={`tel:${SITE.phoneTel}`} className="hover:text-accent">{SITE.phone}</a>
                 </div>
               </li>
               <li className="flex items-start gap-2">
