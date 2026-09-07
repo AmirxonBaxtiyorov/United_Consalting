@@ -37,6 +37,8 @@ export function Header() {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
+  // `xlOnly` keeps the desktop bar from overflowing at the lg breakpoint;
+  // those links are still listed in full in the mobile menu and the footer.
   const NAV = [
     { href: '/', label: t('home') },
     { href: '/about', label: t('about') },
@@ -44,6 +46,7 @@ export function Header() {
     { href: '/countries', label: t('countries') },
     { href: '/universities', label: t('universities') },
     { href: '/blog', label: t('blog') },
+    { href: '/partnership', label: t('partnership'), xlOnly: true },
     { href: '/contact', label: t('contact') },
   ];
 
@@ -81,7 +84,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="hover:text-accent-dark"
+                className={cn('hover:text-accent-dark', item.xlOnly && 'hidden xl:inline')}
               >
                 {item.label}
               </Link>
