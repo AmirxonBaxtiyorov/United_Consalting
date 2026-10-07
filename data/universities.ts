@@ -212,6 +212,30 @@ export const UNIVERSITIES: University[] = [
       en: 'A leading international institute in Singapore offering foundation and pathway programs into UK, US and Australian universities.',
     },
   },
+  {
+    slug: 'tmc-singapore',
+    countrySlug: 'singapore',
+    kind: 'private',
+    name: 'TMC Academy Singapore',
+    city: 'Singapore',
+    image: '/universities/tmc-singapore.jpg',
+    programs: ['Foundation', 'Diploma', 'Higher Diploma', "Bachelor's Degree", 'Postgraduate Diploma', 'MBA'],
+    tuition: 'S$5,571 – S$15,284 (dastur darajasiga qarab)',
+    scholarships: ['50% gacha scholarship / grant', 'Dastur hamda talabaga qarab belgilanadi', "O'zbekistonlik talabalar uchun maxsus narx"],
+    advantages: [
+      "Anglia Ruskin University (Buyuk Britaniya) hamkorligida xalqaro diplom",
+      'Yo\'nalishlar keng: Biznes, Hospitality & Tourism, IT, Marketing, Psixologiya',
+      "Kontrakt arzon — S$5,571 dan boshlanadi",
+      'Singapur xalqaro biznes va IT markazida ingliz tilida o\'qish',
+      'Scholarship 50% gacha — dastur va talaba profiliga qarab',
+    ],
+    language: 'English',
+    summary: {
+      uz: "Singapurdagi TMC Academy Anglia Ruskin University (Buyuk Britaniya) bilan hamkorlikda Foundation, Diploma, Bakalavr va MBA dasturlarini taklif etadi. Biznes, Hospitality & Tourism, IT, Marketing va Psixologiya yo'nalishlari, O'zbekistonlik talabalar uchun kontrakt S$5,571 dan, scholarship esa 50% gacha.",
+      ru: 'TMC Academy в Сингапуре предлагает программы Foundation, Diploma, бакалавриат и MBA совместно с Anglia Ruskin University (Великобритания). Направления — бизнес, гостеприимство, IT, маркетинг, психология. Стоимость для студентов из Узбекистана — от S$5 571, стипендии — до 50%.',
+      en: 'TMC Academy Singapore delivers Foundation, Diploma, Bachelor and MBA programs together with Anglia Ruskin University (UK). Fields include business, hospitality & tourism, IT, marketing and psychology, with tuition from S$5,571 and scholarships of up to 50% for Uzbek students.',
+    },
+  },
 
   // ============ TURKEY ============
   {

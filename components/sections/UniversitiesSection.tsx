@@ -15,7 +15,7 @@ export function UniversitiesSection() {
   const featuredSlugs = [
     'usf', 'webster',
     'apu', 'taylors',
-    'amity-singapore',
+    'amity-singapore', 'tmc-singapore',
     'marmara', 'nisantasi',
     'tampere',
     'bologna', 'polimi',

@@ -116,7 +116,7 @@ export const COUNTRIES: Country[] = [
     language: 'English',
     currency_local: 'SGD',
     image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1600&q=80',
-    universities_count: 1,
+    universities_count: 2,
     tuition_year: { bachelor: 7000, master: 9000, phd: 8000, language: 5000 },
     living_year: { dorm: 7200, shared: 9600, rent: 15000 },
     extra: { documents: 350, visa: 280, insurance: 600, flight: 900 },
@@ -126,6 +126,7 @@ export const COUNTRIES: Country[] = [
     quiz_weight: { asia: 3, affordable: 1, prestige: 3, english: 3, tech: 3, warm: 3, europe: 0, scholarship_focus: 2 },
     universities: [
       { name: 'Amity Global Institute Singapore', chip: 'Foundation', desc: 'UK / USA / Australia transfer pathway.' },
+      { name: 'TMC Academy Singapore', chip: 'UK Degree', desc: "Anglia Ruskin University hamkorligida Diploma, Bachelor's va MBA." },
     ],
   },
   {
