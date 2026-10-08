@@ -158,7 +158,7 @@ Ranglarni o'zgartirsangiz, `app/icon.tsx`, `app/apple-icon.tsx`, `app/opengraph-
 export const SITE = {
   phone: '+998 99 212 32 24',
   phone2: '+998 88 526 30 00',
-  email: 'unitedglobalconsultinguz@gmail.com',
+  email: 'info@unitedglobalconsulting.uz',
   social: {
     whatsapp: 'https://wa.me/998885263000',
     telegram: 'https://t.me/United_global_consulting',

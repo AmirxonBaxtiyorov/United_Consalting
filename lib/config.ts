@@ -10,7 +10,7 @@ export const SITE = {
   phoneTel: '+998992123224',
   phone2: '+998 88 526 30 00',
   phone2Tel: '+998885263000',
-  email: 'unitedglobalconsultinguz@gmail.com',
+  email: 'info@unitedglobalconsulting.uz',
   address: 'Tashkent, Uzbekistan',
   hours: 'Mon–Sat, 9:00–20:00',
   social: {
