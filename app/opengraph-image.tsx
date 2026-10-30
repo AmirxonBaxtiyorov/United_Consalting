@@ -118,7 +118,7 @@ export default async function OpenGraphImage() {
             unitedglobalconsulting.uz
           </div>
           <div style={{ color: '#475569' }}>·</div>
-          <div>13 countries · 36+ partner universities</div>
+          <div>15 countries · 45+ partner universities</div>
         </div>
       </div>
     ),

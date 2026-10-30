@@ -192,6 +192,25 @@ export const UNIVERSITIES: University[] = [
     },
   },
 
+  {
+    slug: 'alfa-college',
+    countrySlug: 'malaysia',
+    kind: 'private',
+    name: 'ALFA University College',
+    city: 'Subang Jaya, Selangor',
+    image: '/universities/alfa-college.jpg',
+    programs: ['Foundation in Business', 'Foundation in Information Technology', 'Foundation in Arts and Design', 'Diploma in Accountancy', 'Diploma in Business Administration', 'Bachelor of Business Administration (Honours)', 'Bachelor of Information Technology (Honours)', 'Bachelor of Artificial Intelligence', 'MBA', 'PhD in Management'],
+    tuition: '$3,602 – $14,455 (dasturga qarab)',
+    scholarships: ['Bakalavr dasturlari uchun 20% chegirma', "Foundation'dan keyin bakalavrda davom etsa — Foundation bepul (shartlar tasdiqlanadi)"],
+    advantages: ["1999-yilda tashkil etilgan xususiy kollej", 'Foundation, Diploma, Bachelor, Master va PhD', 'IELTS 5.0–6.0', 'Yanvar, aprel va sentabr qabullari'],
+    language: 'English',
+    summary: {
+      uz: "Malayziyaning Selangor shtatidagi xususiy kollej. Foundation, Diploma, bakalavr, magistratura va PhD dasturlarini taklif etadi. Bakalavrlar uchun 20% chegirma, Foundation'dan keyin bakalavrda davom etganlarga bepul Foundation imkoniyati ko'rsatilgan.",
+      ru: 'Частный колледж в штате Селангор, Малайзия. Предлагает программы Foundation, Diploma, бакалавриат, магистратуру и PhD. Для бакалавриата указана скидка 20%, а при продолжении обучения после Foundation — бесплатный Foundation.',
+      en: 'A private college in Selangor, Malaysia, offering Foundation, Diploma, Bachelor, Master and PhD programs. A 20% Bachelor discount is advertised, plus a free Foundation when students continue to Bachelor studies.',
+    },
+  },
+
   // ============ SINGAPORE ============
   {
     slug: 'amity-singapore',
@@ -469,6 +488,46 @@ export const UNIVERSITIES: University[] = [
     },
   },
 
+  {
+    slug: 'link-campus',
+    countrySlug: 'italy',
+    kind: 'private',
+    name: 'Link Campus University',
+    city: 'Rome',
+    image: '/universities/link-campus.jpg',
+    programs: ['Media and Cultural Industries', 'Strategic Studies and Security Policies', 'Corporate Management and Public Administration', 'Business and Institutional Economics and Management', 'Communication Sciences, Media and Digital Technologies', 'Political Science, Diplomacy and Government Administration'],
+    tuition: '€8,000 – €9,500 / yil',
+    scholarships: ["Universitet stipendiyalari va kontrakt chegirmalari", "O'zbekiston fuqarolari uchun mavjudligi universitetdan aniqlashtiriladi"],
+    advantages: ['Rimdagi xususiy universitet', 'Ingliz tilida bakalavr va magistratura', "Media, siyosat va biznes yo'nalishlari", "Qo'shimcha to'lovlar: ro'yxatdan o'tish €250, hududiy yig'im €140"],
+    language: 'English',
+    summary: {
+      uz: "Rimdagi xususiy universitet. Media, strategik tadqiqotlar, biznes va davlat boshqaruvi yo'nalishlarida ingliz tilida bakalavr va magistratura dasturlarini taklif etadi. Yillik kontrakt €8,000–€9,500, qo'shimcha to'lovlar esa alohida.",
+      ru: 'Частный университет в Риме. Предлагает англоязычные программы бакалавриата и магистратуры в сфере медиа, стратегических исследований, бизнеса и госуправления. Стоимость — €8 000–€9 500 в год плюс дополнительные сборы.',
+      en: 'A private university in Rome offering English-taught Bachelor and Master programs in media, strategic studies, business and public administration. Tuition is €8,000–€9,500 per year plus additional fees.',
+    },
+  },
+
+  // ============ MALTA ============
+  {
+    slug: 'global-college-malta',
+    countrySlug: 'malta',
+    kind: 'private',
+    name: 'Global College Malta',
+    city: 'SmartCity Malta, Ricasoli',
+    image: '/universities/global-college-malta.jpg',
+    gallery: ['/universities/global-college-malta-2.jpg'],
+    programs: ['Foundation in Business and Management', "Bachelor's in Accountancy and Finance", "Top-Up Bachelor's in Business and Management", 'Diploma in Financial Crime Compliance, AML & CFT', 'Doctor of Business Administration (DBA)', "Master's in Health and Social Care Management"],
+    tuition: '€5,500 – €10,000 / yil',
+    scholarships: ['Malta Get Qualified — bitirgandan keyin 70% gacha soliq imtiyozi', 'Shartlar va talabaning muvofiqligi universitetdan tasdiqlanadi'],
+    advantages: ['2012-yilda tashkil etilgan xususiy kollej', 'Foundation, Bachelor, Top-Up, Master va DBA', "SmartCity Malta kampusida ingliz tilida ta'lim", 'Malta Get Qualified imtiyozi'],
+    language: 'English',
+    summary: {
+      uz: "Maltaning SmartCity kampusesida joylashgan xususiy kollej. Foundation, bakalavr, Top-Up, magistratura va DBA dasturlari mavjud. Malta Get Qualified dasturi orqali o'qish xarajatlarining 70% gacha qismini soliq imtiyozi sifatida qaytarish mumkin.",
+      ru: 'Частный колледж в кампусе SmartCity на Мальте. Программы Foundation, бакалавриат, Top-Up, магистратура и DBA. По программе Malta Get Qualified можно вернуть до 70% расходов на обучение в виде налоговой льготы.',
+      en: 'A private college located in the SmartCity Malta campus. Offers Foundation, Bachelor, Top-Up, Master and DBA programs. The Malta Get Qualified scheme can return up to 70% of study costs as a tax benefit.',
+    },
+  },
+
   // ============ GERMANY ============
   {
     slug: 'hochschule-anhalt',
@@ -588,6 +647,25 @@ export const UNIVERSITIES: University[] = [
     },
   },
 
+  {
+    slug: 'bsa-riga',
+    countrySlug: 'latvia',
+    kind: 'private',
+    name: 'Baltic International Academy (BSA)',
+    city: 'Riga',
+    image: '/universities/bsa-riga.jpg',
+    programs: ['Business Management and Administration (120 CP)', 'Business Management and Administration (150 CP)', 'Enterprise Management in the Leisure and Entertainment Industry'],
+    tuition: '€2,900 – €3,300 / yil',
+    scholarships: ['Universitet platformasida scholarship mavjud', 'Aniq miqdor universitetdan tasdiqlanadi'],
+    advantages: ["1992-yilda tashkil etilgan xususiy oliy ta'lim muassasasi", '21 ta faol dastur', 'IELTS 5.5 yetarli', "Riga'da arzonroq magistratura"],
+    language: 'English',
+    summary: {
+      uz: "Rigadagi xususiy oliy ta'lim muassasasi. Biznes boshqaruvi bo'yicha 120 va 150 CP magistratura dasturlari mavjud. Kontrakt €2,900–€3,300, o'qish muddati 24–30 oy, IELTS 5.5 talab qilinadi.",
+      ru: 'Частный вуз в Риге. Магистерские программы по бизнес-администрированию на 120 и 150 CP. Стоимость — €2 900–€3 300, срок обучения 24–30 месяцев, требуется IELTS 5.5.',
+      en: 'A private higher-education institution in Riga. Offers 120 and 150 CP Master programs in Business Management and Administration. Tuition is €2,900–€3,300, duration 24–30 months, IELTS 5.5 required.',
+    },
+  },
+
   // ============ POLAND ============
   {
     slug: 'vistula',
@@ -625,6 +703,44 @@ export const UNIVERSITIES: University[] = [
       uz: "Polshada IT va Aviation yo'nalishlari bilan mashhur private universitet. Arzonroq kontrakt va oson admission.",
       ru: 'Польский частный университет, известный направлениями IT и Aviation Management. Доступная стоимость и простое поступление.',
       en: 'A Polish private university known for IT and Aviation Management. Affordable tuition and easy admission.',
+    },
+  },
+
+  {
+    slug: 'uafm-krakow',
+    countrySlug: 'poland',
+    kind: 'private',
+    name: 'Andrzej Frycz Modrzewski Krakow University (UAFM)',
+    city: 'Krakow',
+    image: '/universities/uafm-krakow.jpg',
+    programs: ['Animal Behavior and Psychology', 'Architecture', 'English Philology', 'English Philology with Additional Oriental Language', 'Management', 'Intensive Preparatory Polish Language Course'],
+    tuition: '€3,000 – €4,200 / yil',
+    scholarships: ['Scholarship orqali €1,000 gacha chegirma', 'Ayrim bakalavr dasturlarida qo\'llaniladi'],
+    advantages: ['Krakowdagi xususiy universitet', "10 500+ talaba va 30+ ingliz tilidagi dastur", 'Scholarship orqali kontraktni kamaytirish', "Polyak va ingliz tillarida ta'lim"],
+    language: 'Polish / English',
+    summary: {
+      uz: "Krakowdagi xususiy universitet. 10 500+ talaba va 30+ ingliz tilidagi dastur mavjud. Ayrim bakalavr dasturlarida scholarship orqali kontraktni yiliga €1,000 gacha kamaytirish mumkin.",
+      ru: 'Частный университет в Кракове. Более 10 500 студентов и 30+ англоязычных программ. На некоторых бакалаврских программах стипендия снижает стоимость обучения до €1 000 в год.',
+      en: 'A private university in Krakow with 10,500+ students and 30+ English-taught programs. On selected Bachelor programs a scholarship can reduce tuition by up to €1,000 per year.',
+    },
+  },
+  {
+    slug: 'vizja',
+    countrySlug: 'poland',
+    kind: 'private',
+    name: 'VIZJA University',
+    city: 'Warsaw',
+    image: '/universities/vizja.jpg',
+    gallery: ['/universities/vizja-2.jpg'],
+    programs: ['Accounting, Audit and Controlling', 'Advertising', 'Animal Therapy', 'Animal Upbringing and Training', 'Applied Economics', 'Architecture'],
+    tuition: '€2,070 – €2,760 / yil',
+    scholarships: ['Ayrim dasturlar uchun chegirma yoki moliyaviy yordam', 'CEEMAN IQA xalqaro akkreditatsiyasi'],
+    advantages: ['Warsawdagi xususiy universitet', '91 ta faol dastur', 'CEEMAN IQA xalqaro akkreditatsiyasi', "QS Sharqiy Yevropa reytingida 81-o'rin"],
+    language: 'English / Polish',
+    summary: {
+      uz: "Varshavadagi xususiy universitet. 91 ta faol dastur, jumladan biznes, buxgalteriya, reklama, hayvonlar terapiyasi va arxitektura. Biznes maktabi CEEMAN IQA akkreditatsiyasiga ega, QS Sharqiy Yevropa reytingida 81-o'rinda.",
+      ru: 'Частный университет в Варшаве. 91 активная программа, включая бизнес, бухгалтерию, рекламу, анималотерапию и архитектуру. Бизнес-школа имеет аккредитацию CEEMAN IQA, в рейтинге QS по Восточной Европе — 81-е место.',
+      en: 'A private university in Warsaw with 91 active programs, including business, accounting, advertising, animal therapy and architecture. Its business school holds CEEMAN IQA accreditation and ranks 81st in QS Eastern Europe.',
     },
   },
 
@@ -704,6 +820,45 @@ export const UNIVERSITIES: University[] = [
       uz: "Budapeshtda international talabalar orasida mashhur private universitet. IELTS yumshoq va admission oson.",
       ru: 'Известный частный университет Будапешта для иностранных студентов. Мягкий IELTS и простое поступление.',
       en: 'A private university in Budapest popular with international students. Lenient IELTS and easy admission.',
+    },
+  },
+
+  {
+    slug: 'mcdaniel-budapest',
+    countrySlug: 'hungary',
+    kind: 'private',
+    name: 'McDaniel College Budapest',
+    city: 'Budapest',
+    image: '/universities/mcdaniel-budapest.jpg',
+    programs: ['Art History and Studio Art', 'Business Administration and Economics', 'Communication', 'Political Science & International Studies', 'Psychology', 'One-Semester Intensive Pre-Medical Foundation'],
+    tuition: '€7,900 – €9,200 / yil',
+    scholarships: ['Scholarship mavjud', 'AQSh akkreditatsiyasiga ega Bachelor of Arts diplomi'],
+    advantages: ['AQShdagi McDaniel College kampusi', '1994-yildan beri Budapeshtda faoliyat yuritadi', 'AQSh akkreditatsiyasiga ega BA diplomi', 'Pre-Medical/Pre-Veterinary Foundation dasturi'],
+    language: 'English',
+    summary: {
+      uz: "AQShdagi McDaniel College'ning Budapesht kampusi. 1994-yildan beri faoliyat yuritadi va AQSh akkreditatsiyasiga ega Bachelor of Arts darajasini beradi. Psixologiya, biznes, kommunikatsiya va siyosatshunoslik yo'nalishlari mavjud.",
+      ru: 'Будапештский кампус американского McDaniel College, работающий с 1994 года. Выдаёт степень Bachelor of Arts с американской аккредитацией. Направления: психология, бизнес, коммуникации, политология.',
+      en: 'The Budapest campus of McDaniel College (USA), operating since 1994 and awarding a US-accredited Bachelor of Arts. Programs include psychology, business, communication and political science.',
+    },
+  },
+
+  // ============ RUSSIA ============
+  {
+    slug: 'mip-moscow',
+    countrySlug: 'russia',
+    kind: 'private',
+    name: 'Moscow Institute of Psychoanalysis (MIP)',
+    city: 'Moscow',
+    image: '/universities/mip-moscow.jpg',
+    programs: ['Amaliy psixoanaliz va psixoanalitik maslahat', "Ta'lim menejmenti", 'Klinik-psixologik maslahat va psixoterapiya asoslari', "Stressdan keyingi buzilishlar psixoterapiyasi", 'Raqamli muhitda biznes psixologiyasi', "Ma'lumotlar tahlili va psixologiyada sun'iy intellekt"],
+    tuition: '$1,830 – $2,440 / semestr',
+    scholarships: ['Rossiya qonunchiligiga muvofiq magistr diplomi', "Masofaviy ta'lim texnologiyalari"],
+    advantages: ["Psixologiya va psixoanalizga ixtisoslashgan institut", '2–2,5 yillik magistratura dasturlari', "Masofaviy ta'lim imkoniyati", 'Har bir semestr uchun arzonroq kontrakt'],
+    language: 'Russian',
+    summary: {
+      uz: "Psixologiya, psixoanaliz va psixoterapiya yo'nalishlarida magistratura dasturlarini taklif qiluvchi Rossiya oliy ta'lim muassasasi. Dasturlar 2–2,5 yil, bir semestr narxi $1,830 dan boshlanadi, masofaviy ta'lim texnologiyalaridan foydalaniladi.",
+      ru: 'Российский вуз, предлагающий магистерские программы по психологии, психоанализу и психотерапии. Срок обучения 2–2,5 года, стоимость семестра — от $1 830, используются дистанционные технологии.',
+      en: 'A Russian higher-education institution offering Master programs in psychology, psychoanalysis and psychotherapy. Programs last 2–2.5 years, tuition starts from $1,830 per semester, with distance-learning technologies.',
     },
   },
 

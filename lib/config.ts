@@ -28,11 +28,13 @@ export const COUNTRY_OPTIONS = [
   'turkey',
   'finland',
   'italy',
+  'malta',
   'germany',
   'luxembourg',
   'latvia',
   'poland',
   'romania',
   'hungary',
+  'russia',
   'uk',
 ] as const;

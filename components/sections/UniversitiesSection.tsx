@@ -14,17 +14,17 @@ export function UniversitiesSection() {
   // Show 12 featured universities — one or two per country, mix of public/private/foundation
   const featuredSlugs = [
     'usf', 'webster',
-    'apu', 'taylors',
+    'apu', 'taylors', 'alfa-college',
     'amity-singapore', 'tmc-singapore',
     'marmara', 'nisantasi',
     'tampere',
-    'bologna', 'polimi',
+    'bologna', 'polimi', 'link-campus',
     'rwth-aachen',
-    'luxembourg',
+    'luxembourg', 'global-college-malta',
     'rtu',
-    'vistula',
+    'vistula', 'vizja',
     'transilvania',
-    'debrecen',
+    'debrecen', 'mcdaniel-budapest',
     'sunderland', 'teesside',
   ];
   const list = UNIVERSITIES.filter((u) => featuredSlugs.includes(u.slug));
