@@ -404,6 +404,29 @@ export const COUNTRIES: Country[] = [
       { name: 'Teesside University', chip: 'AI', desc: 'IT, AI — £7,000 Vice-Chancellor Scholarship.' },
     ],
   },
+  {
+    slug: 'china',
+    code: 'cn',
+    name: { uz: 'Xitoy', ru: 'Китай', en: 'China' },
+    capital: 'Beijing',
+    language: 'English / Chinese',
+    currency_local: 'CNY',
+    image: '/universities/china-great-wall.jpg',
+    universities_count: 3,
+    tuition_year: { bachelor: 2600, master: 3600, phd: 3400, language: 2000 },
+    living_year: { dorm: 1800, shared: 3000, rent: 6000 },
+    extra: { documents: 230, visa: 200, insurance: 300, flight: 600 },
+    typical_deadlines: [
+      { id: 'cn-fall', label: 'SWUFE / USTB — Fall intake', date: '2026-06-30' },
+      { id: 'cn-spring', label: 'HZNU — Spring intake', date: '2026-12-15' },
+    ],
+    quiz_weight: { asia: 3, affordable: 3, prestige: 2, english: 2, tech: 3, warm: 1, europe: 0, scholarship_focus: 3 },
+    universities: [
+      { name: 'Southwestern University of Finance and Economics (SWUFE)', chip: 'Finance', desc: 'Chengdu — Finance, Economics, Business, Accounting, CS va Data Science. Bakalavr $2,300–$2,900/yil, magistratura ~$3,600/yil. IELTS 6.0/6.5, to\'liq yoki qisman scholarship.' },
+      { name: 'University of Science and Technology Beijing (USTB)', chip: 'Engineering & AI', desc: 'Beijing — CS, Artificial Intelligence, Engineering, International Trade va Business. Bakalavr ~$3,300/yil, magistratura ~$5,400/yil. HSK 4–5 yoki IELTS 5.5.' },
+      { name: 'Hangzhou Normal University (HZNU)', chip: 'Scholarships', desc: 'Hangzhou — Economics, International Business, CS, Education va Design. Bakalavr $2,600–$3,100/yil, magistratura $3,300–$3,500/yil. Universitet va Zhejiang provinsiyasi stipendiyalari.' },
+    ],
+  },
 ];
 
 export function getCountry(slug: string): Country | undefined {

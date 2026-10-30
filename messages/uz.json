@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "United Global Consulting — Chet elda o'qish: AQSh, Yevropa, Turkiya, Malayziya",
-    "description": "O'zbekistonlik talabalarga dunyoning yetakchi universitetlariga kirishda yordam beramiz. 45+ hamkor universitet, 15 davlat. Bepul maslahat, universitet tanlash, hujjatlar, stipendiya, viza.",
+    "description": "O'zbekistonlik talabalarga dunyoning yetakchi universitetlariga kirishda yordam beramiz. 48+ hamkor universitet, 16 davlat. Bepul maslahat, universitet tanlash, hujjatlar, stipendiya, viza.",
     "keywords": "chet elda o'qish, universitetga kirish, stipendiya, AQShda o'qish, Yevropada o'qish, Turkiyada o'qish, Malayziyada o'qish"
   },
   "nav": {
@@ -24,7 +24,7 @@
     "eyebrow": "Xalqaro ta'lim agentligi",
     "title_part1": "Kelajagingizni",
     "title_part2": "chet elda boshlang",
-    "subtitle": "AQSh, Yevropa, Turkiya, Malayziya va boshqa 15 davlatning 45+ hamkor universitetiga kirishda yordam beramiz. Dastur tanlashdan vizagacha.",
+    "subtitle": "AQSh, Yevropa, Turkiya, Malayziya va boshqa 16 davlatning 48+ hamkor universitetiga kirishda yordam beramiz. Dastur tanlashdan vizagacha.",
     "bullet_1": "Sizga mos universitet",
     "bullet_2": "Xatosiz hujjatlar",
     "bullet_3": "Vizagacha kuzatib boramiz",
@@ -79,7 +79,7 @@
   "countries": {
     "eyebrow": "DAVLATLAR",
     "title": "Qayerga talabalar yuboramiz",
-    "subtitle": "15 davlat, ingliz va mahalliy tillarda minglab dasturlar",
+    "subtitle": "16 davlat, ingliz va mahalliy tillarda minglab dasturlar",
     "universities": "universitet",
     "from_year": "$/yilda",
     "learn_more": "Batafsil",
@@ -124,10 +124,10 @@
   "universities": {
     "eyebrow": "UNIVERSITETLAR",
     "title": "Biz hamkorlik qiladigan universitetlar",
-    "subtitle": "15 davlatda 45+ hamkor universitet — bakalavr, magistr, PhD va foundation dasturlari",
+    "subtitle": "16 davlatda 48+ hamkor universitet — bakalavr, magistr, PhD va foundation dasturlari",
     "see_all": "Barcha universitetlarni ko'rish",
     "full_title": "Barcha hamkor universitetlar",
-    "full_subtitle": "15 davlatda 45+ universitet. Davlat va private. Kontrakt $400 dan boshlanadi, scholarship 25% dan to'liq grantgacha.",
+    "full_subtitle": "16 davlatda 48+ universitet. Davlat va private. Kontrakt $400 dan boshlanadi, scholarship 25% dan to'liq grantgacha.",
     "universities_in_country": "ta universitet"
   },
   "university_detail": {

@@ -901,6 +901,62 @@ export const UNIVERSITIES: University[] = [
       en: 'A strong UK university for IT, AI and Engineering. The Vice-Chancellor Scholarship gives up to £7,000 off.',
     },
   },
+
+  // ============ CHINA ============
+  {
+    slug: 'swufe',
+    countrySlug: 'china',
+    kind: 'public',
+    name: 'Southwestern University of Finance and Economics (SWUFE)',
+    city: 'Chengdu',
+    image: '/universities/swufe.jpg',
+    programs: ['Economics', 'Finance', 'Business Administration', 'Accounting', 'Computer Science', 'Data Science'],
+    tuition: '$2,300 – $2,900 / yil (bachelor); master ~$3,600 / yil',
+    scholarships: ['Full or partial university scholarship', 'Contract, dormitory and living costs may be covered', 'Annual academic performance review required'],
+    advantages: ["Finance va Economics bo'yicha yetakchi universitet", 'Ingliz tilida bakalavr va magistratura dasturlari', 'IELTS 6.0 (bachelor) / 6.5 (master)', "To'liq yoki qisman universitet stipendiyasi"],
+    language: 'English / Chinese',
+    summary: {
+      uz: "Chengdudagi iqtisod va moliya bo'yicha yetakchi universitet. Ingliz tilidagi bakalavr va magistratura dasturlari mavjud, kontrakt $2,300–$3,600/yil. IELTS 6.0–6.5 va universitet stipendiyalari.",
+      ru: 'Ведущий университет экономики и финансов в Чэнду. Есть англоязычные программы бакалавриата и магистратуры, стоимость $2 300–$3 600 в год. IELTS 6.0–6.5 и стипендии университета.',
+      en: 'A leading finance and economics university in Chengdu. English-taught bachelor and master programs, tuition $2,300–$3,600/year. IELTS 6.0–6.5 and university scholarships.',
+    },
+  },
+  {
+    slug: 'ustb',
+    countrySlug: 'china',
+    kind: 'public',
+    name: 'University of Science and Technology Beijing (USTB)',
+    city: 'Beijing',
+    image: '/universities/ustb.jpg',
+    programs: ['Computer Science', 'Artificial Intelligence', 'Engineering', 'International Trade', 'Business Management'],
+    tuition: '$3,300 / yil (bachelor); master ~$5,400 / yil',
+    scholarships: ['University scholarships', 'Selected government scholarships', 'Eligibility checked per program'],
+    advantages: ['Beijing markazida joylashgan', 'CS, AI va Engineering kuchli', 'Ingliz tilidagi dasturlar uchun IELTS 5.5', 'Xitoy tilidagi dasturlar uchun HSK 4–5'],
+    language: 'English / Chinese',
+    summary: {
+      uz: "Beijingdagi texnologiya va muhandislik universiteti. CS, AI, Engineering va Business yo'nalishlari kuchli. Bakalavr ~$3,300/yil, magistratura ~$5,400/yil.",
+      ru: 'Технологический университет в Пекине. Сильные направления — CS, AI, Engineering и Business. Бакалавриат ~$3 300 в год, магистратура ~$5 400 в год.',
+      en: 'A technology university in Beijing with strong CS, AI, Engineering and Business programs. Bachelor ~$3,300/year, master ~$5,400/year.',
+    },
+  },
+  {
+    slug: 'hznu',
+    countrySlug: 'china',
+    kind: 'public',
+    name: 'Hangzhou Normal University (HZNU)',
+    city: 'Hangzhou',
+    image: '/universities/hznu.jpg',
+    programs: ['Economics', 'International Business', 'Computer Science', 'Education', 'Design'],
+    tuition: '$2,600 – $3,100 / yil (bachelor); master $3,300 – $3,500 / yil',
+    scholarships: ['HZNU university scholarship', 'Zhejiang provincial scholarship', 'Contract support and monthly living allowance (selected cases)'],
+    advantages: ['Hangzhou — Alibaba va tech ekotizimi yaqin', "GPA 75%+ bo'lsa scholarship imkoniyati", 'Universitet va Zhejiang provinsiyasi stipendiyalari', "Ingliz yoki xitoy tilida ta'lim"],
+    language: 'English / Chinese',
+    summary: {
+      uz: "Hangzhoudagi universitet. Economics, Business, CS, Education va Design yo'nalishlari bor. Bakalavr $2,600–$3,100/yil, magistratura $3,300–$3,500/yil. GPA 75%+ uchun stipendiya imkoniyati.",
+      ru: 'Университет в Ханчжоу. Направления Economics, Business, CS, Education и Design. Бакалавриат $2 600–$3 100 в год, магистратура $3 300–$3 500 в год. Стипендии при GPA 75%+.',
+      en: 'A university in Hangzhou with Economics, Business, CS, Education and Design programs. Bachelor $2,600–$3,100/year, master $3,300–$3,500/year. Scholarships for GPA 75%+.',
+    },
+  },
 ];
 
 export function getUniversity(slug: string): University | undefined {

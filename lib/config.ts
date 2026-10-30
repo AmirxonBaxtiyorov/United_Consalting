@@ -37,4 +37,5 @@ export const COUNTRY_OPTIONS = [
   'hungary',
   'russia',
   'uk',
+  'china',
 ] as const;

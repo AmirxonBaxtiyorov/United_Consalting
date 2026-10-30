@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "United Global Consulting — Study Abroad: USA, Europe, Türkiye, Malaysia",
-    "description": "We help students from Uzbekistan enrol at leading universities worldwide. 45+ partner universities across 15 countries. Free consultation, university selection, documents, scholarships, visa.",
+    "description": "We help students from Uzbekistan enrol at leading universities worldwide. 48+ partner universities across 16 countries. Free consultation, university selection, documents, scholarships, visa.",
     "keywords": "study abroad, university admission, scholarships, study in USA, study in Europe, study in Turkey, study in Malaysia, F-1 visa, IELTS"
   },
   "nav": {
@@ -24,7 +24,7 @@
     "eyebrow": "International Education Agency",
     "title_part1": "Start your future",
     "title_part2": "abroad",
-    "subtitle": "We help you enrol at 45+ partner universities across the USA, Europe, Türkiye, Malaysia and 15 countries in total. From program selection to visa approval.",
+    "subtitle": "We help you enrol at 48+ partner universities across the USA, Europe, Türkiye, Malaysia and 16 countries in total. From program selection to visa approval.",
     "bullet_1": "The right university for you",
     "bullet_2": "Flawless documents",
     "bullet_3": "Support all the way to visa",
@@ -79,7 +79,7 @@
   "countries": {
     "eyebrow": "COUNTRIES",
     "title": "Where we send students",
-    "subtitle": "15 countries, thousands of programs in English and local languages",
+    "subtitle": "16 countries, thousands of programs in English and local languages",
     "universities": "universities",
     "from_year": "from $/year",
     "learn_more": "Learn more",
@@ -124,10 +124,10 @@
   "universities": {
     "eyebrow": "UNIVERSITIES",
     "title": "Our partner universities",
-    "subtitle": "45+ universities in 15 countries — Bachelor, Master, PhD and Foundation programs",
+    "subtitle": "48+ universities in 16 countries — Bachelor, Master, PhD and Foundation programs",
     "see_all": "View all universities",
     "full_title": "All partner universities",
-    "full_subtitle": "45+ universities in 15 countries. Public and private. Tuition starts from $400/year, scholarships from 25% to full grant.",
+    "full_subtitle": "48+ universities in 16 countries. Public and private. Tuition starts from $400/year, scholarships from 25% to full grant.",
     "universities_in_country": "universities"
   },
   "university_detail": {
